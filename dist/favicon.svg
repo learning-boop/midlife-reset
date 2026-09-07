@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Simplified mark: rings drop away at favicon sizes, petals fill the canvas -->
+  <path d="M50 16C63 24 63 42 50 51 37 42 37 24 50 16Z" fill="#8C9B75"/>
+  <path d="M50 51C63 60 63 78 50 86 37 78 37 60 50 51Z" fill="#B56D57"/>
+  <circle cx="50" cy="8" r="3.6" fill="#1F3D33"/>
+</svg>
