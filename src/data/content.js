@@ -32,7 +32,10 @@ export const hero = {
     'A plan that fits your actual life, not the other way round',
     'Sustainable habits, not a quick fix',
   ],
-  image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80',
+  image: '/images/dr-sarika-hero.jpg',
+  imageAlt: 'Dr Sarika Gorantyal, NHS GP and Lifestyle Medicine physician',
+  // shown until the photo above is added to public/images/
+  imageFallback: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80',
 }
 
 export const pillars = {
@@ -128,7 +131,10 @@ export const about = {
   body: 'My approach combines medical knowledge with practical behaviour-change strategies, so your plan fits your actual life — not the other way around.',
   creds: ['NHS GP', 'Lifestyle Medicine, British Society of Lifestyle Medicine', 'Certified Health Coach, Health Coaches Academy', 'Completing: BMS Certificate in the Principles and Practice of Menopause Care'],
   cta: 'Book a discovery call with Dr Sarika',
-  image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80',
+  image: '/images/dr-sarika-portrait.jpg',
+  imageAlt: 'Dr Sarika Gorantyal',
+  // shown until the photo above is added to public/images/
+  imageFallback: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80',
 }
 
 export const nutrition = {

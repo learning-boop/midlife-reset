@@ -13,7 +13,7 @@ export default function About() {
           <div className="creds">{about.creds.map((c) => <span key={c}>{c}</span>)}</div>
           <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
         </div>
-        <Img src={about.image} alt="Dr Sarika Gorantyal" />
+        <Img src={about.image} fallback={about.imageFallback} alt={about.imageAlt} />
       </div>
     </section>
   )

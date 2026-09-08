@@ -29,7 +29,9 @@ const Hero = forwardRef(function Hero(_, ref) {
             {hero.trust.map(([b, t]) => <span key={b}><b>{b}</b> {t}</span>)}
           </div>
         </div>
-        <div className="hero-photo"><Img src={hero.image} /></div>
+        <div className="hero-photo">
+          <Img src={hero.image} fallback={hero.imageFallback} alt={hero.imageAlt} loading="eager" fetchpriority="high" />
+        </div>
       </div>
       <div className="hero-checks">
         <div className="wrap">
