@@ -1,7 +1,7 @@
 // All page copy lives here so the client can edit text without touching components.
 
 export const site = {
-  name: 'the midlife reset',
+  name: 'The Midlife-reset',
   domain: 'themidlifereset.uk',
   bookingUrl: '#discovery', // TODO: replace with Cal.com / booking link
   email: 'mailto:hello@themidlifereset.uk', // TODO: confirm
@@ -33,22 +33,20 @@ export const hero = {
     'Sustainable habits, not a quick fix',
   ],
   image: '/images/dr-sarika-hero.jpg',
-  imageAlt: 'Dr Sarika Gorantyal, NHS GP and Lifestyle Medicine physician',
-  // shown until the photo above is added to public/images/
-  imageFallback: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80',
 }
 
 export const pillars = {
   kicker: 'What is Lifestyle Medicine?',
   title: 'A whole-person approach to health, not a symptom checklist',
   intro: "Rather than focusing only on symptoms, Lifestyle Medicine looks at the bigger picture: how you nourish your body, move, sleep, manage stress, connect with others and build habits that stick. The aim isn't perfection — it's realistic change that supports your health now and in the future.",
+  // [title, body, image] — swap image URLs for client photography when available
   items: [
-    ['🥗', 'Nutrition', 'Supporting balanced, sustainable eating patterns that nourish your body and support metabolic health.'],
-    ['🏃', 'Physical activity', 'Helping you build enjoyable movement into your lifestyle.'],
-    ['💪', 'Strength & muscle health', 'Supporting strength, independence and healthy ageing through resistance-based activity.'],
-    ['😴', 'Sleep', 'Improving sleep habits to support energy, recovery and wellbeing.'],
-    ['🧘', 'Stress & emotional wellbeing', 'Developing strategies to improve resilience, balance and coping.'],
-    ['🤝', 'Social connection', 'Recognising the importance of relationships, belonging and support.'],
+    ['Nutrition', 'Supporting balanced, sustainable eating patterns that nourish your body and support metabolic health.', 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80'],
+    ['Physical activity', 'Helping you build enjoyable movement into your lifestyle.', 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=900&q=80'],
+    ['Strength & muscle health', 'Supporting strength, independence and healthy ageing through resistance-based activity.', 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80'],
+    ['Sleep', 'Improving sleep habits to support energy, recovery and wellbeing.', 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=900&q=80'],
+    ['Stress & emotional wellbeing', 'Developing strategies to improve resilience, balance and coping.', 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80'],
+    ['Social connection', 'Recognising the importance of relationships, belonging and support.', 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80'],
   ],
 }
 
@@ -132,9 +130,6 @@ export const about = {
   creds: ['NHS GP', 'Lifestyle Medicine, British Society of Lifestyle Medicine', 'Certified Health Coach, Health Coaches Academy', 'Completing: BMS Certificate in the Principles and Practice of Menopause Care'],
   cta: 'Book a discovery call with Dr Sarika',
   image: '/images/dr-sarika-portrait.jpg',
-  imageAlt: 'Dr Sarika Gorantyal',
-  // shown until the photo above is added to public/images/
-  imageFallback: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80',
 }
 
 export const nutrition = {
