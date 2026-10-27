@@ -1,5 +1,5 @@
-import Img from './Img'
 import { pillars } from '../data/content'
+import FillText from './FillText'
 
 export default function Pillars() {
   return (
@@ -7,17 +7,15 @@ export default function Pillars() {
       <div className="wrap">
         <div className="pillars-head center">
           <p className="kicker">{pillars.kicker}</p>
-          <h2>{pillars.title}</h2>
-          <p style={{ marginTop: 16 }}>{pillars.intro}</p>
+          <FillText>{pillars.title}</FillText>
+          <p className="lede">{pillars.intro}</p>
         </div>
         <div className="six">
-          {pillars.items.map(([title, body, image]) => (
-            <div className="pillar-card" key={title}>
-              <Img src={image} alt={title} />
-              <div className="pillar-body">
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </div>
+          {pillars.items.map(([title, body], i) => (
+            <div key={title} data-reveal>
+              <span className="ico">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{title}</h3>
+              <p>{body}</p>
             </div>
           ))}
         </div>

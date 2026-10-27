@@ -15,7 +15,7 @@ export default function StickyBar({ watchRef }) {
     <div className={`sticky${show ? ' show' : ''}`}>
       <div className="wrap">
         <div className="t">
-          Feel like <i>yourself</i> again, guided by a GP who's been there.
+          Feel like <i>yourself</i> again, guided by a doctor who&rsquo;s been there.
           <small>Virtual consultations available across the UK</small>
         </div>
         <div className="r">

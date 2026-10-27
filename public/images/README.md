@@ -1,14 +1,13 @@
 # Photos
 
-Drop the two photographs of Dr Sarika here with these exact filenames:
+| File | Where it appears | Source |
+|------|------------------|--------|
+| `dr-sarika-garden.webp` | Hero, right-hand column | client, Oct 2026 |
+| `dr-sarika-studio.jpg`  | About / founder section | client, Sep 2026 |
+| `dr-sarika-kitchen.webp`| Nutrition approach      | client, Oct 2026 |
+| `dr-sarika-seated.jpg`  | Ready to begin / discovery | client, Sep 2026 |
 
-| File | Where it appears | Shape |
-|------|------------------|-------|
-| `dr-sarika-hero.jpg` | Hero, right-hand column | tall portrait (approx 2:3) |
-| `dr-sarika-portrait.jpg` | About / founder section | portrait, cropped to 4:5 |
-
-Until they exist the site falls back to the previous stock photos, so nothing
-looks broken — see `imageFallback` in `src/data/content.js`.
-
-JPEG or WebP both work. Around 1400px on the long edge is plenty; anything
-larger just costs load time.
+Not used (see handover notes): the two purple "Move More / Live Better" and
+"Why Movement is Essential" graphics, the cut-out objects sheet, and the
+yellow salad bowl. The purple graphics are off-palette and one carries
+third-party "Wardiere Inc." branding.

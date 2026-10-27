@@ -1,10 +1,12 @@
 import { faqs, notice } from '../data/content'
+import FillText from './FillText'
 
 export default function Faq() {
   return (
-    <section className="faq" style={{ background: '#fff' }} id="faq">
+    <section className="faq" id="faq">
       <div className="wrap">
-        <h2>Frequently asked questions</h2>
+        <p className="kicker">Frequently Asked Questions</p>
+        <FillText>Common questions before you get started</FillText>
         <div className="faq-list">
           {faqs.map(([q, a], i) => (
             <details key={q} open={i === 0}>
@@ -13,7 +15,7 @@ export default function Faq() {
             </details>
           ))}
         </div>
-        <div className="notice" style={{ marginTop: 48 }}>
+        <div className="notice">
           <h3>{notice.title}</h3>
           {notice.lines.map((l) => <p key={l}>{l}</p>)}
         </div>

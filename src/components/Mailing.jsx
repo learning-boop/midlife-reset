@@ -8,11 +8,11 @@ export default function Mailing() {
     setDone(true)
   }
   return (
-    <section className="mail pillars">
+    <section className="mail">
       <div className="wrap">
         <div>
           <h3>Stay in touch</h3>
-          <p>Full pricing and package details to follow — join the mailing list to be notified first.</p>
+          <p>Occasional notes on midlife health, longevity and lifestyle medicine — no more than once a month.</p>
         </div>
         {done ? (
           <p style={{ color: 'var(--ink)' }}>Thank you — you're on the list.</p>
