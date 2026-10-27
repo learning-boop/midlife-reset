@@ -1,12 +1,10 @@
 import { faqs, notice } from '../data/content'
-import FillText from './FillText'
-
 export default function Faq() {
   return (
     <section className="faq" id="faq">
       <div className="wrap">
         <p className="kicker">Frequently Asked Questions</p>
-        <FillText>Common questions before you get started</FillText>
+        <h2>Common questions before you get started</h2>
         <div className="faq-list">
           {faqs.map(([q, a], i) => (
             <details key={q} open={i === 0}>

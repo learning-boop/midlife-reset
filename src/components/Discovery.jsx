@@ -1,14 +1,12 @@
 import Img from './Img'
 import { discovery, site } from '../data/content'
-import FillText from './FillText'
-
 export default function Discovery() {
   return (
     <section className="disc" id="discovery">
       <div className="wrap">
         <div>
           <p className="kicker">{discovery.kicker}</p>
-          <FillText>{discovery.title}</FillText>
+          <h2>{discovery.title}</h2>
           <p className="lede">{discovery.intro}</p>
           <ul>{discovery.bullets.map((b) => <li key={b}><span className="check">✓</span>{b}</li>)}</ul>
           <div className="row">
@@ -16,7 +14,7 @@ export default function Discovery() {
             <a className="btn btn-ghost" href="#faq">Read the FAQs</a>
           </div>
         </div>
-        <Img src={discovery.image} alt={discovery.imageAlt} data-reveal="clip" />
+        <Img src={discovery.image} alt={discovery.imageAlt} />
       </div>
     </section>
   )

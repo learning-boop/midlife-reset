@@ -1,5 +1,3 @@
-import FillText from './FillText'
-
 // Shared layout for the two explainer sections (Menopause, Longevity): a pair of
 // contrasting definition cards, then the words people actually use themselves.
 export default function Explainer({ data, id, tone = '' }) {
@@ -8,12 +6,12 @@ export default function Explainer({ data, id, tone = '' }) {
       <div className="wrap">
         <div className="explainer-head">
           <p className="kicker">{data.kicker}</p>
-          <FillText>{data.title}</FillText>
+          <h2>{data.title}</h2>
         </div>
 
         <div className="defs">
           {data.cards.map(([term, body], i) => (
-            <div className="def" key={term} data-reveal>
+            <div className="def" key={term}>
               <span className="def-n">{String(i + 1).padStart(2, '0')}</span>
               <h3>{term}</h3>
               <p>{body}</p>
@@ -24,7 +22,7 @@ export default function Explainer({ data, id, tone = '' }) {
         <p className="quotes-intro">{data.quotesIntro}</p>
         <ul className="quotes">
           {data.quotes.map((q) => (
-            <li key={q} data-reveal>
+            <li key={q}>
               <blockquote>{q}</blockquote>
             </li>
           ))}

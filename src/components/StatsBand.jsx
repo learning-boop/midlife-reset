@@ -6,7 +6,7 @@ export default function StatsBand() {
       <div className="wrap">
         <div className="band-stats">
           {stats.items.map(([big, text]) => (
-            <div className="stat" key={big} data-reveal>
+            <div className="stat" key={big}>
               <div className="big">{big}</div>
               <p>{text}</p>
             </div>

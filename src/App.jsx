@@ -16,12 +16,10 @@ import Faq from './components/Faq'
 import Mailing from './components/Mailing'
 import Footer from './components/Footer'
 import StickyBar from './components/StickyBar'
-import useReveal from './components/useReveal'
 import { menopause, longevity } from './data/content'
 
 export default function App() {
   const heroRef = useRef(null)
-  useReveal()
   return (
     <>
       <Header />

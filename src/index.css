@@ -27,8 +27,6 @@ p{color:var(--muted)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:var(--sp-section) 0}
 .kicker{color:var(--muted);font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:500;margin-bottom:14px}
-.kicker::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-right:9px;vertical-align:middle;position:relative;top:-1px}
-.center .kicker::before{margin-left:-15px}
 .center{text-align:center}
 .lede{font-size:clamp(16px,1.4vw,18px);line-height:1.65;max-width:68ch}
 .center .lede{margin-left:auto;margin-right:auto}
@@ -380,42 +378,4 @@ footer a:hover{color:#fff}
     .appts{grid-template-rows:auto auto auto}
     .appt{grid-row:span 3;display:grid;grid-template-rows:subgrid;align-content:start}
   }
-}
-
-/* ─────────────────────────────────────────────────────────
-   Scroll effects
-   ───────────────────────────────────────────────────────── */
-
-/* Registered so --p animates/interpolates as a number inside calc(). */
-@property --p{syntax:'<number>';initial-value:1;inherits:true}
-
-/* Word fill. Default is full contrast; .is-ready (set by JS) hands control to
-   --p. Each word lights when the fill front passes its index — the ~1.6 word
-   window keeps a soft edge instead of a hard on/off step. */
-.fill-text{--p:1}
-.fill-text .fw{color:var(--fill-on,var(--ink))}
-@supports (color:color-mix(in srgb,red 50%,blue)){
-  .fill-text.is-ready .fw{
-    --lit:clamp(0,calc((var(--p) * (var(--n) + 1.6) - var(--i)) / 1.6),1);
-    color:color-mix(in srgb,var(--fill-on,var(--ink)) calc(var(--lit) * 100%),var(--fill-off,var(--line)));
-  }
-}
-/* on the dark sections the unlit state is a dimmed white, not grey */
-.founder .fill-text,.cardio .fill-text{--fill-on:#fff;--fill-off:rgba(255,255,255,.26)}
-.hero .fill-text{--fill-on:#fff;--fill-off:rgba(255,255,255,.3)}
-
-/* Reveal on scroll — only armed once the observer is attached. */
-.reveal-ready [data-reveal]{opacity:0;transform:translateY(18px);
-  transition:opacity .7s cubic-bezier(.22,.61,.36,1) var(--d,0ms),transform .7s cubic-bezier(.22,.61,.36,1) var(--d,0ms)}
-.reveal-ready [data-reveal].is-in{opacity:1;transform:none}
-
-/* Images wipe open from the bottom as they arrive. */
-.reveal-ready [data-reveal="clip"]{opacity:1;transform:none;clip-path:inset(0 0 100% 0);
-  transition:clip-path .9s cubic-bezier(.22,.61,.36,1) var(--d,0ms)}
-.reveal-ready [data-reveal="clip"].is-in{clip-path:inset(0 0 0 0)}
-
-@media (prefers-reduced-motion:reduce){
-  .fill-text .fw{color:var(--fill-on,var(--ink))!important}
-  .reveal-ready [data-reveal],
-  .reveal-ready [data-reveal="clip"]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
 }
