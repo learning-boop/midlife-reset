@@ -217,6 +217,7 @@ const TIER_NOTE =
 export const programmes = [
   {
     id: 'menopause-packages',
+    tab: 'Menopause coaching',
     kicker: 'Menopause Coaching Packages',
     title: 'Three levels of support, built around this stage of life',
     tiers: [
@@ -247,6 +248,7 @@ export const programmes = [
   },
   {
     id: 'longevity-programme',
+    tab: 'Longevity medicine',
     kicker: 'Longevity Medicine Programme',
     title: 'Evidence-informed support for a longer, healthier healthspan',
     intro:
