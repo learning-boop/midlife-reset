@@ -775,17 +775,11 @@ header.is-tucked{transform:translateY(-100%)}
 @keyframes markerland{0%{transform:scale(1)}40%{transform:scale(1.16)}100%{transform:scale(1)}}
 .stop.on .marker{animation:markerland .52s cubic-bezier(.34,1.56,.64,1)}
 
-/* ── the accordion's control, not its panel ──────────────── */
-/* The panel itself opens instantly, and stays that way deliberately. A native
-   <details> panel cannot be animated in current Chrome (152): neither a
-   block-size nor a height transition on ::details-content fires even with
-   interpolate-size in effect, and a keyframe animation does not run either —
-   on the pseudo-element it never starts, and on the panel's children the
-   closed panel's content-visibility:hidden preserves the finished animation so
-   it never replays. Hand-rolling a disclosure with a div would animate, but it
-   would trade away what <details> gives for free: correct semantics, real
-   exposure to assistive technology, and find-in-page reaching closed answers.
-   So the control animates and the panel does not. */
+/* ── the accordion ───────────────────────────────────────── */
+/* The open/close animation lives in Faq.jsx, which animates the <details>
+   element's own height. It cannot be done here: in current Chrome (152)
+   ::details-content refuses both a height transition — even with
+   interpolate-size in effect — and a keyframe animation. See that file. */
 summary{transition:color .2s}
 summary:hover{color:var(--plum)}
 summary .ic{transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s,border-color .2s}
