@@ -628,22 +628,6 @@ header.is-tucked{transform:translateY(-100%)}
 .photoband img{height:124%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
 @media (prefers-reduced-motion:reduce){.photoband img{height:100%;transform:none}}
 
-/* ─── Assessments as stacking cards ──────────────────────── */
-/* Each card sticks a little lower than the one before, so they pile up as the
-   reader scrolls instead of sitting side by side. Only above 1024px: on a phone
-   the viewport is too short to hold a stack and it just traps the scroll. */
-@media (min-width:1025px){
-  .cgrid{display:block;max-width:860px;margin:0 auto}
-  .cgrid .ccard{position:sticky;margin-bottom:28px;
-    box-shadow:0 -14px 34px rgba(31,61,51,.07)}
-  .cgrid .ccard:nth-child(1){top:120px}
-  .cgrid .ccard:nth-child(2){top:150px}
-  .cgrid .ccard:nth-child(3){top:180px}
-  /* the last card needs room beneath it or the stack never finishes forming */
-  .cgrid::after{content:"";display:block;height:30vh}
-  .ccard ul{grid-template-columns:1fr 1fr}
-}
-
 /* ─── Pinned mechanism walkthrough ───────────────────────── */
 /* The five mechanisms are the densest thing on the page. Above 1024px the
    block pins and they advance one at a time; below it they stay a plain list,
@@ -687,3 +671,4 @@ header.is-tucked{transform:translateY(-100%)}
 @media (prefers-reduced-motion:reduce){
   .mech.is-pinned .mech-slide{transition:none}
 }
+
