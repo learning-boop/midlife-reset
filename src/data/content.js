@@ -34,11 +34,10 @@ export const hero = {
     'sustainable lifestyle change.',
   ],
   intro:
-    'Evidence-informed longevity, lifestyle medicine and menopause coaching, built around your metabolic health, nutrition, strength and sleep — not a one-size-fits-all plan.',
+    'Built around your metabolic health, nutrition, strength and sleep — not a one-size-fits-all plan.',
   primary: 'Book your complimentary discovery call',
   secondary: 'Why a doctor-led approach',
   trust: [
-    ['Doctor-led', 'GP & Lifestyle Medicine'],
     ['Evidence-informed', 'longevity medicine'],
     ['100% virtual', 'across the UK'],
   ],
@@ -52,6 +51,8 @@ export const hero = {
   videoPosterSmall: '/video/hero-story-sm.jpg',
 }
 
+// Not rendered in the hero any more: the rotating headline already cycles all
+// six, and the chips repeated them on the same screen. Kept for reuse.
 export const focusAreas = {
   kicker: 'Focus areas',
   items: [

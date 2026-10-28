@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import HeroMedia from './HeroMedia'
 import useTypewriter from './useTypewriter'
-import { hero, focusAreas, site } from '../data/content'
+import { hero, site } from '../data/content'
 
 // The longest phrase sizes the rotating line, so the heading reserves exactly the
 // height it needs at any viewport and the buttons below never shift as it cycles.
@@ -41,15 +41,6 @@ const Hero = forwardRef(function Hero(_, ref) {
               {hero.trust.map(([b, t]) => <span key={b}><b>{b}</b> {t}</span>)}
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="hero-focus">
-        <div className="wrap">
-          <p className="kicker">{focusAreas.kicker}</p>
-          <ul className="chips">
-            {focusAreas.items.map((f) => <li key={f}>{f}</li>)}
-          </ul>
         </div>
       </div>
     </section>
