@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import Img from './Img'
+import HeroMedia from './HeroMedia'
 import useTypewriter from './useTypewriter'
 import { hero, focusAreas, site } from '../data/content'
 
@@ -31,7 +31,12 @@ const Hero = forwardRef(function Hero(_, ref) {
           </div>
         </div>
         <div className="hero-photo">
-          <Img src={hero.image} alt={hero.imageAlt} loading="eager" fetchpriority="high" />
+          <HeroMedia
+            photo={hero.image}
+            alt={hero.imageAlt}
+            video={hero.video}
+            poster={hero.videoPoster}
+          />
         </div>
       </div>
 
