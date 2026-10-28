@@ -1,11 +1,11 @@
 # Hero video
 
-`hero-woodland.mp4` — silent 8s loop, 600x900, 1.05MB, h264.
-`hero-woodland.jpg` — poster frame, shown while the clip buffers.
+`hero-nutrition.mp4` — silent 7s loop, 600x900, 271KB, h264.
+`hero-nutrition.jpg` — poster frame, shown while the clip buffers.
 
-Source: Pexels video 15211027 (free commercial use, no attribution required),
-cut to a centre 2:3 crop to match the hero column. No people in frame, so it
-cannot be read as a patient.
+Source: Pexels video 19343491 (free commercial use, no attribution required),
+natively shot in portrait, cropped to 2:3 to match the hero column. Overhead
+still life, slow drift. No people in frame, so it cannot read as a patient.
 
 Desktop only. `HeroMedia.jsx` mounts the video above 1025px with reduced motion
 off; phones and reduced-motion visitors get the photograph of Dr Sarika and the
