@@ -599,7 +599,7 @@ header.is-tucked{transform:translateY(-100%)}
    Without the overlap the corners would cut through to the page background,
    which is white and belongs to neither band. The padding puts back the
    vertical space the negative margin takes away. */
-:root{--curve:clamp(28px,4.5vw,60px)}
+:root{--curve:clamp(44px,7.5vw,108px)}
 
 .band,.founder,.cardio,.faq,footer{
   position:relative;z-index:1;
