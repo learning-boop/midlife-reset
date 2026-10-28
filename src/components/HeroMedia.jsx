@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import Img from './Img'
 
-// The hero's right-hand column. Video is a desktop-only enhancement: on phones
-// autoplay is unreliable and the clip is a 1MB download on mobile data, and
-// under reduced motion it should not play at all. In both of those cases the
-// photograph of Dr Sarika stays — she is the reason people trust the page, so
-// she is the fallback rather than a frame of woodland.
-export default function HeroMedia({ photo, alt, video, poster }) {
+// The hero's background layer. Video is a desktop-only enhancement: on phones
+// autoplay is unreliable and it is a needless download on mobile data, and
+// under reduced motion it should not play at all. Both of those cases fall back
+// to the clip's own poster frame, so the composition is identical either way.
+export default function HeroMedia({ video, poster }) {
   const [useVideo, setUseVideo] = useState(false)
 
   useEffect(() => {
@@ -23,12 +22,11 @@ export default function HeroMedia({ photo, alt, video, poster }) {
   }, [])
 
   if (!useVideo) {
-    return <Img src={photo} alt={alt} loading="eager" fetchpriority="high" />
+    return <Img src={poster} alt="" loading="eager" fetchpriority="high" />
   }
 
   return (
     <video
-      className="hero-video"
       src={video}
       poster={poster}
       autoPlay

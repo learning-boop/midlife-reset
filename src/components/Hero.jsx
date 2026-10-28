@@ -31,12 +31,7 @@ const Hero = forwardRef(function Hero(_, ref) {
           </div>
         </div>
         <div className="hero-photo">
-          <HeroMedia
-            photo={hero.image}
-            alt={hero.imageAlt}
-            video={hero.video}
-            poster={hero.videoPoster}
-          />
+          <HeroMedia video={hero.video} poster={hero.videoPoster} />
         </div>
       </div>
 

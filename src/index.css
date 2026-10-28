@@ -485,3 +485,8 @@ header.is-tucked{transform:translateY(-100%)}
 /* Hero background clip. Sits in the same box as the photograph it replaces, so
    the existing green gradient over the column still does its work. */
 .hero-video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;background:var(--green-mid)}
+
+/* The hero column now carries the clip (or its poster) rather than a portrait,
+   so Dr Sarika appears once each in About, Nutrition and Ready to begin
+   instead of four times down the page. */
+.hero-photo img,.hero-photo video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
