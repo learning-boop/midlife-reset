@@ -21,7 +21,7 @@ export default function Nutrition() {
             </div>
           </div>
         </div>
-        <Img className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} data-reveal="clip" />
+        <Img className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} data-reveal />
       </div>
     </section>
   )

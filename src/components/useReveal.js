@@ -29,6 +29,20 @@ export default function useReveal() {
       io.observe(el)
     })
 
-    return () => io.disconnect()
+    // Failsafe: nothing may stay hidden because a reveal did not fire. Anything
+    // already past the top of the viewport is shown outright — content being
+    // invisible is always worse than missing its animation.
+    const sweep = () => {
+      for (const el of els) {
+        if (el.classList.contains('is-in')) continue
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('is-in')
+          io.unobserve(el)
+        }
+      }
+    }
+    const timer = setInterval(sweep, 1000)
+
+    return () => { io.disconnect(); clearInterval(timer) }
   }, [])
 }

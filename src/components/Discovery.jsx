@@ -16,7 +16,7 @@ export default function Discovery() {
             <a className="btn btn-ghost" href="#faq">Read the FAQs</a>
           </div>
         </div>
-        <Img src={discovery.image} alt={discovery.imageAlt} data-reveal="clip" />
+        <Img src={discovery.image} alt={discovery.imageAlt} data-reveal />
       </div>
     </section>
   )

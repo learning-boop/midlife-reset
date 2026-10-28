@@ -409,15 +409,15 @@ footer a:hover{color:#fff}
   transition:opacity .7s cubic-bezier(.22,.61,.36,1) var(--d,0ms),transform .7s cubic-bezier(.22,.61,.36,1) var(--d,0ms)}
 .reveal-ready [data-reveal].is-in{opacity:1;transform:none}
 
-/* Images wipe open from the bottom as they arrive. */
-.reveal-ready [data-reveal="clip"]{opacity:1;transform:none;clip-path:inset(0 0 100% 0);
-  transition:clip-path .9s cubic-bezier(.22,.61,.36,1) var(--d,0ms)}
-.reveal-ready [data-reveal="clip"].is-in{clip-path:inset(0 0 0 0)}
+/* NOTE: no clip-path reveal here. clip-path collapses the element's visible
+   area to zero, and IntersectionObserver measures intersection AFTER clipping,
+   so a clipped element never reports as intersecting and never gets revealed —
+   it hides itself from the observer that would show it. Reveals must use
+   properties that leave geometry intact (opacity, translate). */
 
 @media (prefers-reduced-motion:reduce){
   .fill-text .fw{color:var(--fill-on,var(--ink))!important}
-  .reveal-ready [data-reveal],
-  .reveal-ready [data-reveal="clip"]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+  .reveal-ready [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
 
 /* FAQ question text fills like a heading; the + stays pinned right. */

@@ -14,7 +14,7 @@ export default function About() {
           <ul className="creds">{about.creds.map((c) => <li key={c}>{c}</li>)}</ul>
           <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
         </div>
-        <Img src={about.image} alt={about.imageAlt} data-reveal="clip" />
+        <Img src={about.image} alt={about.imageAlt} data-reveal />
       </div>
     </section>
   )
