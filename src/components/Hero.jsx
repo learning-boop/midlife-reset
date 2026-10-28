@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import HeroMedia from './HeroMedia'
+import HeroMark from './HeroMark'
 import useTypewriter from './useTypewriter'
 import { hero, focusAreas, site } from '../data/content'
 
@@ -30,9 +30,7 @@ const Hero = forwardRef(function Hero(_, ref) {
             {hero.trust.map(([b, t]) => <span key={b}><b>{b}</b> {t}</span>)}
           </div>
         </div>
-        <div className="hero-photo">
-          <HeroMedia video={hero.video} poster={hero.videoPoster} />
-        </div>
+        <HeroMark />
       </div>
 
       <div className="hero-focus">

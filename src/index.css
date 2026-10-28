@@ -490,3 +490,29 @@ header.is-tucked{transform:translateY(-100%)}
    so Dr Sarika appears once each in About, Nutrition and Ready to begin
    instead of four times down the page. */
 .hero-photo img,.hero-photo video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+
+/* ─── Hero panel built from the brand mark ───────────────── */
+.hero-mark{position:relative;overflow:hidden;background:var(--green);
+  display:grid;place-items:center;
+  /* tonal rings so the mark sits in the green rather than on top of it */
+  --mark-ring-outer:rgba(255,255,255,.16);
+  --mark-ring-inner:rgba(255,255,255,.11);
+  --mark-dot:rgba(255,255,255,.8)}
+/* oversized and pushed right, so the panel edge crops it */
+.hero-mark .mark{width:150%;height:150%;max-width:none;
+  transform:translateX(14%);animation:markdrift 48s ease-in-out infinite}
+@keyframes markdrift{
+  0%,100%{transform:translateX(14%) scale(1)}
+  50%{transform:translateX(14%) scale(1.045)}
+}
+/* a soft green wash at the seam, matching the photo treatment it replaces */
+.hero-mark::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--green) 0%,rgba(31,61,51,0) 32%)}
+@media (prefers-reduced-motion:reduce){.hero-mark .mark{animation:none}}
+@media (max-width:1024px){
+  .hero-mark{min-height:320px;order:-1}
+  .hero-mark .mark{width:118%;height:118%;transform:translateX(6%)}
+  @keyframes markdrift{0%,100%{transform:translateX(6%) scale(1)}50%{transform:translateX(6%) scale(1.03)}}
+  .hero-mark::after{background:linear-gradient(180deg,rgba(31,61,51,.3),rgba(31,61,51,0) 45%)}
+}
+@media (max-width:640px){.hero-mark{min-height:240px}}
