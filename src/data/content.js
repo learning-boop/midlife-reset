@@ -97,12 +97,12 @@ export const pillars = {
   intro:
     'Rather than treating symptoms in isolation, lifestyle medicine looks at how you nourish your body, move, sleep, manage stress, connect with others and build habits that stick. The aim isn’t perfection — it’s realistic change that supports your health now and later.',
   items: [
-    ['Nutrition', 'Supporting balanced, sustainable eating patterns that nourish your body and support metabolic health.'],
-    ['Physical activity', 'Helping you build enjoyable movement into your lifestyle.'],
-    ['Strength & muscle health', 'Supporting strength, independence and healthy ageing through resistance-based activity.'],
-    ['Sleep', 'Improving sleep habits to support energy, recovery and wellbeing.'],
-    ['Stress & emotional wellbeing', 'Developing strategies to improve resilience, balance and coping.'],
-    ['Social connection', 'Recognising the importance of relationships, belonging and support.'],
+    ['Nutrition', 'Supporting balanced, sustainable eating patterns that nourish your body and support metabolic health.', '/images/pillars/nutrition.jpg'],
+    ['Physical activity', 'Helping you build enjoyable movement into your lifestyle.', '/images/pillars/activity.jpg'],
+    ['Strength & muscle health', 'Supporting strength, independence and healthy ageing through resistance-based activity.', '/images/pillars/strength.jpg'],
+    ['Sleep', 'Improving sleep habits to support energy, recovery and wellbeing.', '/images/pillars/sleep.jpg'],
+    ['Stress & emotional wellbeing', 'Developing strategies to improve resilience, balance and coping.', '/images/pillars/wellbeing.jpg'],
+    ['Social connection', 'Recognising the importance of relationships, belonging and support.', '/images/pillars/connection.jpg'],
   ],
 }
 

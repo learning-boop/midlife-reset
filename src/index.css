@@ -540,3 +540,30 @@ header.is-tucked{transform:translateY(-100%)}
   .hero-bed{min-height:520px}
   .hero-inner{padding-block:48px}
 }
+
+/* ─── Lifestyle Medicine cards: image + number badge ──────── */
+.six>article{background:#fff;border:1px solid var(--line);border-radius:var(--r-img);
+  overflow:hidden;display:flex;flex-direction:column}
+.six-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--sand-deep)}
+.six-img img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+/* the number moves off the card body and onto the image corner */
+.six-img .ico{position:absolute;left:14px;bottom:14px;margin:0;
+  background:rgba(255,255,255,.92);color:var(--sage-deep);
+  font-family:var(--serif);font-size:13px;letter-spacing:.06em;
+  padding:3px 10px;border-radius:var(--r-pill);backdrop-filter:blur(4px)}
+.six>article>h3{margin:22px 26px 8px}
+.six>article>p{margin:0 26px 26px;font-size:15px}
+
+@media (hover:hover){
+  .six>article:hover .six-img img{transform:scale(1.06)}
+}
+@media (prefers-reduced-motion:reduce){
+  .six-img img{transition:none}
+  .six>article:hover .six-img img{transform:none}
+}
+@media (max-width:640px){
+  .six>article>h3{margin:18px 20px 6px}
+  .six>article>p{margin:0 20px 20px}
+  .six-img .ico{left:12px;bottom:12px}
+}
