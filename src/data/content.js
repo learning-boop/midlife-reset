@@ -49,6 +49,7 @@ export const hero = {
   video: '/video/hero-story.mp4',
   videoSmall: '/video/hero-story-sm.mp4',
   videoPoster: '/video/hero-story.jpg',
+  videoPosterSmall: '/video/hero-story-sm.jpg',
 }
 
 export const focusAreas = {
