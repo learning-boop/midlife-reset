@@ -210,12 +210,35 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .nutri-img{border-radius:var(--r-card);aspect-ratio:4/5;object-fit:cover;background:var(--sand-deep)}
 
 /* journey */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:50px}
-.steps5{grid-template-columns:repeat(5,1fr);gap:26px}
-.step{border-top:2px solid var(--sage-soft);padding-top:22px}
-.step .n{font-family:var(--serif);font-size:15px;letter-spacing:.08em;color:var(--terracotta);margin-bottom:12px}
-.step h3{font-size:20px;margin-bottom:8px}
-.step p{font-size:14.5px}
+/* Deep green gives the section the weight its neighbours have, and makes the
+   terracotta progress line the brightest thing in it. */
+.journey{background:var(--green);color:#fff}
+.journey .kicker{color:#9FB3AA}
+.journey .kicker::before{background:var(--terracotta)}
+.journey h2{color:#fff}
+
+.track5{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:30px;margin-top:62px;position:relative}
+/* the track and its fill sit behind the markers, centred on them */
+.track-line{position:absolute;left:0;right:0;top:21px;height:2px;
+  background:rgba(255,255,255,.16);overflow:hidden}
+.track-line i{display:block;height:100%;background:var(--terracotta);
+  transform:scaleX(var(--p,0));transform-origin:0 50%}
+.stop{position:relative;padding-top:60px}
+.marker{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;
+  display:grid;place-items:center;box-sizing:border-box;
+  font-family:var(--serif);font-size:15px;letter-spacing:.04em;
+  background:var(--green);border:1.5px solid rgba(255,255,255,.26);
+  color:rgba(255,255,255,.5);
+  transition:background .45s,border-color .45s,color .45s}
+.stop.on .marker{background:var(--terracotta);border-color:var(--terracotta);color:#fff}
+.stop h3{font-size:20px;margin-bottom:8px;color:#fff;line-height:1.2}
+.stop p{font-size:15.5px;color:#C9D6D0}
+
+@media (prefers-reduced-motion:reduce){
+  .track-line i{transform:scaleX(1)}
+  .marker{transition:none}
+}
 
 /* why */
 .whysec{background:var(--sand)}
@@ -457,29 +480,7 @@ header.is-tucked{transform:translateY(-100%)}
   .cardio-col:hover{border-color:rgba(255,255,255,.4)}
 }
 
-/* ─── Journey as a connected timeline ────────────────────── */
-.track5{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
-  gap:26px;margin-top:54px;position:relative;counter-reset:none}
-/* the line runs through the markers, behind them */
-.track5::before{content:"";position:absolute;left:0;right:0;top:7px;height:2px;
-  background:var(--sage-soft)}
-.stop{position:relative;padding-top:30px}
-.stop .dot{position:absolute;top:0;left:0;width:16px;height:16px;border-radius:50%;
-  background:var(--sand);border:2px solid var(--sage-deep);box-sizing:border-box}
-.stop:first-child .dot{background:var(--terracotta);border-color:var(--terracotta)}
-.stop .n{font-family:var(--serif);font-size:14px;letter-spacing:.08em;
-  color:var(--terracotta);margin-bottom:8px}
-.stop h3{font-size:19px;margin-bottom:6px}
-.stop p{font-size:15.5px}
-
-@media (max-width:1024px){
-  .track5{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
-  .track5::before{display:none}
-  .stop{padding-top:0;padding-left:30px}
-  .stop .dot{top:5px}
-}
 @media (max-width:640px){
-  .track5{grid-template-columns:minmax(0,1fr);gap:24px}
   .progress{height:2px}
 }
 
@@ -692,10 +693,6 @@ header.is-tucked{transform:translateY(-100%)}
 .six>article:nth-child(3n+2) .ico{background:var(--clay-soft);color:var(--terracotta-deep)}
 .six>article:nth-child(3n) .ico{background:var(--plum-soft);color:var(--plum-dark)}
 
-/* journey markers alternate down the line */
-.stop:nth-child(even) .dot{border-color:var(--terracotta)}
-.stop:nth-child(even) .n{color:var(--sage-deep)}
-
 /* price emphasis, and a warmer ground on the popular tier */
 .tier.pop{background:var(--clay-soft)}
 .appt-meta{color:var(--terracotta-deep)}
@@ -703,4 +700,23 @@ header.is-tucked{transform:translateY(-100%)}
 @media (max-width:640px){
   /* the accent rule reads as clutter at phone width, where cards are full bleed */
   .explainer .def,.explainer-alt .def{border-left-width:2px}
+}
+
+/* ─── Journey at narrow widths ───────────────────────────── */
+@media (max-width:1024px){
+  .track5{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 34px}
+  /* a horizontal line cannot span a wrapped grid, so each stop carries its own
+     vertical connector instead */
+  .track-line{display:none}
+  .stop{padding-top:0;padding-left:62px}
+  .marker{top:-2px}
+  .stop::before{content:"";position:absolute;left:21px;top:46px;bottom:-40px;
+    width:2px;background:rgba(255,255,255,.14)}
+  .stop:last-child::before,.stop:nth-last-child(2)::before{display:none}
+}
+@media (max-width:640px){
+  .track5{grid-template-columns:minmax(0,1fr);gap:34px}
+  .stop:nth-last-child(2)::before{display:block}
+  .stop:last-child::before{display:none}
+  .stop::before{bottom:-34px}
 }
