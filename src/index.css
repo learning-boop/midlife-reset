@@ -593,3 +593,97 @@ header.is-tucked{transform:translateY(-100%)}
   .prog-switch button{flex:1;padding:11px 10px;font-size:13.5px;text-align:center}
 }
 
+
+/* ─── Link underlines that draw in ───────────────────────── */
+.link,.nav-links a,.fcontact a,.fgrid li a{position:relative}
+.link::after,.nav-links a::after,.fgrid li a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+  background:currentColor;transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .32s cubic-bezier(.22,.61,.36,1)}
+@media (hover:hover){
+  .link:hover::after,.nav-links a:hover::after,.fgrid li a:hover::after{transform:scaleX(1)}
+}
+.link:focus-visible::after,.nav-links a:focus-visible::after,.fgrid li a:focus-visible::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){
+  .link::after,.nav-links a::after,.fgrid li a::after{transition:none}
+}
+
+/* ─── Accreditation ticker ───────────────────────────────── */
+.creds-strip{background:var(--green-deep);border-top:1px solid rgba(255,255,255,.1);
+  overflow:hidden;padding:18px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.creds-track{display:flex;width:max-content;animation:ticker 48s linear infinite}
+.creds-track>span{display:flex;align-items:center;gap:34px;padding-right:34px;
+  font-size:13.5px;color:#CFDAD3;white-space:nowrap}
+.creds-track b{font-weight:400;display:flex;align-items:center;gap:12px}
+.creds-track b::before{content:"";width:5px;height:5px;border-radius:50%;
+  background:var(--sage);flex:none}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (hover:hover){.creds-strip:hover .creds-track{animation-play-state:paused}}
+@media (prefers-reduced-motion:reduce){.creds-track{animation:none}}
+
+/* ─── Photo band parallax ────────────────────────────────── */
+/* the image is taller than its frame so it can travel without showing an edge */
+.photoband img{height:124%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
+@media (prefers-reduced-motion:reduce){.photoband img{height:100%;transform:none}}
+
+/* ─── Assessments as stacking cards ──────────────────────── */
+/* Each card sticks a little lower than the one before, so they pile up as the
+   reader scrolls instead of sitting side by side. Only above 1024px: on a phone
+   the viewport is too short to hold a stack and it just traps the scroll. */
+@media (min-width:1025px){
+  .cgrid{display:block;max-width:860px;margin:0 auto}
+  .cgrid .ccard{position:sticky;margin-bottom:28px;
+    box-shadow:0 -14px 34px rgba(31,61,51,.07)}
+  .cgrid .ccard:nth-child(1){top:120px}
+  .cgrid .ccard:nth-child(2){top:150px}
+  .cgrid .ccard:nth-child(3){top:180px}
+  /* the last card needs room beneath it or the stack never finishes forming */
+  .cgrid::after{content:"";display:block;height:30vh}
+  .ccard ul{grid-template-columns:1fr 1fr}
+}
+
+/* ─── Pinned mechanism walkthrough ───────────────────────── */
+/* The five mechanisms are the densest thing on the page. Above 1024px the
+   block pins and they advance one at a time; below it they stay a plain list,
+   because pinning on a short viewport reads as the page having frozen. */
+@media (min-width:1025px){
+  .mech.is-pinned{position:relative}
+  /* the stage fills the screen while pinned and centres its content, so the
+     runway's remaining height never shows as a band of empty ground below it.
+     The padding keeps the content clear of the header when it slides back in. */
+  .mech.is-pinned .mech-stage{position:sticky;top:0;min-height:100vh;
+    display:grid;grid-template-columns:210px 1fr;
+    gap:52px;align-content:center;padding:120px 0}
+  .mech.is-pinned .mech-rail{display:grid;gap:10px;align-content:start}
+  .mech.is-pinned .mech-rail button{appearance:none;background:none;border:0;
+    cursor:pointer;font:inherit;text-align:left;padding:7px 0 7px 20px;
+    position:relative;color:rgba(255,255,255,.4);font-size:14px;
+    transition:color .3s}
+  .mech.is-pinned .mech-rail button::before{content:"";position:absolute;
+    left:0;top:50%;width:9px;height:1px;background:currentColor;
+    transform:translateY(-50%) scaleX(.6);transform-origin:0 50%;
+    transition:transform .3s}
+  .mech.is-pinned .mech-rail button.on{color:#fff}
+  .mech.is-pinned .mech-rail button.on::before{transform:translateY(-50%) scaleX(1.8);
+    background:var(--sage)}
+  /* tall enough for the longest mechanism, so the block never resizes as
+     slides change, but no taller — extra height reads as a void */
+  .mech.is-pinned .mech-slides{position:relative;min-height:188px}
+  .mech.is-pinned .mech-slide{position:absolute;inset:0;opacity:0;
+    transform:translateY(14px);pointer-events:none;
+    transition:opacity .45s cubic-bezier(.22,.61,.36,1),transform .45s cubic-bezier(.22,.61,.36,1)}
+  .mech.is-pinned .mech-slide.on{opacity:1;transform:none;pointer-events:auto}
+  .mech.is-pinned .mech-slide .n{font-family:var(--serif);font-size:15px;
+    letter-spacing:.08em;color:var(--sage);margin-bottom:12px}
+  .mech.is-pinned .mech-slide h4{font-family:var(--serif);font-weight:400;
+    font-size:clamp(22px,2.4vw,30px);color:#fff;margin-bottom:12px;line-height:1.18}
+  .mech.is-pinned .mech-slide p{color:#C9D6D0;font-size:16.5px;max-width:56ch}
+  /* the scroll distance the pin consumes: one viewport per mechanism */
+  .mech.is-pinned .mech-runway{height:calc(5 * 46vh)}
+  .mech.is-pinned .mech-list{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .mech.is-pinned .mech-slide{transition:none}
+}

@@ -17,6 +17,7 @@ import Mailing from './components/Mailing'
 import Footer from './components/Footer'
 import PhotoBand from './components/PhotoBand'
 import ProgressBar from './components/ProgressBar'
+import CredsStrip from './components/CredsStrip'
 import StickyBar from './components/StickyBar'
 import useReveal from './components/useReveal'
 import { menopause, longevity } from './data/content'
@@ -29,6 +30,7 @@ export default function App() {
       <ProgressBar />
       <Header />
       <Hero ref={heroRef} />
+      <CredsStrip />
       <StatsBand />
       <About />
       <Pillars />

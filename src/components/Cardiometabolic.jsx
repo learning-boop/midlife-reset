@@ -1,5 +1,6 @@
 import { cardiometabolic as c } from '../data/content'
 import FillText from './FillText'
+import Mechanisms from './Mechanisms'
 
 export default function Cardiometabolic() {
   return (
@@ -20,18 +21,7 @@ export default function Cardiometabolic() {
           ))}
         </div>
 
-        <div className="mech">
-          <h3>{c.why.title}</h3>
-          <p className="lede">{c.why.intro}</p>
-          <ol className="mech-list">
-            {c.why.items.map(([term, body]) => (
-              <li key={term}>
-                <h4>{term}</h4>
-                <p>{body}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
+        <Mechanisms title={c.why.title} intro={c.why.intro} items={c.why.items} />
 
         <div className="cardio-outro">
           {c.outro.map((p) => <p key={p}>{p}</p>)}
