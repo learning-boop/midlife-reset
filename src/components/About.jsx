@@ -1,18 +1,20 @@
 import Img from './Img'
 import { about, site } from '../data/content'
+import FillText from './FillText'
+
 export default function About() {
   return (
     <section className="founder" id="about">
       <div className="wrap">
         <div>
           <p className="kicker">{about.kicker}</p>
-          <h2>{about.title}</h2>
+          <FillText>{about.title}</FillText>
           <blockquote>“{about.quote}”</blockquote>
           {about.body.map((p) => <p key={p}>{p}</p>)}
           <ul className="creds">{about.creds.map((c) => <li key={c}>{c}</li>)}</ul>
           <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
         </div>
-        <Img src={about.image} alt={about.imageAlt} />
+        <Img src={about.image} alt={about.imageAlt} data-reveal="clip" />
       </div>
     </section>
   )

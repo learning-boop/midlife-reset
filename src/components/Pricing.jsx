@@ -1,4 +1,6 @@
 import { consultations, programmes, site } from '../data/content'
+import FillText from './FillText'
+
 function Tiers({ block }) {
   return (
     <div className="prog" id={block.id}>
@@ -9,7 +11,7 @@ function Tiers({ block }) {
       </div>
       <div className="tiers">
         {block.tiers.map((t) => (
-          <div className={`tier${t.popular ? ' pop' : ''}`} key={t.name}>
+          <div className={`tier${t.popular ? ' pop' : ''}`} key={t.name} data-reveal>
             {t.popular && <span className="tag">Most popular</span>}
             <div className="lvl">{t.level}</div>
             <h4>{t.name}</h4>
@@ -31,13 +33,13 @@ export default function Pricing() {
       <div className="wrap">
         <div className="prog-head">
           <p className="kicker">{consultations.kicker}</p>
-          <h2>{consultations.title}</h2>
+          <FillText>{consultations.title}</FillText>
           <p className="lede">{consultations.intro}</p>
         </div>
 
         <div className="appts">
           {consultations.items.map((a) => (
-            <div className="appt" key={a.name}>
+            <div className="appt" key={a.name} data-reveal>
               <div className="appt-top">
                 <h3>{a.name}</h3>
                 <div className="price">{a.price}</div>

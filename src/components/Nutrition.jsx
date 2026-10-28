@@ -1,12 +1,14 @@
 import Img from './Img'
 import { nutrition } from '../data/content'
+import FillText from './FillText'
+
 export default function Nutrition() {
   return (
     <section className="nutri" id="nutrition">
       <div className="wrap">
         <div className="nutri-copy">
           <p className="kicker">{nutrition.kicker}</p>
-          <h2>{nutrition.title}</h2>
+          <FillText>{nutrition.title}</FillText>
           <p className="lede">{nutrition.intro}</p>
           <div className="cols">
             <div>
@@ -19,7 +21,7 @@ export default function Nutrition() {
             </div>
           </div>
         </div>
-        <Img className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} />
+        <Img className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} data-reveal="clip" />
       </div>
     </section>
   )
