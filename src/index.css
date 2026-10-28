@@ -592,3 +592,31 @@ header.is-tucked{transform:translateY(-100%)}
   .prog-switch{display:flex;width:100%;margin-bottom:26px}
   .prog-switch button{flex:1;padding:11px 10px;font-size:13.5px;text-align:center}
 }
+
+/* ─── Curved section transitions ─────────────────────────── */
+/* Each curved section slides up over the one before it by exactly its own
+   radius, so its rounded top corners reveal the previous section's colour.
+   Without the overlap the corners would cut through to the page background,
+   which is white and belongs to neither band. The padding puts back the
+   vertical space the negative margin takes away. */
+:root{--curve:clamp(28px,4.5vw,60px)}
+
+.band,.founder,.cardio,.faq,footer{
+  position:relative;z-index:1;
+  margin-top:calc(var(--curve) * -1);
+  border-top-left-radius:var(--curve);
+  border-top-right-radius:var(--curve)}
+
+/* sections set their vertical rhythm with the section padding, so the overlap
+   is added back on top of it */
+.band{padding-top:calc(72px + var(--curve))}
+.founder,.cardio,.faq{padding-top:calc(var(--sp-section) + var(--curve))}
+footer{padding-top:calc(72px + var(--curve))}
+
+/* the hero sits under the first curve, so nothing may clip it there */
+.hero{overflow:visible}
+.hero-bed{overflow:hidden;border-bottom-left-radius:0;border-bottom-right-radius:0}
+
+@media (max-width:640px){
+  .band{padding-top:calc(52px + var(--curve))}
+}
