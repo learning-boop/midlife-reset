@@ -44,11 +44,10 @@ export const hero = {
   ],
   image: '/images/dr-sarika-seated.jpg',
   imageAlt: 'Dr Sarika Gorantyal, GP and Lifestyle Medicine physician',
-  // Desktop-only background clip; the photo above stays on phones and under
-  // reduced motion. Silent 7s loop, no people in frame.
-  // Pexels 19343491, free commercial use.
-  video: '/video/hero-nutrition.mp4',
-  videoPoster: '/video/hero-nutrition.jpg',
+  // Desktop-only background clip; phones and reduced-motion visitors get the
+  // poster frame instead. Silent 8s loop. Pexels 6293287, free commercial use.
+  video: '/video/hero-movement.mp4',
+  videoPoster: '/video/hero-movement.jpg',
 }
 
 export const focusAreas = {
