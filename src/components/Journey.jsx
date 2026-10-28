@@ -7,15 +7,16 @@ export default function Journey() {
       <div className="wrap">
         <p className="kicker">{journey.kicker}</p>
         <FillText>{journey.title}</FillText>
-        <div className="steps steps5">
+        <ol className="track5">
           {journey.steps.map(([title, body], i) => (
-            <div className="step" key={title} data-reveal>
+            <li className="stop" key={title} data-reveal>
+              <span className="dot" aria-hidden="true" />
               <div className="n">{String(i + 1).padStart(2, '0')}</div>
               <h3>{title}</h3>
               <p>{body}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

@@ -1,11 +1,34 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { nav, site } from '../data/content'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const last = useRef(0)
+
+  // Retreats on the way down and comes straight back on the way up. Never
+  // hides while the menu is open, or near the top where it belongs on screen.
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let frame = 0
+    const read = () => {
+      frame = 0
+      const y = window.scrollY
+      const down = y > last.current
+      if (y < 140) setHidden(false)
+      else if (Math.abs(y - last.current) > 6) setHidden(down)
+      last.current = y
+    }
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(read) }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => { window.removeEventListener('scroll', onScroll); if (frame) cancelAnimationFrame(frame) }
+  }, [])
+
+  useEffect(() => { if (open) setHidden(false) }, [open])
+
   return (
-    <header>
+    <header className={hidden && !open ? 'is-tucked' : ''}>
       <div className="wrap nav">
         <Logo />
         <nav className="nav-links">

@@ -432,3 +432,52 @@ details[open] .faq-q{--p:1}
 .photoband::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(90deg,rgba(31,61,51,.34),rgba(31,61,51,0) 28%,rgba(31,61,51,0) 72%,rgba(31,61,51,.34))}
 @media (max-width:640px){.photoband{height:clamp(200px,52vw,280px)}}
+
+/* ─── Scroll chrome ──────────────────────────────────────── */
+
+/* Reading progress. Pinned above the header so it survives the header tucking
+   away; scaleX keeps it off the main thread. */
+.progress{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:3px;z-index:60;
+  background:rgba(31,61,51,.1);pointer-events:none}
+.progress span{display:block;height:100%;background:var(--terracotta);
+  transform:scaleX(0);transform-origin:0 50%;will-change:transform}
+
+/* Header retreats on the way down, returns on the way up. */
+header{transition:transform .32s cubic-bezier(.22,.61,.36,1)}
+header.is-tucked{transform:translateY(-100%)}
+
+/* ─── Card hover ─────────────────────────────────────────── */
+@media (hover:hover){
+  .six>div,.def,.ccard,.appt,.tier{transition:transform .22s ease,border-color .22s ease}
+  .six>div:hover,.def:hover,.ccard:hover,.appt:hover,.tier:hover{
+    transform:translateY(-3px);border-color:var(--sage-deep)}
+  .tier.pop:hover{border-color:var(--plum-dark)}
+  .cardio-col{transition:border-color .22s ease}
+  .cardio-col:hover{border-color:rgba(255,255,255,.4)}
+}
+
+/* ─── Journey as a connected timeline ────────────────────── */
+.track5{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:26px;margin-top:54px;position:relative;counter-reset:none}
+/* the line runs through the markers, behind them */
+.track5::before{content:"";position:absolute;left:0;right:0;top:7px;height:2px;
+  background:var(--sage-soft)}
+.stop{position:relative;padding-top:30px}
+.stop .dot{position:absolute;top:0;left:0;width:16px;height:16px;border-radius:50%;
+  background:var(--sand);border:2px solid var(--sage-deep);box-sizing:border-box}
+.stop:first-child .dot{background:var(--terracotta);border-color:var(--terracotta)}
+.stop .n{font-family:var(--serif);font-size:14px;letter-spacing:.08em;
+  color:var(--terracotta);margin-bottom:8px}
+.stop h3{font-size:19px;margin-bottom:6px}
+.stop p{font-size:14.5px}
+
+@media (max-width:1024px){
+  .track5{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
+  .track5::before{display:none}
+  .stop{padding-top:0;padding-left:30px}
+  .stop .dot{top:5px}
+}
+@media (max-width:640px){
+  .track5{grid-template-columns:minmax(0,1fr);gap:24px}
+  .progress{height:2px}
+}
