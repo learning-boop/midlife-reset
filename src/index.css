@@ -630,51 +630,6 @@ header.is-tucked{transform:translateY(-100%)}
 .photoband img{height:124%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
 @media (prefers-reduced-motion:reduce){.photoband img{height:100%;transform:none}}
 
-/* ─── Pinned mechanism walkthrough ───────────────────────── */
-/* The five mechanisms are the densest thing on the page. Above 1024px the
-   block pins and they advance one at a time; below it they stay a plain list,
-   because pinning on a short viewport reads as the page having frozen. */
-@media (min-width:1025px){
-  .mech.is-pinned{position:relative}
-  /* the stage fills the screen while pinned and centres its content, so the
-     runway's remaining height never shows as a band of empty ground below it.
-     The padding keeps the content clear of the header when it slides back in. */
-  .mech.is-pinned .mech-stage{position:sticky;top:0;min-height:100vh;
-    display:grid;grid-template-columns:210px 1fr;
-    gap:52px;align-content:center;padding:120px 0}
-  .mech.is-pinned .mech-rail{display:grid;gap:10px;align-content:start}
-  .mech.is-pinned .mech-rail button{appearance:none;background:none;border:0;
-    cursor:pointer;font:inherit;text-align:left;padding:7px 0 7px 20px;
-    position:relative;color:rgba(255,255,255,.4);font-size:14px;
-    transition:color .3s}
-  .mech.is-pinned .mech-rail button::before{content:"";position:absolute;
-    left:0;top:50%;width:9px;height:1px;background:currentColor;
-    transform:translateY(-50%) scaleX(.6);transform-origin:0 50%;
-    transition:transform .3s}
-  .mech.is-pinned .mech-rail button.on{color:#fff}
-  .mech.is-pinned .mech-rail button.on::before{transform:translateY(-50%) scaleX(1.8);
-    background:var(--sage)}
-  /* tall enough for the longest mechanism, so the block never resizes as
-     slides change, but no taller — extra height reads as a void */
-  .mech.is-pinned .mech-slides{position:relative;min-height:188px}
-  .mech.is-pinned .mech-slide{position:absolute;inset:0;opacity:0;
-    transform:translateY(14px);pointer-events:none;
-    transition:opacity .45s cubic-bezier(.22,.61,.36,1),transform .45s cubic-bezier(.22,.61,.36,1)}
-  .mech.is-pinned .mech-slide.on{opacity:1;transform:none;pointer-events:auto}
-  .mech.is-pinned .mech-slide .n{font-family:var(--serif);font-size:15px;
-    letter-spacing:.08em;color:var(--sage);margin-bottom:12px}
-  .mech.is-pinned .mech-slide h4{font-family:var(--serif);font-weight:400;
-    font-size:clamp(22px,2.4vw,30px);color:#fff;margin-bottom:12px;line-height:1.18}
-  .mech.is-pinned .mech-slide p{color:#C9D6D0;font-size:16.5px;max-width:56ch}
-  /* the scroll distance the pin consumes: one viewport per mechanism */
-  .mech.is-pinned .mech-runway{height:calc(5 * 46vh)}
-  .mech.is-pinned .mech-list{display:none}
-}
-@media (prefers-reduced-motion:reduce){
-  .mech.is-pinned .mech-slide{transition:none}
-}
-
-
 /* ─── More colour across the page ────────────────────────── */
 /* Sand, white and green alone made every other section read the same. These
    grounds are mixed from the sage and terracotta already in the logo, so the
