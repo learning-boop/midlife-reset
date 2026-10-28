@@ -336,7 +336,7 @@ footer a:hover{color:#fff}
 
 /* ─── phone ──────────────────────────────────────────────── */
 @media (max-width:640px){
-  :root{--sp-section:64px}
+  :root{--sp-section:44px}
   html{scroll-padding-top:76px}
   .nav{height:64px}
   .logo{font-size:15px}
@@ -781,4 +781,31 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 
 @media (max-width:640px){
   .founder .shot{position:static;width:100%;max-width:460px}
+}
+
+/* ═══ Phone length ════════════════════════════════════════
+   At 375px the page ran 21,023px, and the six Lifestyle Medicine cards were
+   2,160px of it — 1,266px of that six full-width photographs stacked one above
+   another. The cards turn side-on, so each photograph becomes a thumbnail as
+   tall as its own text instead of a band of its own. Nothing is dropped. */
+@media (max-width:640px){
+  .six>article{display:grid;grid-template-columns:112px minmax(0,1fr);
+    grid-template-rows:auto auto;align-content:center;min-height:124px}
+  /* explicit placement: left to auto-flow, the heading would land beside the
+     photograph and the body text underneath it */
+  .six-img{grid-column:1;grid-row:1/3;aspect-ratio:auto;height:100%}
+  .six>article>h3{grid-column:2;grid-row:1;align-self:end;
+    margin:0 16px 5px 15px;font-size:19px}
+  .six>article>p{grid-column:2;grid-row:2;align-self:start;
+    margin:0 16px 0 15px;font-size:14.5px}
+  .six-img .ico{left:8px;bottom:8px;font-size:12px;padding:2px 7px}
+  /* the cards carried desktop-sized interiors */
+  .def,.cardio-col,.appt,.tier,.ccard{padding:22px 18px}
+  /* stacked cards sat on gaps sized for a three-across desktop grid */
+  .six,.cgrid,.appts,.tiers,.why,.defs,.cardio-cols,.cols,.band-stats{gap:16px}
+  .mech-list{gap:14px;margin-top:22px}
+  .mech-list li{padding-top:14px}
+  /* the tall portraits are the last of it: 4/5 at 339px wide is a 424px band,
+     and a square crop holds the same subject in 85px less */
+  .founder .shot img,.nutri-img{aspect-ratio:1}
 }
