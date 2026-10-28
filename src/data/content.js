@@ -2,8 +2,8 @@
 // Source: client deck "the-midlife-reset" (22pp), supplied 2026-10-27.
 
 export const site = {
-  name: 'The Midlife Reset',
-  nameShort: 'The Midlife Reset',
+  name: 'The Reset and Longevity Clinic',
+  nameShort: 'The Reset & Longevity Clinic',
   domain: 'themidlifereset.uk',
   bookingUrl: '#discovery', // TODO: replace with Cal.com / booking link
   email: 'mailto:hello@themidlifereset.uk', // TODO: confirm

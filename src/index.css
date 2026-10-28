@@ -7,6 +7,7 @@
   --ink:#1E2A26; --muted:#5B6863; --line:#E2DED5; --white:#fff;
   /* from the logo mark */
   --sage:#8C9B75; --sage-deep:#6F7D5A; --sage-soft:#E9EDE2;
+  --sage-tint:#DFE6D7; --clay-soft:#F7EBE4; --clay-tint:#F0DDD2;
   --terracotta:#B56D57; --terracotta-deep:#95513D;
   --gold:#A89A6B;
   --serif:"Newsreader",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
@@ -17,12 +18,12 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.12}
-h2{font-size:clamp(29px,3.5vw,44px)}
-h3{font-size:clamp(21px,2.1vw,26px)}
+h2{font-size:clamp(32px,3.9vw,50px)}
+h3{font-size:clamp(22px,2.3vw,29px)}
 p{color:var(--muted)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:var(--sp-section) 0}
@@ -30,7 +31,7 @@ section{padding:var(--sp-section) 0}
 .kicker::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-right:9px;vertical-align:middle;position:relative;top:-1px}
 .center .kicker::before{margin-left:-15px}
 .center{text-align:center}
-.lede{font-size:clamp(16px,1.4vw,18px);line-height:1.65;max-width:68ch}
+.lede{font-size:clamp(17px,1.5vw,20px);line-height:1.65;max-width:66ch}
 .center .lede{margin-left:auto;margin-right:auto}
 
 /* buttons */
@@ -76,7 +77,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .rot{border-right:2px solid rgba(255,255,255,.7);padding-right:4px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{border-color:transparent}}
 @media (prefers-reduced-motion:reduce){.rot{animation:none}}
-.hero-intro{color:#D5E0DB;font-size:17px;line-height:1.65;max-width:52ch;margin-bottom:32px}
+.hero-intro{color:#D5E0DB;font-size:18.5px;line-height:1.65;max-width:52ch;margin-bottom:32px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
 .trust{display:flex;flex-wrap:wrap;gap:12px 26px;font-size:13px;color:#CFDAD3}
 .trust span{display:flex;align-items:center;gap:7px}
@@ -117,7 +118,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .six{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .six>div{background:#fff;border:1px solid var(--line);border-radius:var(--r-img);padding:30px}
 .six .ico{display:inline-block;font-family:var(--serif);font-size:15px;color:var(--sage-deep);background:var(--sage-soft);border-radius:var(--r-pill);padding:4px 11px;margin-bottom:16px;letter-spacing:.04em}
-.six h3{font-size:21px;margin-bottom:8px}
+.six h3{font-size:22px;margin-bottom:8px}
 .six p{font-size:15px}
 
 /* explainer sections (menopause / longevity) */
@@ -126,7 +127,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .def{border:1px solid var(--line);border-radius:var(--r-card);padding:34px 32px;background:#fff;position:relative}
 .def-n{font-family:var(--serif);font-size:14px;color:var(--terracotta);letter-spacing:.08em}
 .def h3{margin:10px 0 10px}
-.def p{font-size:15.5px}
+.def p{font-size:16.5px}
 .quotes-intro{max-width:68ch;margin-bottom:24px;font-size:16.5px}
 .quotes{list-style:none;display:grid;gap:14px;max-width:860px}
 .quotes blockquote{font-family:var(--serif);font-size:clamp(18px,1.9vw,22px);line-height:1.4;font-weight:300;color:var(--ink);background:var(--sand);border-left:3px solid var(--terracotta);border-radius:0 12px 12px 0;padding:20px 26px}
@@ -147,7 +148,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .cardio-col{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-card);padding:30px 32px}
 .cardio-col h3{color:#fff;font-size:21px;margin-bottom:16px}
 .cardio-col ul{list-style:none;display:grid;gap:10px}
-.cardio-col li{font-size:15px;color:#DDE6E1;padding-left:22px;position:relative}
+.cardio-col li{font-size:16px;color:#DDE6E1;padding-left:22px;position:relative}
 .cardio-col li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--terracotta)}
 .cardio-col.is-focus li::before{background:var(--sage)}
 .mech h3{color:#fff;margin-bottom:14px}
@@ -155,7 +156,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .mech-list li{counter-increment:m;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
 .mech-list li::before{content:counter(m,decimal-leading-zero);font-family:var(--serif);font-size:15px;color:var(--sage);grid-row:span 2}
 .mech-list h4{font-family:var(--serif);font-weight:400;font-size:19px;color:#fff}
-.mech-list p{color:#C9D6D0;font-size:15px}
+.mech-list p{color:#C9D6D0;font-size:16px}
 .cardio-outro{margin-top:44px;display:grid;gap:14px;max-width:72ch}
 .cardio-outro p{color:#DDE6E1;font-size:16px}
 
@@ -165,9 +166,9 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .ccard{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:34px 30px;display:flex;flex-direction:column}
 .ccard h3{margin-bottom:10px;font-size:22px}
-.ccard>p{font-size:15px;margin-bottom:18px}
+.ccard>p{font-size:16px;margin-bottom:18px}
 .ccard ul{list-style:none;display:grid;gap:9px;margin-bottom:26px;flex:1}
-.ccard li{display:flex;gap:9px;align-items:flex-start;color:var(--ink);font-size:14.5px}
+.ccard li{display:flex;gap:9px;align-items:flex-start;color:var(--ink);font-size:15.5px}
 .ccard li::before{content:"✓";color:var(--sage-deep);font-weight:600;flex:none}
 .ccard .btn{align-self:flex-start}
 
@@ -179,7 +180,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .appt h3{font-size:20px;max-width:16ch}
 .price{font-family:var(--serif);font-size:30px;line-height:1;color:var(--terracotta);flex:none}
 .appt-meta{font-size:13.5px;color:var(--sage-deep);font-weight:500;margin:10px 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.appt p{font-size:14.5px}
+.appt p{font-size:15.5px}
 .prog{margin-bottom:84px}
 .prog:last-of-type{margin-bottom:0}
 .prog>.prog-head h3{font-size:clamp(25px,2.8vw,34px)}
@@ -190,7 +191,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .tier .lvl{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .tier h4{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:10px}
 .tier .price{font-size:34px;margin-bottom:16px}
-.tier p{font-size:14.5px;flex:1}
+.tier p{font-size:15.5px;flex:1}
 .tier .best{color:var(--ink);font-size:14px;margin:16px 0 18px;font-weight:500}
 .prog-note{margin-top:24px;font-size:14px;color:var(--muted)}
 .link{color:var(--plum);font-weight:500;font-size:14px;display:inline-flex;align-items:center;gap:6px}
@@ -203,7 +204,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .nutri .lede{margin-bottom:26px}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .cols h3{font-size:18px;margin-bottom:12px}
-.cols ul{list-style:none;display:grid;gap:9px;color:var(--ink);font-size:15px}
+.cols ul{list-style:none;display:grid;gap:9px;color:var(--ink);font-size:16px}
 .cols li{display:flex;gap:10px}
 .cols li::before{content:"–";color:var(--terracotta);flex:none}
 .nutri-img{border-radius:var(--r-card);aspect-ratio:4/5;object-fit:cover;background:var(--sand-deep)}
@@ -221,7 +222,7 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 40px;margin-top:44px}
 .why div{border-top:2px solid var(--sage-soft);padding-top:18px}
 .why h3{font-size:21px;margin-bottom:6px}
-.why p{font-size:15px}
+.why p{font-size:16px}
 
 /* discovery */
 .disc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -238,14 +239,14 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 .faq-list{max-width:880px}
 details{border-top:1px solid var(--line)}
 details:last-child{border-bottom:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;font-size:18px;color:var(--ink);font-family:var(--serif)}
+summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;font-size:20px;color:var(--ink);font-family:var(--serif)}
 summary::-webkit-details-marker{display:none}
 summary .ic{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:transform .2s;background:#fff}
 details[open] summary .ic{transform:rotate(45deg)}
 details p{padding:0 0 24px;max-width:72ch}
 .notice{background:var(--plum-soft);border-radius:var(--r-card);padding:32px 36px;max-width:880px;margin-top:48px}
 .notice h3{font-size:21px;margin-bottom:12px}
-.notice p{color:var(--ink);font-size:15px;margin-bottom:10px}
+.notice p{color:var(--ink);font-size:16px;margin-bottom:10px}
 .notice p:last-child{margin-bottom:0}
 
 /* mailing */
@@ -469,7 +470,7 @@ header.is-tucked{transform:translateY(-100%)}
 .stop .n{font-family:var(--serif);font-size:14px;letter-spacing:.08em;
   color:var(--terracotta);margin-bottom:8px}
 .stop h3{font-size:19px;margin-bottom:6px}
-.stop p{font-size:14.5px}
+.stop p{font-size:15.5px}
 
 @media (max-width:1024px){
   .track5{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
@@ -553,7 +554,7 @@ header.is-tucked{transform:translateY(-100%)}
   font-family:var(--serif);font-size:13px;letter-spacing:.06em;
   padding:3px 10px;border-radius:var(--r-pill);backdrop-filter:blur(4px)}
 .six>article>h3{margin:22px 26px 8px}
-.six>article>p{margin:0 26px 26px;font-size:15px}
+.six>article>p{margin:0 26px 26px;font-size:16px}
 
 @media (hover:hover){
   .six>article:hover .six-img img{transform:scale(1.06)}
@@ -672,3 +673,34 @@ header.is-tucked{transform:translateY(-100%)}
   .mech.is-pinned .mech-slide{transition:none}
 }
 
+
+/* ─── More colour across the page ────────────────────────── */
+/* Sand, white and green alone made every other section read the same. These
+   grounds are mixed from the sage and terracotta already in the logo, so the
+   page gains variety without gaining a colour the brand does not own. */
+.whysec{background:var(--sage-soft)}
+.nutri{background:var(--clay-soft)}
+.consult{background:var(--sand)}
+
+/* the two explainers get a side each, so Menopause and Longevity read as
+   different subjects rather than one long stretch of cards */
+.explainer .def{border-left:3px solid var(--clay-tint)}
+.explainer-alt .def{border-left:3px solid var(--sage-tint)}
+.def{border-radius:0 var(--r-card) var(--r-card) 0}
+
+/* pillar badges alternate so the six do not read as one block */
+.six>article:nth-child(3n+2) .ico{background:var(--clay-soft);color:var(--terracotta-deep)}
+.six>article:nth-child(3n) .ico{background:var(--plum-soft);color:var(--plum-dark)}
+
+/* journey markers alternate down the line */
+.stop:nth-child(even) .dot{border-color:var(--terracotta)}
+.stop:nth-child(even) .n{color:var(--sage-deep)}
+
+/* price emphasis, and a warmer ground on the popular tier */
+.tier.pop{background:var(--clay-soft)}
+.appt-meta{color:var(--terracotta-deep)}
+
+@media (max-width:640px){
+  /* the accent rule reads as clutter at phone width, where cards are full bleed */
+  .explainer .def,.explainer-alt .def{border-left-width:2px}
+}
