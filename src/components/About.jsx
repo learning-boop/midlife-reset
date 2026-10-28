@@ -1,4 +1,4 @@
-import Img from './Img'
+import Shot from './Shot'
 import { about, site } from '../data/content'
 import FillText from './FillText'
 
@@ -14,7 +14,7 @@ export default function About() {
           <ul className="creds">{about.creds.map((c) => <li key={c}>{c}</li>)}</ul>
           <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
         </div>
-        <Img src={about.image} alt={about.imageAlt} data-reveal />
+        <Shot src={about.image} alt={about.imageAlt} />
       </div>
     </section>
   )

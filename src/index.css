@@ -425,7 +425,7 @@ footer a:hover{color:#fff}
   }
 }
 /* on the dark sections the unlit state is a dimmed white, not grey */
-.founder .fill-text,.cardio .fill-text{--fill-on:#fff;--fill-off:rgba(255,255,255,.26)}
+.founder .fill-text,.cardio .fill-text,.journey .fill-text{--fill-on:#fff;--fill-off:rgba(255,255,255,.26)}
 .hero .fill-text{--fill-on:#fff;--fill-off:rgba(255,255,255,.3)}
 
 /* Reveal on scroll — only armed once the observer is attached. */
@@ -445,7 +445,7 @@ footer a:hover{color:#fff}
 }
 
 /* FAQ question text fills like a heading; the + stays pinned right. */
-.faq-q{flex:1}
+.faq-q{flex:1;--fill-off:var(--muted)}
 details[open] .faq-q{--p:1}
 
 /* Full-bleed photographic breather between heavy text sections. */
@@ -472,8 +472,8 @@ header.is-tucked{transform:translateY(-100%)}
 
 /* ─── Card hover ─────────────────────────────────────────── */
 @media (hover:hover){
-  .six>div,.def,.ccard,.appt,.tier{transition:transform .22s ease,border-color .22s ease}
-  .six>div:hover,.def:hover,.ccard:hover,.appt:hover,.tier:hover{
+  .six>article,.def,.ccard,.appt,.tier{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+  .six>article:hover,.def:hover,.ccard:hover,.appt:hover,.tier:hover{
     transform:translateY(-3px);border-color:var(--sage-deep)}
   .tier.pop:hover{border-color:var(--plum-dark)}
   .cardio-col{transition:border-color .22s ease}
@@ -719,4 +719,117 @@ header.is-tucked{transform:translateY(-100%)}
   .stop:nth-last-child(2)::before{display:block}
   .stop:last-child::before{display:none}
   .stop::before{bottom:-34px}
+}
+
+/* ═══ Motion pass ═════════════════════════════════════════
+   The page had the mechanics (reveal, word fill, count-up, ticker) but all at
+   low amplitude, so it read as static. This raises the amplitude and adds the
+   pieces that were missing: an entrance, photographs that arrive, an accordion
+   that opens rather than snaps, and surfaces that answer the pointer.
+   Everything here is transform/opacity so it stays off the layout path, and
+   the whole block is switched off under prefers-reduced-motion at the end. */
+
+/* ── the hero states itself, line by line ───────────────── */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero-copy>*{animation:rise .9s cubic-bezier(.22,.61,.36,1) both}
+.hero-copy>:nth-child(1){animation-delay:.08s}
+.hero-copy>:nth-child(2){animation-delay:.18s}
+.hero-copy>:nth-child(3){animation-delay:.3s}
+.hero-copy>:nth-child(4){animation-delay:.42s}
+.hero-copy>:nth-child(5){animation-delay:.54s}
+/* the video itself eases out of a slow push-in as the page settles */
+@keyframes settle{from{transform:scale(1.07)}to{transform:none}}
+.hero-media{animation:settle 2.4s cubic-bezier(.22,.61,.36,1) both}
+
+/* ── photographs arrive behind a curtain ────────────────── */
+.shot{position:relative;overflow:hidden;border-radius:var(--r-card);
+  max-width:100%}
+.shot img{display:block;width:100%}
+/* the wrapper opts out of the generic rise: the curtain is the reveal */
+.reveal-ready .shot[data-reveal]{opacity:1;transform:none}
+.reveal-ready .shot[data-reveal] img{transform:scale(1.14);
+  transition:transform 1.5s cubic-bezier(.22,.61,.36,1)}
+.reveal-ready .shot[data-reveal].is-in img{transform:none}
+.shot-curtain{position:absolute;inset:0;background:var(--curtain,var(--sand));
+  transform-origin:50% 100%;transition:transform 1s cubic-bezier(.76,0,.24,1)}
+.reveal-ready .shot[data-reveal].is-in .shot-curtain{transform:scaleY(0)}
+.founder{--curtain:var(--green)}
+.nutri{--curtain:var(--clay-soft)}
+.disc{--curtain:var(--white)}
+/* the portrait's sticky behaviour moves to the wrapper that now holds it */
+.founder .shot{position:sticky;top:100px}
+.founder .shot img{position:static}
+
+/* ── the rest of the page rises a little further ─────────── */
+.reveal-ready [data-reveal]{transform:translateY(26px) scale(.985);
+  transition:opacity .8s cubic-bezier(.22,.61,.36,1) var(--d,0ms),transform .8s cubic-bezier(.22,.61,.36,1) var(--d,0ms)}
+
+/* ── the dark sections get depth instead of flat colour ──── */
+.founder,.cardio,.journey{position:relative;isolation:isolate}
+.founder::before,.cardio::before,.journey::before{content:"";position:absolute;
+  inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(68% 52% at 22% 0%,rgba(140,155,117,.22),transparent 70%),
+             radial-gradient(52% 44% at 92% 100%,rgba(193,106,75,.14),transparent 72%)}
+
+/* ── journey markers land rather than recolour ───────────── */
+@keyframes markerland{0%{transform:scale(1)}40%{transform:scale(1.16)}100%{transform:scale(1)}}
+.stop.on .marker{animation:markerland .52s cubic-bezier(.34,1.56,.64,1)}
+
+/* ── the accordion's control, not its panel ──────────────── */
+/* The panel itself opens instantly, and stays that way deliberately. A native
+   <details> panel cannot be animated in current Chrome (152): neither a
+   block-size nor a height transition on ::details-content fires even with
+   interpolate-size in effect, and a keyframe animation does not run either —
+   on the pseudo-element it never starts, and on the panel's children the
+   closed panel's content-visibility:hidden preserves the finished animation so
+   it never replays. Hand-rolling a disclosure with a div would animate, but it
+   would trade away what <details> gives for free: correct semantics, real
+   exposure to assistive technology, and find-in-page reaching closed answers.
+   So the control animates and the panel does not. */
+summary{transition:color .2s}
+summary:hover{color:var(--plum)}
+summary .ic{transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s,border-color .2s}
+summary:hover .ic{border-color:var(--plum);color:var(--plum)}
+
+/* ── surfaces answer the pointer ─────────────────────────── */
+@media (hover:hover){
+  /* .reveal-ready prefix only to outrank `.reveal-ready [data-reveal]`, whose
+     transition would otherwise govern these cards and drop box-shadow */
+  .reveal-ready .six>article,.reveal-ready .def,.reveal-ready .ccard,
+  .reveal-ready .appt,.reveal-ready .tier{
+    transition:transform .24s cubic-bezier(.22,.61,.36,1),border-color .24s ease,box-shadow .24s ease}
+  /* .reveal-ready again, and for the same reason: a revealed card carries
+     `.reveal-ready [data-reveal].is-in{transform:none}`, which outranks a bare
+     :hover and would cancel the lift while leaving the shadow behind. */
+  .reveal-ready .six>article:hover,.reveal-ready .def:hover,
+  .reveal-ready .ccard:hover,.reveal-ready .appt:hover,.reveal-ready .tier:hover{
+    transform:translateY(-5px);box-shadow:0 18px 40px -24px rgba(31,61,51,.45)}
+  .six>article:hover .ico{transform:translateY(-3px)}
+  .six .ico{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+  /* a light sweeps across the solid buttons */
+  .btn-plum,.btn-white{position:relative;overflow:hidden;isolation:isolate}
+  .btn-plum::after,.btn-white::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.3) 50%,transparent 62%);
+    transform:translateX(-120%);transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+  .btn-white::after{background:linear-gradient(105deg,transparent 38%,rgba(31,61,51,.09) 50%,transparent 62%)}
+  .btn-plum:hover::after,.btn-white:hover::after{transform:translateX(120%)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn{transition:background .18s,color .18s,border-color .18s,transform .22s cubic-bezier(.22,.61,.36,1)}
+}
+
+/* ── the kicker's dot breathes, so each section opens ─────── */
+@keyframes dotpulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.55}}
+.kicker::before{animation:dotpulse 3.4s ease-in-out infinite}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-copy>*,.hero-media,.stop.on .marker,.kicker::before{animation:none}
+  .reveal-ready .shot[data-reveal] img,.shot-curtain{transition:none}
+  .shot-curtain{transform:scaleY(0)}
+  .reveal-ready .shot[data-reveal] img{transform:none}
+  .btn:hover{transform:none}
+  .btn-plum::after,.btn-white::after{display:none}
+}
+
+@media (max-width:640px){
+  .founder .shot{position:static;width:100%;max-width:460px}
 }

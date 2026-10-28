@@ -1,4 +1,4 @@
-import Img from './Img'
+import Shot from './Shot'
 import { discovery, site } from '../data/content'
 import FillText from './FillText'
 
@@ -16,7 +16,7 @@ export default function Discovery() {
             <a className="btn btn-ghost" href="#faq">Read the FAQs</a>
           </div>
         </div>
-        <Img src={discovery.image} alt={discovery.imageAlt} data-reveal />
+        <Shot src={discovery.image} alt={discovery.imageAlt} />
       </div>
     </section>
   )

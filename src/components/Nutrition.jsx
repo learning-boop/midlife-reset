@@ -1,4 +1,4 @@
-import Img from './Img'
+import Shot from './Shot'
 import { nutrition } from '../data/content'
 import FillText from './FillText'
 
@@ -21,7 +21,7 @@ export default function Nutrition() {
             </div>
           </div>
         </div>
-        <Img className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} data-reveal />
+        <Shot className="nutri-img" src={nutrition.image} alt={nutrition.imageAlt} />
       </div>
     </section>
   )
