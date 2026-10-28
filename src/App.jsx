@@ -34,7 +34,6 @@ export default function App() {
       <Pillars />
       <Explainer data={menopause} id="menopause" />
       <Explainer data={longevity} id="longevity" tone="explainer-alt" />
-      <PhotoBand src="/images/stock-movement.jpg" position="62% 42%" />
       <Cardiometabolic />
       <Support />
       <Pricing />
