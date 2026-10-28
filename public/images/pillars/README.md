@@ -6,7 +6,7 @@ names the pillar, so a description would only repeat it.
 
 | File | Unsplash id |
 |------|-------------|
-| nutrition.jpg  | photo-1651326919937-e1557dbdbaab |
+| nutrition.jpg  | client-supplied (replaced the Unsplash radishes) |
 | activity.jpg   | photo-1758508232383-2037f52c9929 |
 | strength.jpg   | photo-1561729955-89357c733059 |
 | sleep.jpg      | photo-1568305427839-b16e35fe0072 |
