@@ -44,9 +44,10 @@ export const hero = {
   ],
   image: '/images/dr-sarika-seated.jpg',
   imageAlt: 'Dr Sarika Gorantyal, GP and Lifestyle Medicine physician',
-  // Full-bleed background montage, desktop only; phones and reduced-motion
-  // visitors get the poster frame. Silent 10s loop, client-supplied.
+  // Full-bleed background montage, silent 10s loop, client-supplied. Phones get
+  // the lighter 640px cut; reduced-motion visitors get the poster frame.
   video: '/video/hero-story.mp4',
+  videoSmall: '/video/hero-story-sm.mp4',
   videoPoster: '/video/hero-story.jpg',
 }
 

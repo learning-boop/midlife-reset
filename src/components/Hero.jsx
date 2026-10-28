@@ -13,7 +13,7 @@ const Hero = forwardRef(function Hero(_, ref) {
     <section className="hero" id="top" ref={ref}>
       <div className="hero-bed">
         <div className="hero-media">
-          <HeroMedia video={hero.video} poster={hero.videoPoster} />
+          <HeroMedia video={hero.video} videoSmall={hero.videoSmall} poster={hero.videoPoster} />
         </div>
         <div className="hero-scrim" />
 

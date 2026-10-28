@@ -1,7 +1,8 @@
 # Hero media
 
 `hero-story.mp4` — silent 10s montage, 1136x638, 1.0MB, h264 crf 22.
-`hero-story.jpg` — poster frame, 70KB.
+`hero-story-sm.mp4` — the same cut at 640x360, 211KB, served to phones.
+`hero-story.jpg` — poster frame, 42KB.
 
 Source: client-supplied, generated with Google Gemini
 (`gemini_generated_video_ef1b0d1a.mp4`).
@@ -27,7 +28,13 @@ file needs to be smaller.
 The source is still 720p, so this is the ceiling. Regenerating at 1080p or
 higher, landscape, is the only way past it.
 
-`HeroMedia.jsx` plays the clip above 1025px with reduced motion off, and shows
-the poster otherwise, so phones never download the mp4. The hero is full-bleed
-because the montage is landscape and its eight scenes, none longer than 2s,
-cannot be cropped to a tall column without cutting subjects out of frame.
+`HeroMedia.jsx` plays on every screen size, choosing the 640px cut below
+1025px so phones fetch 211KB rather than 1MB. Reduced motion still gets the
+poster. It calls play() and swallows the rejection: mobile autoplay is refused
+under Low Power Mode, Data Saver and in some in-app browsers, and the poster
+sits underneath, so a refusal looks like a still rather than a dead player.
+
+The hero is full-bleed because the montage is landscape and its eight scenes,
+none longer than 2s, cannot be cropped to a tall column without cutting
+subjects out of frame. On a phone that means a hard centre crop, which the
+heavier mobile scrim largely covers.
