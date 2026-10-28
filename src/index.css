@@ -423,3 +423,12 @@ footer a:hover{color:#fff}
 /* FAQ question text fills like a heading; the + stays pinned right. */
 .faq-q{flex:1}
 details[open] .faq-q{--p:1}
+
+/* Full-bleed photographic breather between heavy text sections. */
+.photoband{position:relative;overflow:hidden;background:var(--green-mid);
+  height:clamp(240px,34vw,420px)}
+.photoband img{width:100%;height:100%;object-fit:cover}
+/* a touch of the brand green at the edges so the band belongs to the page */
+.photoband::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(31,61,51,.34),rgba(31,61,51,0) 28%,rgba(31,61,51,0) 72%,rgba(31,61,51,.34))}
+@media (max-width:640px){.photoband{height:clamp(200px,52vw,280px)}}

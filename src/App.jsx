@@ -15,6 +15,7 @@ import Discovery from './components/Discovery'
 import Faq from './components/Faq'
 import Mailing from './components/Mailing'
 import Footer from './components/Footer'
+import PhotoBand from './components/PhotoBand'
 import StickyBar from './components/StickyBar'
 import useReveal from './components/useReveal'
 import { menopause, longevity } from './data/content'
@@ -31,9 +32,11 @@ export default function App() {
       <Pillars />
       <Explainer data={menopause} id="menopause" />
       <Explainer data={longevity} id="longevity" tone="explainer-alt" />
+      <PhotoBand src="/images/stock-movement.jpg" position="62% 42%" />
       <Cardiometabolic />
       <Support />
       <Pricing />
+      <PhotoBand src="/images/stock-nutrition.jpg" position="50% 58%" />
       <Nutrition />
       <Journey />
       <Why />
