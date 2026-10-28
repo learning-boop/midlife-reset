@@ -14,8 +14,7 @@ export const site = {
 export const nav = [
   { label: 'How we can help', href: '#support' },
   { label: 'Pricing', href: '#pricing' },
-  { label: 'Menopause', href: '#menopause' },
-  { label: 'Longevity', href: '#longevity' },
+  { label: 'Menopause', href: '#cardiometabolic' },
   { label: 'Dr Sarika', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -415,8 +414,7 @@ export const footer = {
   columns: [
     ['Focus', [
       ['Lifestyle & biometabolic health', '#support'],
-      ['Midlife & menopause', '#menopause'],
-      ['Longevity & healthspan', '#longevity'],
+      ['Midlife & menopause', '#cardiometabolic'],
       ['Healthy ageing', '#lifestyle'],
     ]],
     ['Site', [

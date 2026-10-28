@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import StatsBand from './components/StatsBand'
 import About from './components/About'
 import Pillars from './components/Pillars'
-import Explainer from './components/Explainer'
 import Cardiometabolic from './components/Cardiometabolic'
 import Support from './components/Support'
 import Pricing from './components/Pricing'
@@ -20,7 +19,6 @@ import ProgressBar from './components/ProgressBar'
 import CredsStrip from './components/CredsStrip'
 import StickyBar from './components/StickyBar'
 import useReveal from './components/useReveal'
-import { menopause, longevity } from './data/content'
 
 export default function App() {
   const heroRef = useRef(null)
@@ -34,8 +32,6 @@ export default function App() {
       <StatsBand />
       <About />
       <Pillars />
-      <Explainer data={menopause} id="menopause" />
-      <Explainer data={longevity} id="longevity" tone="explainer-alt" />
       <Cardiometabolic />
       <Support />
       <Pricing />
