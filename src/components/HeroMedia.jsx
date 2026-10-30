@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Img from './Img'
 
-// The hero's background layer.
+// The montage behind the mid-page band.
 //
 // Two cuts of the same montage: a landscape one for wide screens and a portrait
 // one for phones, each cropped per scene so the subject stays in frame. Width
@@ -12,7 +12,7 @@ import Img from './Img'
 // in-app browsers refuse it and the promise rejects silently. play() is called
 // explicitly and the rejection swallowed, and the poster sits beneath the
 // video, so a refusal reads as a still image rather than a dead player.
-export default function HeroMedia({ video, videoSmall, poster, posterSmall }) {
+export default function HeroMedia({ video, videoSmall, poster, posterSmall, autoplay = true }) {
   // Measured during the first render, not in an effect: guessing and correcting
   // would fetch the wrong poster before the correction landed.
   const [env, setEnv] = useState(() => ({
@@ -37,7 +37,7 @@ export default function HeroMedia({ video, videoSmall, poster, posterSmall }) {
   const still = isWide ? poster : (posterSmall || poster)
 
   if (env.calm) {
-    return <Img src={still} alt="" loading="eager" fetchpriority="high" />
+    return <Img src={still} alt="" />
   }
 
   return (
@@ -45,14 +45,14 @@ export default function HeroMedia({ video, videoSmall, poster, posterSmall }) {
       key={isWide ? 'wide' : 'small'}
       src={isWide ? video : videoSmall}
       poster={still}
-      autoPlay
+      autoPlay={autoplay}
       muted
       loop
       playsInline
       preload="metadata"
       aria-hidden="true"
       tabIndex={-1}
-      ref={(el) => { el?.play?.().catch(() => {}) }}
+      ref={(el) => { if (autoplay) el?.play?.().catch(() => {}) }}
     />
   )
 }

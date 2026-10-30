@@ -14,7 +14,7 @@ import Discovery from './components/Discovery'
 import Faq from './components/Faq'
 import Mailing from './components/Mailing'
 import Footer from './components/Footer'
-import PhotoBand from './components/PhotoBand'
+import VideoBand from './components/VideoBand'
 import ProgressBar from './components/ProgressBar'
 import CredsStrip from './components/CredsStrip'
 import StickyBar from './components/StickyBar'
@@ -35,7 +35,7 @@ export default function App() {
       <Cardiometabolic />
       <Support />
       <Pricing />
-      <PhotoBand src="/images/stock-nutrition.jpg" position="50% 58%" />
+      <VideoBand />
       <Nutrition />
       <Journey />
       <Why />

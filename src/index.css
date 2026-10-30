@@ -64,8 +64,11 @@ footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba
 
 /* hero */
 .hero{padding:0;background:var(--green);color:#fff;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.08fr 1fr;min-height:660px}
-.hero-copy{padding:92px 48px 84px calc((100vw - var(--max))/2 + 24px);display:flex;flex-direction:column;justify-content:center}
+/* The copy column is wider than it was when this layout last held a portrait:
+   the type scale went up since, and at the old 1.08fr the headline set to five
+   lines and the two buttons wrapped to a second row. */
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;min-height:660px}
+.hero-copy{padding:76px 56px 68px calc((100vw - var(--max))/2 + 24px);display:flex;flex-direction:column;justify-content:center}
 .hero-copy .kicker{color:#CFDAD3}
 .hero h1{font-size:clamp(34px,3.9vw,52px);font-weight:300;color:#fff;margin-bottom:22px}
 .hero-tail{color:#CBD9D1;font-style:italic}
@@ -488,11 +491,6 @@ header.is-tucked{transform:translateY(-100%)}
    the existing green gradient over the column still does its work. */
 .hero-video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;background:var(--green-mid)}
 
-/* The hero column now carries the clip (or its poster) rather than a portrait,
-   so Dr Sarika appears once each in About, Nutrition and Ready to begin
-   instead of four times down the page. */
-.hero-photo img,.hero-photo video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
-
 /* ─── Hero panel built from the brand mark ───────────────── */
 .hero-mark{position:relative;overflow:hidden;background:var(--green);
   display:grid;place-items:center;
@@ -519,29 +517,17 @@ header.is-tucked{transform:translateY(-100%)}
 }
 @media (max-width:640px){.hero-mark{min-height:240px}}
 
-/* ─── Full-bleed hero (landscape montage behind the copy) ── */
-.hero-bed{position:relative;display:grid;min-height:min(640px,86vh);background:var(--green-mid)}
-.hero-media,.hero-scrim,.hero-inner{grid-area:1/1}
-.hero-media{overflow:hidden}
-.hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block}
-/* heavy enough on the left that the headline holds over any scene in the cut */
-.hero-scrim{background:
-  linear-gradient(90deg,rgba(21,42,35,.94) 0%,rgba(21,42,35,.86) 32%,rgba(21,42,35,.42) 62%,rgba(21,42,35,.22) 100%)}
-.hero-inner{position:relative;display:flex;align-items:center;
-  max-width:var(--max);width:100%;margin:0 auto;
-  padding-left:max(24px,env(safe-area-inset-left,0px));
-  padding-right:max(24px,env(safe-area-inset-right,0px));
-  padding-block:84px}
-.hero-bed .hero-copy{padding:0;max-width:60ch}
-@media (max-width:1024px){
-  .hero-bed{min-height:560px}
-  .hero-inner{padding-block:64px}
-  .hero-scrim{background:linear-gradient(180deg,rgba(21,42,35,.5) 0%,rgba(21,42,35,.82) 45%,rgba(21,42,35,.94) 100%)}
-}
-@media (max-width:640px){
-  .hero-bed{min-height:520px}
-  .hero-inner{padding-block:48px}
-}
+/* ─── The montage, full-bleed across the middle of the page ─ */
+/* Same slot and proportions the photographic band had, so the page keeps its
+   one visual breather between Pricing and Nutrition rather than gaining a
+   section. The edge gradient is the band's, carried over. */
+.videoband{position:relative;overflow:hidden;background:var(--green-mid);
+  height:clamp(240px,34vw,420px)}
+.videoband img,.videoband video{width:100%;height:100%;object-fit:cover;
+  object-position:50% 42%;display:block}
+.videoband::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(31,61,51,.34),rgba(31,61,51,0) 28%,rgba(31,61,51,0) 72%,rgba(31,61,51,.34))}
+@media (max-width:640px){.videoband{height:clamp(200px,52vw,280px)}}
 
 /* ─── Lifestyle Medicine cards: image + number badge ──────── */
 .six>article{background:#fff;border:1px solid var(--line);border-radius:var(--r-img);
@@ -692,9 +678,6 @@ header.is-tucked{transform:translateY(-100%)}
 .hero-copy>:nth-child(3){animation-delay:.3s}
 .hero-copy>:nth-child(4){animation-delay:.42s}
 .hero-copy>:nth-child(5){animation-delay:.54s}
-/* the video itself eases out of a slow push-in as the page settles */
-@keyframes settle{from{transform:scale(1.07)}to{transform:none}}
-.hero-media{animation:settle 2.4s cubic-bezier(.22,.61,.36,1) both}
 
 /* ── photographs arrive behind a curtain ────────────────── */
 .shot{position:relative;overflow:hidden;border-radius:var(--r-card);
@@ -771,7 +754,7 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .kicker::before{animation:dotpulse 3.4s ease-in-out infinite}
 
 @media (prefers-reduced-motion:reduce){
-  .hero-copy>*,.hero-media,.stop.on .marker,.kicker::before{animation:none}
+  .hero-copy>*,.stop.on .marker,.kicker::before{animation:none}
   .reveal-ready .shot[data-reveal] img,.shot-curtain{transition:none}
   .shot-curtain{transform:scaleY(0)}
   .reveal-ready .shot[data-reveal] img{transform:none}
