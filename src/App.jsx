@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
 import Pillars from './components/Pillars'
 import Cardiometabolic from './components/Cardiometabolic'
 import Support from './components/Support'
@@ -28,7 +27,6 @@ export default function App() {
       <Header />
       <Hero ref={heroRef} />
       <CredsStrip />
-      <About />
       <Pillars />
       <Cardiometabolic />
       <Support />

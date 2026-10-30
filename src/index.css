@@ -797,3 +797,29 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
      and a square crop holds the same subject in 85px less */
   .founder .shot img,.nutri-img{aspect-ratio:1}
 }
+
+/* ═══ Qualifications, on Dr Sarika's own page ══════════════
+   On the home page these were a dimmed footnote under the biography. On a page
+   about the doctor they are a reason to trust her, so each one gets its own
+   card: the qualification as the heading, the awarding body beneath it. */
+.quals{background:var(--sand)}
+.quals h2{margin-bottom:38px}
+.qual-list{list-style:none;counter-reset:q;display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:38px}
+.qual-list li{counter-increment:q;position:relative;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r-card);padding:24px 26px}
+.qual-list li::before{content:counter(q,decimal-leading-zero);
+  font-family:var(--serif);font-size:13px;letter-spacing:.06em;
+  color:var(--sage-deep);display:block;margin-bottom:10px}
+.qual-list h3{font-size:20px;margin-bottom:6px;line-height:1.25}
+.qual-list p{font-size:15px;color:var(--muted)}
+/* the one still being completed says so, rather than sitting among the rest */
+.qual-tag{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--terracotta-deep);background:var(--clay-soft);
+  border-radius:var(--r-pill);padding:4px 11px}
+
+@media (max-width:640px){
+  .qual-list{grid-template-columns:minmax(0,1fr);gap:14px}
+  .qual-list li{padding:20px 18px}
+  .quals h2{margin-bottom:28px}
+}

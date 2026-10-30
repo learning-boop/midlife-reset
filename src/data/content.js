@@ -5,18 +5,18 @@ export const site = {
   name: 'The Reset and Longevity Clinic',
   nameShort: 'The Reset & Longevity Clinic',
   domain: 'themidlifereset.uk',
-  bookingUrl: '#discovery', // TODO: replace with Cal.com / booking link
+  bookingUrl: '/#discovery', // TODO: replace with Cal.com / booking link
   email: 'mailto:hello@themidlifereset.uk', // TODO: confirm
   whatsapp: '#', // TODO: confirm
   byline: 'Dr Sarika Gorantyal · GP · Lifestyle Medicine · Health Coach',
 }
 
 export const nav = [
-  { label: 'How we can help', href: '#support' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Menopause', href: '#cardiometabolic' },
-  { label: 'Dr Sarika', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'How we can help', href: '/#support' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Menopause', href: '/#cardiometabolic' },
+  { label: 'Dr Sarika', href: '/about.html' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export const hero = {
@@ -82,9 +82,9 @@ export const about = {
     'My approach combines medical knowledge with practical behaviour-change strategies, so your plan fits your actual life — not the other way around.',
   ],
   creds: [
-    'Lifestyle Medicine, British Society of Lifestyle Medicine',
-    'Certified Health Coach, Health Coaches Academy',
-    'Advanced Longevity Certification, Apex Academy',
+    'MRCGP',
+    'Diploma in Lifestyle Medicine, British Society of Lifestyle Medicine',
+    'Longevity Certification, Apex Longevity Academy',
     'Nutrition Certification, Precision Nutrition',
     'Currently completing: British Menopause Society Certificate in the Principles and Practice of Menopause Care',
   ],
@@ -446,15 +446,16 @@ export const footer = {
   tagline: site.byline,
   columns: [
     ['Focus', [
-      ['Lifestyle & biometabolic health', '#support'],
-      ['Midlife & menopause', '#cardiometabolic'],
-      ['Healthy ageing', '#lifestyle'],
+      ['Lifestyle & biometabolic health', '/#support'],
+      ['Midlife & menopause', '/#cardiometabolic'],
+      ['Healthy ageing', '/#lifestyle'],
+      ['Dr Sarika', '/about.html'],
     ]],
     ['Site', [
       ['Privacy policy', '#'],
       ['Terms & conditions', '#'],
       ['Disclaimer', '#'],
-      ['Contact', '#contact'],
+      ['Contact', '/#contact'],
     ]],
   ],
 }

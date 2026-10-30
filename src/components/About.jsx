@@ -11,7 +11,6 @@ export default function About() {
           <FillText>{about.title}</FillText>
           <blockquote>“{about.quote}”</blockquote>
           {about.body.map((p) => <p key={p}>{p}</p>)}
-          <ul className="creds">{about.creds.map((c) => <li key={c}>{c}</li>)}</ul>
           <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
         </div>
         <Shot src={about.image} alt={about.imageAlt} />
