@@ -3,7 +3,7 @@ import About from './components/About'
 import Footer from './components/Footer'
 import ProgressBar from './components/ProgressBar'
 import useReveal from './components/useReveal'
-import { about, site } from './data/content'
+import { about, aboutHero, site } from './data/content'
 
 // Dr Sarika's own page. The story itself is the same <About> block the home
 // page used to carry, so the two pages share one source of that copy.
@@ -37,6 +37,21 @@ export default function AboutPage() {
     <>
       <ProgressBar />
       <Header />
+
+      {/* A light ground on purpose: the biography below it is dark green, and
+          two dark bands in a row would read as one heavy block. */}
+      <section className="abouthero">
+        <div className="wrap">
+          <p className="kicker">{aboutHero.kicker}</p>
+          <h1>{aboutHero.title}</h1>
+          <p className="lede">{aboutHero.intro}</p>
+          <div className="abouthero-actions">
+            <a className="btn btn-plum" href={site.bookingUrl}>{aboutHero.cta}</a>
+            <a className="btn btn-ghost" href="/#support">{aboutHero.secondary} →</a>
+          </div>
+        </div>
+      </section>
+
       <About />
 
       <section className="quals" id="qualifications">

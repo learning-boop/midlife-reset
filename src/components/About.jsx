@@ -7,7 +7,6 @@ export default function About() {
     <section className="founder" id="about">
       <div className="wrap">
         <div>
-          <p className="kicker">{about.kicker}</p>
           <FillText>{about.title}</FillText>
           <blockquote>“{about.quote}”</blockquote>
           {about.body.map((p) => <p key={p}>{p}</p>)}

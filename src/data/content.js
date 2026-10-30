@@ -33,7 +33,7 @@ export const nav = [
 ]
 
 export const hero = {
-  kicker: 'Dr Sarika Gorantyal · NHS GP',
+  kicker: 'Dr Sarika Gorantyal · GP',
   lead: 'Doctor-led longevity, lifestyle medicine & menopause care —',
   // the italic tail types/erases through these; first entry is the deck's own line
   tail: [
@@ -82,6 +82,18 @@ export const stats = {
     ['44', 'The age surgical menopause changed how Dr Sarika practises medicine.'],
     ['100%', 'Virtual consultations, available anywhere in the UK.'],
   ],
+}
+
+// The opening band of Dr Sarika's own page. Deliberately not a restatement of
+// the biography that follows it: that section already carries her approach in
+// her own words, so this one introduces her and offers the way to book.
+export const aboutHero = {
+  kicker: 'About',
+  title: 'Dr Sarika Gorantyal',
+  intro:
+    'Menopause care, longevity and lifestyle medicine, led by a doctor who has been through midlife change herself.',
+  cta: 'Book a discovery call',
+  secondary: 'See how we can help',
 }
 
 export const about = {

@@ -843,3 +843,20 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .qual-list li{padding:20px 18px}
   .quals h2{margin-bottom:28px}
 }
+
+/* ═══ The opening band on Dr Sarika's page ═════════════════
+   Light, because the biography that follows it is dark green and two dark
+   bands in a row would read as a single heavy block. This also gives that page
+   its only h1 — the biography's heading is an h2 from FillText. */
+.abouthero{background:var(--sand)}
+.abouthero .wrap{max-width:860px}
+.abouthero h1{font-size:clamp(36px,4.6vw,58px);font-weight:300;
+  line-height:1.06;margin-bottom:20px;color:var(--green)}
+.abouthero .lede{max-width:54ch;margin-bottom:30px}
+.abouthero-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+@media (max-width:640px){
+  .abouthero h1{margin-bottom:16px}
+  .abouthero .lede{margin-bottom:24px}
+  .abouthero-actions .btn{width:100%}
+}
