@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { consultations, programmes, site } from '../data/content'
+import { consultations, platform, programmes, site } from '../data/content'
 import FillText from './FillText'
 
 // The two ladders carry identical prices (£325 / £425 / £650) and differ only in
@@ -31,6 +31,12 @@ export default function Pricing() {
           <p className="kicker">{consultations.kicker}</p>
           <FillText>{consultations.title}</FillText>
           <p className="lede">{consultations.intro}</p>
+          {/* these appointments are all virtual, so this is where saying which
+              platform they run on is worth the reader's attention */}
+          <div className="platform">
+            <img src={platform.logo} alt={platform.alt} loading="lazy" />
+            <p>{platform.note}</p>
+          </div>
         </div>
 
         <div className="appts">
