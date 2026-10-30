@@ -9,7 +9,7 @@
   --sage:#8C9B75; --sage-deep:#6F7D5A; --sage-soft:#E9EDE2;
   --sage-tint:#DFE6D7; --clay-soft:#F7EBE4; --clay-tint:#F0DDD2;
   --terracotta:#B56D57; --terracotta-deep:#95513D;
-  --gold:#A89A6B;
+  --gold:#C5A870;
   --serif:"Newsreader",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
   --r-pill:999px; --r-card:22px; --r-img:18px;
   --max:1180px;
@@ -50,10 +50,25 @@ section{padding:var(--sp-section) 0}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{height:74px;display:flex;align-items:center;gap:28px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:500;font-size:16px;color:var(--green);margin-right:auto}
-.logo-mark{width:38px;height:38px;display:grid;place-items:center;flex:none;
-  --mark-ring-outer:var(--gold); --mark-ring-inner:var(--green); --mark-dot:var(--green)}
-.logo-mark .mark{width:100%;height:100%}
-footer .logo-mark{--mark-ring-outer:rgba(255,255,255,.5); --mark-ring-inner:rgba(255,255,255,.42); --mark-dot:#fff}
+.logo-mark{width:38px;height:38px;flex:none;position:relative}
+/* The monogram is taller than it is wide, so it fits its box rather than
+   filling it. The box comes from inset, not from width/height percentages:
+   as a grid or flex item the image's own height:100% had nothing definite to
+   resolve against and fell back to the natural 341:387 ratio — 39px tall in a
+   34px box, breaking out of the footer's disc. Absolute inset:0 is exactly the
+   container's padding box, and object-fit letterboxes the art inside it. */
+/* width/height are required as well as inset: an absolutely positioned
+   replaced element with auto dimensions takes its intrinsic size and uses the
+   insets only to position it, so inset:0 alone left the image at its natural
+   341:387 and 39px tall in a 34px box. */
+.logo-mark .mark{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+/* On the dark green footer the monogram's own green would disappear, and the
+   artwork has no light variant. It sits on a disc of its native cream instead,
+   which is the ground the logo was drawn for. */
+/* The inset comes from a border, not padding: an absolutely positioned child's
+   containing block is the padding box, which padding would not shrink. */
+footer .logo-mark{background:var(--sand);border-radius:50%;
+  border:4px solid var(--sand);box-sizing:border-box}
 .nav-links{display:flex;gap:22px;font-size:14.5px;color:var(--ink)}
 .nav-links a:hover{color:var(--plum)}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
