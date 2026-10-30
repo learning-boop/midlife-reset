@@ -578,7 +578,12 @@ header.is-tucked{transform:translateY(-100%)}
 
 @media (max-width:640px){
   .prog-switch{display:flex;width:100%;margin-bottom:26px}
-  .prog-switch button{flex:1;padding:11px 10px;font-size:13.5px;text-align:center}
+  /* Three tabs no longer fit on one phone row. flex:1 could not shrink them
+     because white-space:nowrap held each at its min-content width, and the row
+     pushed the page 174px wider than the screen. The labels wrap instead, and
+     min-width:0 lets a flex item go narrower than its content. */
+  .prog-switch button{flex:1 1 0;min-width:0;white-space:normal;line-height:1.25;
+    padding:10px 8px;font-size:13px;text-align:center}
 }
 
 

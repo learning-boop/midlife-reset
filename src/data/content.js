@@ -278,6 +278,39 @@ export const programmes = [
     ],
     note: TIER_NOTE,
   },
+  {
+    id: 'lifestyle-programme',
+    tab: 'Lifestyle & biometabolic health',
+    kicker: 'Lifestyle & Biometabolic Health Assessment',
+    title: 'Three levels of support for the foundations of your health',
+    intro:
+      'For women and men who want to understand the lifestyle factors influencing their health — nutrition, weight, metabolic health, activity, strength and sleep.',
+    tiers: [
+      {
+        level: 'Tier 1',
+        name: 'Foundation',
+        price: '£325',
+        body: 'Lifestyle & Biometabolic Health Assessment covering nutrition and eating patterns, healthy weight goals, metabolic health, activity, strength and sleep: a 60-minute first appointment, a 45-minute second appointment, and a written plan.',
+        best: 'Best for understanding which lifestyle factors matter most for you.',
+      },
+      {
+        level: 'Tier 2',
+        name: 'Signature',
+        price: '£425',
+        body: 'The full assessment plus a 45-minute review at 3 months, to check progress and adjust your plan.',
+        best: 'Best for sustained support while new habits take hold.',
+        popular: true,
+      },
+      {
+        level: 'Tier 3',
+        name: 'Premium',
+        price: '£650',
+        body: 'The full assessment plus a 6-week check-in and 45-minute reviews at 3 and 6 months, for the most continuity of care.',
+        best: 'Best for continuity of care while habits become routine.',
+      },
+    ],
+    note: TIER_NOTE,
+  },
 ]
 
 export const cardiometabolic = {
