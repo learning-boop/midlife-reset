@@ -11,6 +11,19 @@ export const site = {
   byline: 'Dr Sarika Gorantyal · GP · Lifestyle Medicine · Health Coach',
 }
 
+// The bodies Dr Sarika is registered with, accredited by, or trained through.
+// Logos supplied by the client on 30 October 2026 and used at their request;
+// each is the property of the body named beside it.
+export const accreditations = [
+  ['General Medical Council', '/creds/gmc.png'],
+  ['Royal College of General Practitioners', '/creds/rcgp.png'],
+  ['British Society of Lifestyle Medicine', '/creds/bslm.png'],
+  ['Health Coaches Academy', '/creds/hca.png'],
+  ['Apex Longevity Academy', '/creds/apex.png'],
+  ['Precision Nutrition', '/creds/precision-nutrition.png'],
+  ["Information Commissioner's Office", '/creds/ico.png'],
+]
+
 export const nav = [
   { label: 'How we can help', href: '/#support' },
   { label: 'Pricing', href: '/#pricing' },
