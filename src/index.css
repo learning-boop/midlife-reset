@@ -843,17 +843,3 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .qual-list li{padding:20px 18px}
   .quals h2{margin-bottom:28px}
 }
-
-/* ═══ The consulting platform ══════════════════════════════
-   Sits with the virtual appointments rather than in the accreditation strip:
-   helfy neither registers, accredits nor trains Dr Sarika, and a reader meets
-   it when deciding to book, not when weighing her qualifications. */
-.platform{display:flex;align-items:center;gap:18px;margin-top:24px;
-  padding:14px 20px;background:var(--sand);border:1px solid var(--line);
-  border-radius:var(--r-card);max-width:620px}
-.platform img{height:30px;width:auto;flex:none}
-.platform p{font-size:14.5px;color:var(--muted);margin:0}
-
-@media (max-width:640px){
-  .platform{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 18px}
-}

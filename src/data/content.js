@@ -14,18 +14,6 @@ export const site = {
 // The bodies Dr Sarika is registered with, accredited by, or trained through.
 // Logos supplied by the client on 30 October 2026 and used at their request;
 // each is the property of the body named beside it.
-// The platform Dr Sarika consults through. Deliberately not in the
-// accreditation strip: it neither registers, accredits nor trains her, and it
-// belongs where someone is deciding to book rather than among the bodies behind
-// her qualifications.
-export const platform = {
-  logo: '/creds/helfy.png',
-  // the wordmark alone: at 30px the lockup's 'by The Wellbeing Doctors' line
-  // came out about six pixels tall, and the sentence beside it names them anyway
-  alt: 'helfy',
-  note: 'Consultations are held online through helfy, the virtual clinic platform from The Wellbeing Doctors.',
-}
-
 export const accreditations = [
   ['General Medical Council', '/creds/gmc.png'],
   ['Royal College of General Practitioners', '/creds/rcgp.png'],
