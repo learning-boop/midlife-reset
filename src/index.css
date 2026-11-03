@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
 
 :root{
   --green:#1F3D33; --green-deep:#152a23; --green-mid:#2B4E42;
@@ -51,7 +51,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .nav{height:74px;display:flex;align-items:center;gap:28px}
 .logo{display:flex;align-items:center;gap:11px;color:var(--green);margin-right:auto}
 /* the serif the brand's lockup is drawn in, rather than the interface sans */
-.logo-text{font-family:var(--serif);font-weight:400;font-size:20px;
+.logo-text{font-family:var(--serif);font-weight:600;font-size:20px;
   letter-spacing:.005em;white-space:nowrap}
 .logo-accent{font-style:italic;color:var(--terracotta-deep)}
 /* On the footer's dark green the terracotta goes muddy, so the accent there is
