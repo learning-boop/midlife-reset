@@ -1039,8 +1039,16 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
    These pages were long runs of text. A lead under the heading and one beside
    the care block break that up without pushing the reading far down. */
 .page-lead{margin-bottom:54px}
-.page-lead .shot img{width:100%;height:clamp(240px,32vw,400px);object-fit:cover;
-  border-radius:var(--r-card);display:block;background:var(--sand-deep)}
+/* The three lead photographs are all different shapes. A single wide band cut
+   between a third and a half the height off each of them, taking the subject's
+   head with it, so the box takes the picture's own proportions instead and the
+   width is capped to keep it from becoming a slab. */
+.page-lead .shot{max-width:780px}
+.page-lead .shot img{width:100%;aspect-ratio:var(--lead-ar,16/9);
+  object-fit:cover;border-radius:var(--r-card);display:block;
+  background:var(--sand-deep)}
+.menopause{--lead-ar:1200/672}
+.metabolic{--lead-ar:1200/760}
 .page-split{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:start}
 /* lists sit in a narrower column here, so they stop being two across */
 .page-split .cols-2{grid-template-columns:minmax(0,1fr);gap:22px}
@@ -1048,7 +1056,7 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   border-radius:var(--r-card);display:block;background:var(--sand-deep)}
 /* the longevity page is dark green, so its curtain must be too or it flashes
    sand across the photograph as it opens */
-.longevity{--curtain:var(--green)}
+.longevity{--lead-ar:1400/1050;--curtain:var(--green)}
 
 @media (max-width:900px){
   .page-split{grid-template-columns:minmax(0,1fr);gap:34px}
@@ -1056,6 +1064,5 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .page-lead{margin-bottom:38px}
 }
 @media (max-width:640px){
-  .page-lead .shot img{height:200px}
-  .split-shot img{aspect-ratio:1}
+  .page-lead{margin-bottom:32px}
 }

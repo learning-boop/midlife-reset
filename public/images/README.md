@@ -17,8 +17,13 @@ As with the pillars, nobody in these should read as a patient.
 ## Inner-page photographs
 
 Each of the three service pages carries its service card's photograph again as
-a wide lead image under the heading, and one tall 4:5 picture beside a block of
-body copy further down.
+a lead image under the heading, and one tall 4:5 picture beside a block of body
+copy further down.
+
+The lead box takes each photograph's own proportions (`--lead-ar` per page) and
+is capped at 780px wide. It was a single wide band to begin with, which cropped
+between a third and a half the height off all three and took the subject's head
+with it. Anything added here wants its ratio declared the same way.
 
 | File | Page | Source |
 |------|------|--------|
