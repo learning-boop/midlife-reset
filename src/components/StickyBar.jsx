@@ -16,7 +16,7 @@ export default function StickyBar({ watchRef }) {
       <div className="wrap">
         <div className="t">
           Feel like <i>yourself</i> again, guided by a doctor who&rsquo;s been there.
-          <small>Virtual consultations available across the UK</small>
+          <small>Virtual and face-to-face appointments across the UK</small>
         </div>
         <div className="r">
           <a className="btn btn-plum" href={site.bookingUrl}>Book a discovery call</a>

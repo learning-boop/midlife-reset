@@ -860,3 +860,116 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .abouthero .lede{margin-bottom:24px}
   .abouthero-actions .btn{width:100%}
 }
+
+/* ═══ Kaya Reset Clinic sections ═══════════════════════════
+   The client's page of 3 Nov replaces the deck wholesale. These sections are
+   long-form and text-heavy, so they lean on a narrow measure and generous
+   vertical rhythm rather than on cards for their own sake. */
+
+/* shared furniture for the long sections */
+.narrow-head{max-width:760px;margin-bottom:44px}
+.sub{font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.3vw,30px);
+  margin:52px 0 18px;line-height:1.2}
+.narrow-head + .sub{margin-top:0}
+.sub-sm{font-family:var(--serif);font-weight:400;font-size:20px;margin:34px 0 16px}
+.cols-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 44px}
+.cols-2 h5{font-family:var(--serif);font-weight:400;font-size:19px;margin-bottom:6px}
+.cols-2 p{font-size:16px;color:var(--muted)}
+.note-line{margin-top:22px;font-size:16px;color:var(--muted);max-width:68ch}
+.symptoms{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px 36px;margin-top:20px}
+.symptoms li{display:flex;gap:11px;font-size:16px;color:var(--ink)}
+.symptoms li::before{content:"–";color:var(--terracotta);flex:none}
+.expect{list-style:none;counter-reset:e;display:grid;gap:16px;margin-top:20px;max-width:76ch}
+.expect li{counter-increment:e;position:relative;padding-left:44px;font-size:16px;color:var(--muted)}
+.expect li::before{content:counter(e,decimal-leading-zero);position:absolute;left:0;top:1px;
+  font-family:var(--serif);font-size:14px;color:var(--sage-deep)}
+.expect strong{font-weight:500;color:var(--ink)}
+
+/* what is lifestyle medicine — sits above the six pillars */
+.lm-panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);
+  padding:30px 32px;margin:0 auto 44px;max-width:860px}
+.lm-panel h3{font-size:22px;margin-bottom:10px}
+.lm-panel p{font-size:16.5px;color:var(--muted)}
+
+/* three ways in */
+.svc-head{max-width:760px;margin-bottom:40px}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);
+  padding:30px 28px;display:flex;flex-direction:column}
+.svc-who{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--terracotta-deep);margin-bottom:12px}
+.svc h3{font-size:22px;margin-bottom:10px;line-height:1.25}
+.svc p{font-size:16px;color:var(--muted);margin-bottom:18px}
+.svc .link{margin-top:auto;align-self:flex-start}
+
+/* menopause */
+.menopause{background:var(--sand)}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.stage{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:26px 24px}
+.stage h4{font-family:var(--serif);font-weight:400;font-size:20px;margin-bottom:8px}
+.stage p{font-size:15.5px;color:var(--muted)}
+.care{margin-top:8px}
+
+/* metabolic */
+.sa-panel{margin-top:56px;background:var(--clay-soft);border-radius:var(--r-card);
+  padding:34px 36px;max-width:860px}
+.sa-panel .kicker{color:var(--terracotta-deep)}
+.sa-panel .kicker::before{background:var(--terracotta)}
+.sa-panel h3{font-size:24px;margin-bottom:12px}
+.sa-panel p{font-size:16.5px;color:var(--ink)}
+
+/* longevity, on the dark ground */
+.longevity{background:var(--green);color:#fff}
+.longevity .kicker{color:#9FB3AA}
+.longevity h2,.longevity .sub,.longevity h5{color:#fff}
+.longevity .lede,.longevity p,.longevity .note-line{color:#C9D6D0}
+.assess{list-style:none;counter-reset:a;display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 40px;margin-top:22px}
+.assess li{counter-increment:a;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+.assess li::before{content:counter(a,decimal-leading-zero);display:block;
+  font-family:var(--serif);font-size:14px;color:var(--sage);margin-bottom:8px}
+.assess h5{font-family:var(--serif);font-weight:400;font-size:19px;margin-bottom:6px}
+.assess p{font-size:15.5px}
+
+/* fees */
+.fees{background:var(--sand)}
+.fee-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.fee{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:28px 26px}
+.fee.pop{background:var(--clay-soft);border-color:var(--clay-tint)}
+.fee-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+.fee h3{font-size:21px;line-height:1.25}
+.fee .price{font-family:var(--serif);font-size:25px;color:var(--terracotta-deep);
+  white-space:nowrap;flex:none}
+.fee-meta{font-size:13.5px;color:var(--terracotta-deep);margin:8px 0 12px}
+.fee p{font-size:15.5px;color:var(--muted)}
+.fee-inc{list-style:none;display:grid;gap:8px;margin-top:14px}
+.fee-inc li{display:flex;gap:10px;font-size:15px;color:var(--muted)}
+.fee-inc li::before{content:"–";color:var(--terracotta);flex:none}
+.fee-note{margin-top:14px;font-size:14.5px;font-style:italic}
+.fee-cta{margin-top:34px}
+
+/* cancellation */
+.cancel-list{display:grid;gap:0;max-width:860px}
+.cancel-list>div{display:grid;grid-template-columns:minmax(0,290px) minmax(0,1fr);
+  gap:10px 32px;padding:18px 0;border-top:1px solid var(--line)}
+.cancel-list>div:last-child{border-bottom:1px solid var(--line)}
+.cancel-list dt{font-family:var(--serif);font-size:18px;color:var(--ink)}
+.cancel-list dd{font-size:16px;color:var(--muted)}
+
+@media (max-width:1024px){
+  .svc,.stages,.fee-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .svc,.stages,.fee-list,.cols-2,.symptoms,.assess{grid-template-columns:minmax(0,1fr)}
+  .cols-2{gap:22px}
+  .narrow-head{margin-bottom:32px}
+  .sub{margin:38px 0 14px}
+  .lm-panel{padding:24px 20px;margin-bottom:32px}
+  .svc article,.stage,.fee{padding:22px 18px}
+  .sa-panel{padding:26px 20px;margin-top:40px}
+  .fee-top{flex-direction:column;gap:6px}
+  .fee .price{font-size:23px}
+  .cancel-list>div{grid-template-columns:minmax(0,1fr);gap:6px}
+  .fee-cta{width:100%}
+}

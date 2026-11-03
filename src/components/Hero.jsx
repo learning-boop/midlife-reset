@@ -29,7 +29,7 @@ const Hero = forwardRef(function Hero(_, ref) {
           <p className="hero-intro">{hero.intro}</p>
           <div className="hero-actions">
             <a className="btn btn-white" href={site.bookingUrl}>{hero.primary}</a>
-            <a className="btn btn-hero-ghost" href="#why">{hero.secondary} →</a>
+            <a className="btn btn-hero-ghost" href="#services">{hero.secondary} →</a>
           </div>
           <div className="trust">
             {hero.trust.map(([b, t]) => <span key={b}><b>{b}</b> {t}</span>)}

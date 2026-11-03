@@ -1,14 +1,18 @@
 // All page copy lives here so the client can edit text without touching components.
-// Source: client deck "the-midlife-reset" (22pp), supplied 2026-10-27.
+// Source: client page "Kaya Reset Clinic — Metabolic Health, Menopause Support &
+// Longevity", supplied 2026-11-03. It replaces the earlier deck wholesale: the
+// clinic is renamed, the fees are different, appointments are no longer
+// virtual-only, and metabolic health becomes a service in its own right.
 
 export const site = {
-  name: 'The Reset and Longevity Clinic',
-  nameShort: 'The Reset & Longevity Clinic',
-  domain: 'themidlifereset.uk',
-  bookingUrl: '/#discovery', // TODO: replace with Cal.com / booking link
+  name: 'Kaya Reset Clinic',
+  nameShort: 'Kaya Reset Clinic',
+  domain: 'themidlifereset.uk', // TODO: confirm — may change with the rename
+  bookingUrl: '/#discovery',
   email: 'mailto:hello@themidlifereset.uk', // TODO: confirm
   whatsapp: '#', // TODO: confirm
-  byline: 'Dr Sarika Gorantyal · GP · Lifestyle Medicine · Health Coach',
+  byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
+  tagline: 'The science of living better, for longer.',
 }
 
 // The bodies Dr Sarika is registered with, accredited by, or trained through.
@@ -25,91 +29,70 @@ export const accreditations = [
 ]
 
 export const nav = [
-  { label: 'How we can help', href: '/#support' },
-  { label: 'Pricing', href: '/#pricing' },
-  { label: 'Menopause', href: '/#cardiometabolic' },
+  { label: 'Menopause', href: '/#menopause' },
+  { label: 'Metabolic health', href: '/#metabolic' },
+  { label: 'Longevity', href: '/#longevity' },
   { label: 'Dr Sarika', href: '/about.html' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Fees', href: '/#fees' },
+  { label: 'FAQs', href: '/#faqs' },
 ]
 
 export const hero = {
-  kicker: 'Dr Sarika Gorantyal · GP',
-  lead: 'Doctor-led longevity, lifestyle medicine & menopause care —',
-  // the italic tail types/erases through these; first entry is the deck's own line
+  kicker: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
+  lead: 'Metabolic health, menopause support and longevity care,',
+  // the italic tail types/erases through these; first entry is the client's own line
   tail: [
-    'feel like yourself again.',
-    'metabolic health.',
-    'healthy weight.',
-    'midlife & menopause.',
-    'longevity & healthspan.',
-    'strength & healthy ageing.',
-    'sustainable lifestyle change.',
+    'led by a doctor.',
+    'built around you.',
+    'grounded in evidence.',
+    'for midlife and beyond.',
   ],
   intro:
-    'Built around your metabolic health, nutrition, strength and sleep — not a one-size-fits-all plan.',
+    'Evidence-based lifestyle medicine for women in midlife, with longevity care for both men and women. Investigations and treatment where clinically appropriate.',
   primary: 'Book your complimentary discovery call',
-  secondary: 'Why a doctor-led approach',
+  secondary: 'How I can help',
   trust: [
-    ['Evidence-informed', 'longevity medicine'],
-    ['100% virtual', 'across the UK'],
+    ['Virtual & face-to-face', 'appointments'],
+    ['Doctor-led', 'across the UK'],
   ],
   image: '/images/dr-sarika-seated.jpg',
-  imageAlt: 'Dr Sarika Gorantyal, GP and Lifestyle Medicine physician',
-  // Full-bleed background montage, silent 10s loop, client-supplied. Phones get
-  // the lighter 640px cut; reduced-motion visitors get the poster frame.
+  imageAlt: 'Dr Sarika Gorantyal, Lifestyle Medicine and Longevity Doctor',
+  // Full-bleed background montage, silent 10s loop, client-supplied.
   video: '/video/hero-story.mp4',
   videoSmall: '/video/hero-story-sm.mp4',
   videoPoster: '/video/hero-story.jpg',
   videoPosterSmall: '/video/hero-story-sm.jpg',
 }
 
-// Not rendered in the hero any more: the rotating headline already cycles all
-// six, and the chips repeated them on the same screen. Kept for reuse.
-export const focusAreas = {
-  kicker: 'Focus areas',
-  items: [
-    'Metabolic health',
-    'Healthy weight',
-    'Midlife & menopause',
-    'Longevity & healthspan',
-    'Strength & healthy ageing',
-    'Sustainable lifestyle change',
-  ],
-}
-
-export const stats = {
-  items: [
-    ['44', 'The age surgical menopause changed how Dr Sarika practises medicine.'],
-    ['100%', 'Virtual consultations, available anywhere in the UK.'],
-  ],
-}
-
-// The opening band of Dr Sarika's own page. Deliberately not a restatement of
-// the biography that follows it: that section already carries her approach in
-// her own words, so this one introduces her and offers the way to book.
+// The opening band of Dr Sarika's own page.
 export const aboutHero = {
   kicker: 'About',
   title: 'Dr Sarika Gorantyal',
   intro:
-    'Menopause care, longevity and lifestyle medicine, led by a doctor who has been through midlife change herself.',
+    'GP, Lifestyle Medicine and Longevity Doctor and Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
   cta: 'Book a discovery call',
-  secondary: 'See how we can help',
+  secondary: 'How I can help',
 }
 
 export const about = {
-  kicker: 'About Dr Sarika Gorantyal',
-  title: 'A doctor-led approach to longevity, lifestyle medicine & menopause care',
+  kicker: 'About',
+  title: 'Care led by a doctor who understands midlife health',
   quote:
-    'I’m a GP with a special interest in prevention, lifestyle medicine, longevity and helping people make changes that actually last.',
+    'I bring together general practice, lifestyle medicine and longevity training to offer care that is clinically thorough and genuinely personal.',
   body: [
-    'My interest in midlife health became personal after my own experience of surgical menopause at 44. It showed me the gap between “your bloods are normal” and “I don’t feel like myself” — and how much lifestyle, nutrition, movement, sleep and wellbeing can do to close it.',
-    'That experience, alongside my training in longevity medicine, shapes how I think about healthspan — not just treating symptoms as they arise, but building the habits and biomarker awareness that support how well you live for decades to come.',
-    'My approach combines medical knowledge with practical behaviour-change strategies, so your plan fits your actual life — not the other way around.',
+    'At 44, I had surgery for endometriosis that resulted in surgical menopause. Almost overnight, I was living the same challenges so many women had shared with me over the years: weight gain, brain fog, fatigue, mood swings and bloating. Some days, I simply didn’t feel like myself.',
+    'That experience changed me, both as a doctor and as a woman. It showed me how challenging this stage of life can be, physically and emotionally, and that women need more than reassurance. They need evidence-based guidance, compassionate support and practical strategies that truly make a difference.',
+    'That’s why I created Kaya Reset Clinic: to help you nourish your body, improve your metabolic health, sleep better, manage stress and feel healthier, stronger and more confident.',
+    'Today, I empower exhausted midlife women to take charge of their health, and help both men and women optimise their metabolic health through an evidence-based approach.',
   ],
+  // MRCGP and the menopause certificate come from the client's list of 30 Oct;
+  // the rest from the Kaya page of 3 Nov, which also restores the health coach
+  // qualification that list had left out.
   creds: [
     'MRCGP',
     'Diploma in Lifestyle Medicine, British Society of Lifestyle Medicine',
-    'Longevity Certification, Apex Longevity Academy',
+    'Certified Health Coach, Health Coaches Academy',
+    'Advanced Longevity Certification, Apex Longevity Academy',
     'Nutrition Certification, Precision Nutrition',
     'Currently completing: British Menopause Society Certificate in the Principles and Practice of Menopause Care',
   ],
@@ -118,322 +101,253 @@ export const about = {
   imageAlt: 'Dr Sarika Gorantyal',
 }
 
+export const lifestyleMedicine = {
+  title: 'What is lifestyle medicine?',
+  body:
+    'Lifestyle medicine is an evidence-based approach that uses everyday habits to prevent, manage and sometimes reverse long-term conditions. It focuses on six areas: healthy eating, physical activity, restorative sleep, managing stress, positive social connection and reducing harmful substances. Rather than treating symptoms in isolation, it looks at the whole person and helps you make changes that last.',
+}
+
 export const pillars = {
-  kicker: 'What is Lifestyle Medicine?',
-  title: 'A whole-person approach, not a symptom checklist',
+  kicker: 'The foundations of health',
+  title: 'The six pillars of lifestyle medicine',
   intro:
-    'Rather than treating symptoms in isolation, lifestyle medicine looks at how you nourish your body, move, sleep, manage stress, connect with others and build habits that stick. The aim isn’t perfection — it’s realistic change that supports your health now and later.',
+    'Small, consistent changes across these six areas can improve symptoms, protect long-term health and help you feel like yourself again. Your plan is built around the pillars that matter most for you.',
   items: [
-    ['Nutrition', 'Supporting balanced, sustainable eating patterns that nourish your body and support metabolic health.', '/images/pillars/nutrition.jpg'],
-    ['Physical activity', 'Helping you build enjoyable movement into your lifestyle.', '/images/pillars/activity.jpg'],
-    ['Strength & muscle health', 'Supporting strength, independence and healthy ageing through resistance-based activity.', '/images/pillars/strength.jpg'],
-    ['Sleep', 'Improving sleep habits to support energy, recovery and wellbeing.', '/images/pillars/sleep.jpg'],
-    ['Stress & emotional wellbeing', 'Developing strategies to improve resilience, balance and coping.', '/images/pillars/wellbeing.jpg'],
-    ['Social connection', 'Recognising the importance of relationships, belonging and support.', '/images/pillars/connection.jpg'],
+    ['Healthy eating', 'Whole foods, fibre and protein to support metabolic health and steady energy.', '/images/pillars/nutrition.jpg'],
+    ['Physical activity', 'Regular movement and strength training for heart, muscle and bone health.', '/images/pillars/activity.jpg'],
+    ['Restorative sleep', 'Consistent, good-quality sleep for recovery, mood and appetite control.', '/images/pillars/sleep.jpg'],
+    ['Stress management', 'Practical tools to build resilience and support emotional wellbeing.', '/images/pillars/wellbeing.jpg'],
+    ['Social connection', 'Relationships, belonging and purpose, which are linked to longer, healthier lives.', '/images/pillars/connection.jpg'],
+    // TODO: needs its own photograph — the strength image here is a stand-in
+    ['Reducing harmful substances', 'Cutting down on alcohol, smoking and other substances that harm long-term health.', '/images/pillars/strength.jpg'],
+  ],
+}
+
+export const services = {
+  kicker: 'How I can help',
+  title: 'Care built around you, not a one-size-fits-all plan',
+  intro:
+    'Every person’s story, symptoms and goals are different. I start with a thorough assessment, look at the whole picture, from hormones and metabolism to sleep, stress, nutrition and activity, and build a plan that is genuinely yours.',
+  items: [
+    {
+      name: 'Menopause & perimenopause care',
+      who: 'For women',
+      body: 'A symptom-led assessment and personalised plan for the changes affecting your sleep, mood, energy, focus and weight.',
+      href: '#menopause',
+    },
+    {
+      name: 'Metabolic health in midlife women',
+      who: 'For women',
+      body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
+      href: '#metabolic',
+    },
+    {
+      name: 'Longevity care for both men and women',
+      who: 'For men and women',
+      body: 'Advanced blood panel and DEXA scan, with optional VO2 max testing and a personalised plan to protect your heart, metabolic, muscle and bone health.',
+      href: '#longevity',
+    },
   ],
 }
 
 export const menopause = {
-  kicker: 'Understanding Menopause & Perimenopause',
-  title: 'A gradual transition, not a single event',
-  cards: [
-    ['Perimenopause', 'The transition leading up to menopause, often starting in your late 30s or 40s and lasting several years. Hormone levels — particularly oestrogen and progesterone — begin to fluctuate during this time, often well before periods become irregular.'],
-    ['Menopause', 'Reached once you’ve gone 12 months without a period. From this point, oestrogen remains consistently low, which can continue to affect the body well beyond this milestone.'],
+  kicker: 'Menopause & perimenopause care',
+  title: 'If your body doesn’t feel like your own any more, you’re not imagining it.',
+  intro:
+    'Perimenopause can begin years before your periods stop. Symptoms often creep in gradually and overlap with everyday stress, so they are easily missed. These changes are real, they can be explained, and they can be managed well with the right support.',
+  stagesTitle: 'Understanding where you are',
+  stages: [
+    ['Perimenopause', 'The transition before menopause, often from your late 30s or 40s. Hormone levels fluctuate, periods may become irregular and symptoms often begin. It can last several years.'],
+    ['Menopause', 'Reached when you have gone 12 months without a period. In the UK the average age is 51, but it varies widely.'],
+    ['Postmenopause', 'The years that follow. Some symptoms ease, but lower oestrogen has long-term effects on bone, heart and metabolic health that are worth looking after early.'],
   ],
-  quotesIntro:
-    'This stage shows up differently for everyone. Many women describe it in their own words, long before they connect it to perimenopause:',
-  quotes: [
-    'I don’t recognise my own body anymore.',
-    'I keep losing words mid-sentence.',
-    'I’m gaining weight around my midsection, and nothing I do seems to shift it.',
+  symptomsTitle: 'Symptoms I assess and help with',
+  symptomsIntro: 'Menopause affects far more than periods and hot flushes. Common symptoms include:',
+  symptoms: [
+    'Hot flushes and night sweats',
+    'Poor sleep and fatigue',
+    'Low mood, anxiety or irritability',
+    'Brain fog and losing words mid-sentence',
+    'Weight gain around the middle',
+    'Irregular, heavier or more painful periods',
+    'Joint and muscle aches',
+    'Headaches or migraines',
+    'Low libido',
+    'Vaginal dryness and urinary symptoms',
+  ],
+  careTitle: 'Care that starts with listening',
+  careIntro:
+    'Your appointment begins with a thorough, unhurried assessment of your history, symptoms, lifestyle and what you want from this stage of life. From there, we build a plan together that brings in nutrition, activity and lifestyle medicine alongside medical care, because these things are connected.',
+  optionsTitle: 'Understanding your options',
+  options: [
+    ['In-depth nutrition and physical activity assessment', 'A detailed look at what, when and how you eat, and at your movement, strength and fitness, with a realistic plan to support energy, weight, muscle and bone.'],
+    ['Lifestyle medicine', 'Practical changes to sleep, stress and daily routine that can improve symptoms and long-term health, and form the foundation of care alongside any other treatment.'],
+    ['Medical treatment', 'Where clinically appropriate, hormonal and non-hormonal treatment options are discussed fully with you, including the evidence, benefits and risks, so any decision is an informed one made together.'],
+    ['Ongoing review', 'Your plan isn’t fixed. Symptoms and needs change, so we review and adjust over time.'],
+  ],
+  expectTitle: 'What to expect',
+  expect: [
+    ['Initial consultation (60 min)', 'A full review of your story, symptoms, medical and family history and goals, using your pre-appointment questionnaire. We agree your personalised plan, including any blood tests needed.'],
+    ['Your personalised plan', 'Nutrition, activity, sleep and stress guidance, with treatment where clinically appropriate.'],
+    ['Follow-up reviews (30 min)', 'Usually 6 weeks after starting, then every 3 to 6 months, to check how you’re responding and refine your plan.'],
+  ],
+}
+
+export const metabolic = {
+  kicker: 'Weight & metabolic health',
+  title: 'Metabolic health in midlife women',
+  intro:
+    'Many women find weight harder to manage in midlife, especially around the middle, even though nothing about their effort has changed. Eating less and moving more stops working. It isn’t that you’ve stopped trying. Your body has changed, and your plan needs to change with it.',
+  changesTitle: 'What changes, and why',
+  changes: [
+    ['Falling oestrogen', 'Shifts fat storage towards the abdomen, where it is more metabolically active.'],
+    ['Insulin resistance', 'Cells respond less well to insulin, so blood sugar is harder to control and energy dips.'],
+    ['Muscle loss', 'Less muscle means fewer calories burned and less capacity to clear blood sugar after meals.'],
+    ['Sleep and stress', 'Poor sleep and high stress affect appetite, cravings and where fat is stored.'],
+    ['Other medical factors', 'Thyroid function, medicines and other conditions can all play a part.'],
+  ],
+  changesNote: 'These factors interact, which is why a plan that only counts calories so often falls short.',
+  testsTitle: 'Looking beneath the surface',
+  testsIntro:
+    'Weight is rarely the whole story, so blood tests are used to look at what is underneath it (charged separately). Depending on your needs, this may include:',
+  tests: [
+    'Blood sugar and insulin markers (including HbA1c)',
+    'Thyroid function',
+    'Cholesterol and cardiovascular markers',
+    'Liver and kidney function',
+    'Relevant hormone levels',
+    'Iron, vitamin D and B12, and inflammatory markers',
+  ],
+  testsNote:
+    'Your results are explained in a dedicated 45-minute appointment and interpreted alongside your symptoms, history and goals, so your plan is based on what is really going on.',
+  approachTitle: 'A medical approach, not another diet',
+  approachBody:
+    'I start by understanding the full picture: your history, hormones, metabolic markers, sleep, stress and routine, and what is making weight harder for you. You’ll then have a personalised plan built on lifestyle medicine, reviewed regularly as you progress. Where treatment is clinically appropriate, it is offered as part of a structured, closely monitored plan.',
+  includesTitle: 'What the programme includes',
+  includes: [
+    ['60-minute assessment', 'The metabolic, hormonal and lifestyle factors at play, using your pre-appointment questionnaire.'],
+    ['Blood tests', 'Arranged to look at your metabolic and cardiovascular health.'],
+    ['45-minute results appointment', 'Your results explained and your personalised nutrition, activity, strength and sleep plan agreed.'],
+    ['12-week transformation option', 'Regular check-ins over 12 weeks to track your progress and adjust your plan.'],
   ],
   outro:
-    'If any of this sounds familiar, you’re not imagining it — and you don’t have to work it out alone.',
+    'The goal isn’t a quick number on the scales. It’s better metabolic health, more energy and changes you can keep, with a doctor alongside you.',
+  southAsian: {
+    kicker: 'South Asian women’s metabolic health',
+    title: 'Care that reflects your background and your risk',
+    body: 'South Asian women tend to develop type 2 diabetes and heart disease earlier, and at a lower body weight, than many other groups, and risk can rise further through menopause. I look at blood sugar, cholesterol, blood pressure, waist size and family history, with nutrition advice built around your food, family and culture.',
+  },
 }
 
 export const longevity = {
-  kicker: 'Understanding Longevity Medicine',
-  title: 'Healthspan, not just lifespan',
-  cards: [
-    ['Lifespan', 'How many years you live. This is what most healthcare has traditionally focused on — detecting and treating disease once it appears.'],
-    ['Healthspan', 'How many of those years you spend in good health — strong, mobile, cognitively sharp and free from chronic disease. Longevity medicine is built around extending this, not just lifespan alone.'],
-  ],
-  quotesIntro:
-    'This applies well beyond any one life stage — the goal is understanding your own trajectory early, before small changes become harder to reverse:',
-  quotes: [
-    'I want to know what’s actually happening inside my body, not just wait until something goes wrong.',
-    'I’m fit on the outside, but I have no idea what my real risk markers look like.',
-    'I want to stay strong and independent well into my 70s and 80s, not just add years at the end.',
-  ],
-}
-
-export const support = {
-  kicker: 'How We Can Support You',
-  title: 'Three starting points, depending on what brought you here',
-  cards: [
-    {
-      title: 'Lifestyle & Biometabolic Health Assessment',
-      intro: 'For women and men who want to understand the lifestyle factors influencing their health.',
-      list: [
-        'Nutrition and eating patterns',
-        'Healthy weight goals',
-        'Metabolic health',
-        'Physical activity, strength and sleep',
-        'Stress, wellbeing and lifestyle habits',
-        'Existing health information, where available',
-      ],
-    },
-    {
-      title: 'Midlife & Menopause Assessment',
-      intro: 'For women navigating perimenopause, menopause and midlife changes.',
-      list: [
-        'Menopause stage and symptoms',
-        'Nutrition, weight and body composition',
-        'Strength, muscle health and sleep',
-        'Energy, wellbeing and stress',
-        'Healthy ageing and long-term metabolic health',
-      ],
-    },
-    {
-      title: 'Longevity Assessment',
-      intro: 'For those who want to understand and actively extend their healthspan.',
-      list: [
-        'Key biomarkers and body composition',
-        'Strength and cardiovascular health',
-        'Metabolic and cardiometabolic risk markers',
-        'Sleep, recovery and resilience',
-        'Long-term healthspan priorities',
-      ],
-    },
-  ],
-}
-
-export const consultations = {
-  kicker: 'Appointments (Virtual)',
-  title: 'Consultations, when you need a single conversation',
+  kicker: 'Healthspan, not just lifespan',
+  title: 'Longevity care for both men and women',
   intro:
-    'Not every question needs a programme. These are stand-alone appointments, all held virtually.',
+    'Lifespan is how many years you live. Healthspan is how many of those years you spend strong, mobile, sharp and free from chronic disease. Longevity medicine focuses on extending your healthspan, for women and men alike.',
+  shapesTitle: 'What shapes how well you age',
+  shapes: [
+    ['Cardiorespiratory fitness', 'VO2 max is one of the strongest predictors of long-term health.'],
+    ['Muscle and bone', 'Strength and bone density protect independence and mobility.'],
+    ['Metabolic health', 'Blood sugar, cholesterol and blood pressure shape your future heart health.'],
+    ['Sleep, stress and recovery', 'Daily habits that quietly influence every other marker.'],
+  ],
+  midlifeTitle: 'Midlife is an opportunity',
+  midlifeBody:
+    'Midlife is often spent reacting to symptoms and changes as they appear. But it is also one of the best times to get ahead of your long-term health. The choices you make now shape how you will feel and function in your 60s, 70s and beyond.',
+  includesTitle: 'What your Longevity Assessment includes',
+  includes: [
+    ['In-depth consultation', 'A thorough 60-minute appointment to understand your history, family history, lifestyle and goals.'],
+    ['Advanced blood panel', 'Metabolic, cardiovascular, inflammatory and hormonal markers, going beyond routine screening.'],
+    ['DEXA scan', 'An accurate measure of muscle mass, visceral fat and bone density.'],
+    ['Results and plan', 'Your results explained in full, with a personalised plan for fitness, strength, nutrition, sleep and stress to protect the decades ahead.'],
+  ],
+  optional: 'Optional: VO2 max test — your cardiorespiratory fitness, one of the strongest predictors of long-term health. Available at an extra charge.',
+}
+
+export const fees = {
+  kicker: 'Fees',
+  title: 'Our fees',
+  intro:
+    'Appointments are available virtually or face to face. Not sure which is right for you? Start with a free discovery call.',
   items: [
     {
-      name: 'Focused Health Consultation',
-      price: '£85',
-      meta: '30 minutes',
-      body: 'A shorter appointment for a specific question about your health. You might want to go through recent blood test results, talk about your longer-term health risks, or work out how to approach a health problem through changes to sleep, nutrition, activity, stress or other areas of daily life. You will leave with a clear understanding and practical next steps.',
-    },
-    {
-      name: 'Personalised Lifestyle Medicine Consultation',
+      name: 'Initial consultation',
       price: '£195',
-      meta: 'Initial consultation: 60 minutes, plus pre-appointment questionnaire and written plan',
-      body: 'A thorough review of your health, symptoms and goals, followed by a personalised consultation summary and action plan designed to support lasting, sustainable change.',
+      meta: '60 minutes',
+      body: 'A thorough first appointment for menopause, perimenopause or any midlife health concern. We go through your story, symptoms, medical and family history and goals, using your pre-appointment questionnaire, and create your personalised plan, including any blood tests needed. Your plan may include lifestyle guidance, and treatment where clinically appropriate.',
     },
     {
-      name: 'Follow-up appointment',
+      name: 'Follow-up review',
       price: '£85',
       meta: '30 minutes',
-      body: 'To review progress, revisit your plan and adjust as needed.',
+      body: 'To check how you’re responding to your plan, review any changes and adjust your care.',
+    },
+    {
+      name: 'Focused consultation',
+      price: '£95',
+      meta: '30 minutes',
+      body: 'Not sure which package is right for you? A shorter appointment to discuss one focused problem and get practical steps to optimise your lifestyle.',
+    },
+    {
+      name: 'Weight & Metabolic Health Programme',
+      price: '£325',
+      meta: '60-minute assessment · 45-minute results and plan appointment · for midlife women',
+      body: 'A comprehensive, doctor-led assessment of your metabolic risk, family history, eating patterns, activity, sleep and stress, followed by a 45-minute appointment to go through your blood results and agree a personalised nutrition, activity and strength plan, built around your food and culture.',
+      note: 'Covers both consultations and your personalised plan. Blood tests are charged separately.',
+      popular: true,
+    },
+    {
+      name: '12-Week Metabolic Transformation',
+      price: 'Price on enquiry',
+      meta: 'For midlife women',
+      body: 'The Weight & Metabolic Health Programme with 12 weeks of guided support: regular check-ins to track your progress, keep you accountable and adjust your plan as your body changes.',
+    },
+    {
+      name: 'Blood tests',
+      price: 'Priced separately',
+      meta: 'Arranged where clinically appropriate',
+      body: 'Your blood tests are chosen around your symptoms and history, and charged at cost. You’ll be told the price before anything is ordered.',
+    },
+    {
+      name: 'Longevity Assessment',
+      price: '£625',
+      meta: 'For men and women · advanced blood panel and DEXA scan included',
+      body: 'A comprehensive look at how you’re ageing, with a personalised plan to protect your heart, metabolic, muscle and bone health for the decades ahead.',
+      list: [
+        'Pre-assessment questionnaire',
+        '60-minute consultation — your medical and family history, lifestyle and goals',
+        'Advanced blood panel — metabolic, cardiovascular, inflammatory and hormonal markers',
+        'DEXA scan — muscle mass, visceral fat and bone density',
+        '45-minute results and strategy review — everything explained in full',
+        'Personalised longevity plan — fitness, strength, nutrition, sleep and stress, in writing to keep',
+      ],
+      note: 'VO2 max testing (cardiorespiratory fitness) can be added at an extra charge, price on enquiry.',
+    },
+    {
+      name: 'Ongoing support packages',
+      price: 'Price on enquiry',
+      meta: '6-week · 3-monthly · 6-monthly check-ins',
+      body: 'Regular check-ins to keep your plan on track, review progress and adjust as you go. Packages and prices are available on enquiry.',
     },
   ],
 }
 
-const TIER_NOTE =
-  'Ad hoc 30-minute follow-up appointments are available at any point for £85. All consultations are virtual.'
-
-export const programmes = [
-  {
-    id: 'menopause-packages',
-    tab: 'Menopause coaching',
-    kicker: 'Menopause Coaching Packages',
-    title: 'Three levels of support, built around this stage of life',
-    tiers: [
-      {
-        level: 'Tier 1',
-        name: 'Foundation',
-        price: '£325',
-        body: 'Midlife & Menopause Assessment: a 60-minute first appointment, a 45-minute second appointment, and a written plan with practical next steps.',
-        best: 'Best for clarity on where to start.',
-      },
-      {
-        level: 'Tier 2',
-        name: 'Signature',
-        price: '£425',
-        body: 'The full assessment plus a 45-minute review at 3 months, to check progress and adjust your plan.',
-        best: 'Best for sustained, guided support through the transition.',
-        popular: true,
-      },
-      {
-        level: 'Tier 3',
-        name: 'Premium',
-        price: '£650',
-        body: 'The full assessment plus a 6-week check-in and 45-minute reviews at 3 and 6 months, for the most continuity of care.',
-        best: 'Best for continuity of care through the transition.',
-      },
-    ],
-    note: TIER_NOTE,
-  },
-  {
-    id: 'longevity-programme',
-    tab: 'Longevity medicine',
-    kicker: 'Longevity Medicine Programme',
-    title: 'Evidence-informed support for a longer, healthier healthspan',
-    intro:
-      'Alongside menopause coaching, I now offer a longevity-focused programme — looking beyond symptoms to the biomarkers, habits and strength foundations that shape how you age.',
-    tiers: [
-      {
-        level: 'Tier 1',
-        name: 'Foundation',
-        price: '£325',
-        body: 'Longevity Assessment covering key biomarkers, body composition, strength and metabolic health: a 60-minute first appointment, a 45-minute second appointment, and a written plan.',
-        best: 'Best for a clear baseline before deciding on ongoing support.',
-      },
-      {
-        level: 'Tier 2',
-        name: 'Signature',
-        price: '£425',
-        body: 'The full assessment plus a 45-minute review at 3 months, to revisit your markers and adjust your plan.',
-        best: 'Best for sustained, structured healthspan support.',
-        popular: true,
-      },
-      {
-        level: 'Tier 3',
-        name: 'Premium',
-        price: '£650',
-        body: 'The full assessment plus a 6-week check-in and 45-minute reviews at 3 and 6 months, for the most continuity of care.',
-        best: 'Best for the most comprehensive approach to healthspan optimisation.',
-      },
-    ],
-    note: TIER_NOTE,
-  },
-  {
-    id: 'lifestyle-programme',
-    tab: 'Lifestyle & biometabolic health',
-    kicker: 'Lifestyle & Biometabolic Health Assessment',
-    title: 'Three levels of support for the foundations of your health',
-    intro:
-      'For women and men who want to understand the lifestyle factors influencing their health — nutrition, weight, metabolic health, activity, strength and sleep.',
-    tiers: [
-      {
-        level: 'Tier 1',
-        name: 'Foundation',
-        price: '£325',
-        body: 'Lifestyle & Biometabolic Health Assessment covering nutrition and eating patterns, healthy weight goals, metabolic health, activity, strength and sleep: a 60-minute first appointment, a 45-minute second appointment, and a written plan.',
-        best: 'Best for understanding which lifestyle factors matter most for you.',
-      },
-      {
-        level: 'Tier 2',
-        name: 'Signature',
-        price: '£425',
-        body: 'The full assessment plus a 45-minute review at 3 months, to check progress and adjust your plan.',
-        best: 'Best for sustained support while new habits take hold.',
-        popular: true,
-      },
-      {
-        level: 'Tier 3',
-        name: 'Premium',
-        price: '£650',
-        body: 'The full assessment plus a 6-week check-in and 45-minute reviews at 3 and 6 months, for the most continuity of care.',
-        best: 'Best for continuity of care while habits become routine.',
-      },
-    ],
-    note: TIER_NOTE,
-  },
-]
-
-export const cardiometabolic = {
-  kicker: 'Cardiometabolic Health in Midlife',
-  title: 'Why this stage of life changes your risk profile',
-  intro:
-    'The decline in oestrogen during perimenopause and menopause doesn’t just affect symptoms — it also changes how your body manages cholesterol, blood pressure, blood sugar and fat distribution. Midlife is a key window for addressing this proactively, rather than after a diagnosis.',
-  changes: {
-    title: 'What tends to change',
-    items: [
-      'Blood pressure often rises',
-      'Cholesterol profile tends to worsen (higher LDL, lower protective HDL)',
-      'Insulin resistance becomes more common',
-      'Fat redistributes toward the abdomen, raising metabolic risk',
-      'Muscle mass declines, lowering resting metabolic rate',
-    ],
-  },
-  focus: {
-    title: 'What we focus on',
-    items: [
-      'Reviewing relevant biomarkers where appropriate',
-      'Nutrition strategies supporting metabolic and cardiovascular health',
-      'Strength training to preserve muscle and support metabolism',
-      'Sleep and stress management, both linked to cardiometabolic risk',
-      'Ongoing monitoring as part of your personalised plan',
-    ],
-  },
-  why: {
-    title: 'Why this happens',
-    intro:
-      'Oestrogen does far more than regulate the menstrual cycle — it also plays a direct role in how your body handles blood sugar and fat. As levels decline, several connected changes make insulin resistance, and related cardiometabolic risk, more likely:',
-    items: [
-      ['Reduced insulin sensitivity', 'Oestrogen normally helps muscle and fat cells respond efficiently to insulin. As it declines, cells become less responsive, so more insulin is needed to manage the same amount of blood sugar.'],
-      ['Fat redistribution', 'Falling oestrogen shifts fat storage away from hips and thighs toward the abdomen. This visceral (abdominal) fat is metabolically active and itself drives further insulin resistance.'],
-      ['Increased low-grade inflammation', 'Oestrogen has anti-inflammatory effects; as it drops, background inflammation rises, which is closely linked to both insulin resistance and cardiovascular risk.'],
-      ['Changes in cholesterol handling', 'Oestrogen supports healthy LDL and HDL balance. Its decline tends to raise LDL (“bad”) cholesterol and lower protective HDL, independent of diet.'],
-      ['Muscle loss', 'Oestrogen supports muscle maintenance; as levels fall, muscle mass tends to decline too — and since muscle is where most blood sugar is cleared after eating, less muscle means less capacity to manage glucose.'],
-    ],
-  },
-  outro: [
-    'These changes compound each other, which is why cardiometabolic risk often rises noticeably during perimenopause and menopause — and why addressing them proactively, rather than after a diagnosis, is so valuable at this stage.',
-    'This is also why cardiometabolic health sits at the centre of both our Midlife & Menopause and Longevity Assessments — these changes are closely linked, and addressing them together is more effective than treating each in isolation.',
-  ],
-}
-
-export const nutrition = {
-  kicker: 'Nutrition Approach',
-  title: 'Practical nutrition for real life',
-  intro: 'There is no one-size-fits-all diet.',
-  considerTitle: 'Your approach will consider',
-  consider: [
-    'Your goals',
-    'Your lifestyle',
-    'Your cultural background',
-    'Your relationship with food',
-  ],
-  supportTitle: 'Support may include',
-  support: [
-    'Balanced meal structure',
-    'Protein and fibre optimisation',
-    'Meal-planning strategies',
-    'Practical food choices & eating out strategies',
-    'Sustainable habits, not short-term rules',
-  ],
-  image: '/images/dr-sarika-kitchen.webp',
-  imageAlt: 'Dr Sarika Gorantyal preparing fresh fruit and vegetables',
-}
-
+// Rendered by Journey.jsx, which draws a numbered track that fills as you scroll.
 export const journey = {
-  kicker: 'Your Health Journey',
-  title: 'Assess → Personalise → Support → Sustain',
+  kicker: 'How it works',
+  title: 'Discovery call → Assessment → Your plan → Review',
   steps: [
-    ['Discovery Call', 'A conversation to understand your goals and whether we’re the right fit.'],
-    ['Comprehensive Assessment', 'A detailed review of your lifestyle, health goals and priorities.'],
-    ['Personalised Health Plan', 'Clear, practical recommendations focused on what matters most.'],
-    ['Ongoing Support', 'Regular reviews, accountability and adjustments.'],
-    ['Long-Term Lifestyle Strategy', 'Help maintaining changes well beyond the programme.'],
+    ['Free discovery call (15 min)', 'Talk through your goals and find the right starting point.'],
+    ['Your assessment', 'Your story, symptoms, medical and family history, nutrition, activity and goals, using your pre-appointment questionnaire.'],
+    ['Your personalised plan', 'Lifestyle guidance, plus investigations and treatment where clinically appropriate.'],
+    ['Follow-up reviews', 'To check how you’re responding and refine your plan over time.'],
   ],
 }
 
-export const why = {
-  kicker: 'Why Choose This Approach?',
-  title: 'Medical expertise, combined with lifestyle support',
-  items: [
-    ['Doctor-led', 'Medical knowledge combined with lifestyle medicine principles.'],
-    ['Personalised', 'Your goals and circumstances guide your plan.'],
-    ['Evidence-informed', 'Based on established lifestyle and preventative health principles.'],
-    ['Practical', 'Designed around real life, not an idealised one.'],
-    ['Whole-person', 'Looking beyond weight alone.'],
-    ['Sustainable', 'Helping you create habits for long-term health.'],
-  ],
-}
-
-// ⚠️ CLINICAL GOVERNANCE — the source deck flags this statement as NOT FINAL:
-//   "[CONFIRM EXACT WORDING WITH YOUR CLINICAL GOVERNANCE LEAD BEFORE PUBLISHING —
-//    this statement should match how prescribing/investigations are described under
-//    your CQC registration.]"
-// Do not publish without that sign-off. The same applies to the prescribing/HRT FAQ.
+// CLINICAL GOVERNANCE: the client's own page marks the fuller statement — the one
+// naming investigations and prescribing — as needing sign-off before publishing.
+// That wording is deliberately NOT carried across. This is the notice already
+// live on the site, unchanged.
 export const notice = {
   title: 'Please note',
   lines: [
@@ -443,23 +357,21 @@ export const notice = {
 }
 
 export const faqs = [
-  ['Is this the same as seeing my NHS GP?', 'No. This is a doctor-led private service combining lifestyle medicine coaching with clinical assessment. It runs alongside, not instead of, your NHS GP care.'],
-  ['Will I need blood tests or investigations?', 'Where clinically appropriate, investigations will be organised as part of your assessment. Existing results can also be reviewed if you already have them.'],
-  ['Can you prescribe treatment, including HRT?', 'Yes — where clinically indicated and following a full assessment, treatment including prescribing may be offered as part of your care, in line with recognised clinical guidelines.'],
-  ['I’m not sure if I’m perimenopausal — can you help me find out?', 'Yes. A large part of the Midlife & Menopause Assessment is exactly this — understanding your symptoms and history to build a clearer picture of where you are in this transition.'],
-  ['Do I need to choose a package before booking?', 'No. Most people start with a complimentary discovery call, where we discuss your goals and agree together which level of support makes sense.'],
-  ['Are appointments in person or online?', 'All consultations are virtual, so you can access support from anywhere in the UK.'],
-  ['What if I have an urgent health concern?', 'This service does not provide emergency care. For urgent concerns, please contact your GP, NHS 111, 999 or emergency services.'],
+  ['Is this the same as seeing my NHS GP?', 'No. This is a private, doctor-led service combining lifestyle medicine with clinical assessment. It runs alongside your NHS GP care, not instead of it.'],
+  ['Do I need a blood test?', 'Not always. Where clinically appropriate, investigations will be organised as part of your assessment. If you already have recent results, these can be reviewed.'],
+  ['Are appointments online or in person?', 'Both. Virtual consultations are available anywhere in the UK, and face-to-face appointments can be booked after your discovery call.'],
+  ['Do I need to choose a service before booking?', 'No. Most people start with a free discovery call, where we agree together on the right starting point.'],
+  ['What if I have an urgent health concern?', 'This service does not provide emergency care. For urgent concerns, please contact your GP, NHS 111, or 999.'],
 ]
 
 export const discovery = {
-  kicker: 'Ready to Begin?',
+  kicker: 'Ready to begin?',
   title: 'You don’t need to know exactly what support you need yet.',
   intro:
-    'Start with a complimentary 15-minute discovery call to talk through your goals and find the right next step — no obligation to continue.',
+    'Start with a free 15-minute discovery call to talk through your goals and find the right next step. No obligation to continue.',
   bullets: [
-    'Discuss your goals and what brought you here',
-    'Understand how the assessments and packages work',
+    'Talk through your goals and what brought you here',
+    'Understand how the assessments and programmes work',
     'Decide together whether we’re the right fit',
   ],
   cta: 'Book your complimentary discovery call',
@@ -467,20 +379,37 @@ export const discovery = {
   imageAlt: 'Dr Sarika Gorantyal',
 }
 
+export const cancellation = {
+  kicker: 'Before you book',
+  title: 'Cancellation policy',
+  intro:
+    'Appointments are set aside just for you, so I ask for as much notice as possible if you need to change one.',
+  items: [
+    ['48 hours’ notice or more', 'You can rearrange free of charge, or cancel for a full refund.'],
+    ['Less than 48 hours’ notice', '50% of the appointment fee will be charged.'],
+    ['Less than 24 hours’ notice, or a missed appointment', 'The full fee will be charged.'],
+    ['Arriving late', 'Your appointment will still finish at the planned time. If you are more than 15 minutes late, it may be treated as a missed appointment.'],
+    ['Packages', 'Appointments within a package follow the same notice periods. Unused appointments are not refundable once a package has started, and should be used within the package timeframe.'],
+    ['Blood tests and scans', 'Once a test has been ordered or processed, its cost cannot be refunded.'],
+    ['If I need to cancel', 'You will be offered the next available appointment or a full refund.'],
+  ],
+  outro: 'Exceptions may be made in genuine emergencies or illness.',
+}
+
 export const footer = {
   tagline: site.byline,
   columns: [
-    ['Focus', [
-      ['Lifestyle & biometabolic health', '/#support'],
-      ['Midlife & menopause', '/#cardiometabolic'],
-      ['Healthy ageing', '/#lifestyle'],
+    ['Care', [
+      ['Menopause & perimenopause', '/#menopause'],
+      ['Metabolic health', '/#metabolic'],
+      ['Longevity', '/#longevity'],
       ['Dr Sarika', '/about.html'],
     ]],
-    ['Site', [
-      ['Privacy policy', '#'],
-      ['Terms & conditions', '#'],
-      ['Disclaimer', '#'],
-      ['Contact', '/#contact'],
+    ['Practical', [
+      ['Fees', '/#fees'],
+      ['How it works', '/#journey'],
+      ['FAQs', '/#faqs'],
+      ['Cancellation policy', '/#cancellation'],
     ]],
   ],
 }

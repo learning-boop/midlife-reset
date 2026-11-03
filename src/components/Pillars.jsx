@@ -1,6 +1,6 @@
 import Img from './Img'
 import FillText from './FillText'
-import { pillars } from '../data/content'
+import { lifestyleMedicine, pillars } from '../data/content'
 
 export default function Pillars() {
   return (
@@ -10,6 +10,10 @@ export default function Pillars() {
           <p className="kicker">{pillars.kicker}</p>
           <FillText>{pillars.title}</FillText>
           <p className="lede">{pillars.intro}</p>
+        </div>
+        <div className="lm-panel" data-reveal>
+          <h3>{lifestyleMedicine.title}</h3>
+          <p>{lifestyleMedicine.body}</p>
         </div>
         <div className="six">
           {pillars.items.map(([title, body, image], i) => (
