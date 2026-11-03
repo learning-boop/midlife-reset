@@ -902,6 +902,12 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 /* three ways in */
 .svc-head{max-width:760px;margin-bottom:40px}
 .svc{display:flex;flex-direction:column}
+/* "How I can help" picked out in the section's own accent, the colour its
+   audience tags and links already use, while every other kicker on the site
+   stays muted grey — which is what makes this one carry. */
+.services .kicker{color:var(--terracotta-deep)}
+.services .kicker::before{background:var(--terracotta)}
+
 /* These are the way into the three service pages, and they sat directly under
    the six pillar cards in the same white bordered box with a picture on top —
    one system, two jobs. Three rows instead: photograph, service, way in. The
