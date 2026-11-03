@@ -982,3 +982,23 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .cancel-list>div{grid-template-columns:minmax(0,1fr);gap:6px}
   .fee-cta{width:100%}
 }
+
+/* ═══ Dr Sarika's introduction on the home page ════════════
+   Light, and with a different photograph from the hero. The full biography
+   block used to run here as well as on her own page: dark green under a dark
+   green hero, her portrait twice within a screen of each other. */
+.aboutintro{background:var(--sand);--curtain:var(--sand)}
+.aboutintro .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.aboutintro h2{margin-bottom:20px}
+.aboutintro p{color:var(--muted);margin-bottom:14px;max-width:54ch}
+.aboutintro .btn{margin-top:14px}
+.aboutintro .shot img{border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;
+  background:var(--sand-deep);width:100%;display:block}
+
+@media (max-width:900px){
+  .aboutintro .wrap{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:640px){
+  .aboutintro .shot{width:100%}
+  .aboutintro .shot img{aspect-ratio:1}
+}

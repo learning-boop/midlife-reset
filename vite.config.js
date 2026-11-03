@@ -7,7 +7,14 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: { main: 'index.html', about: 'about.html' },
+      input: {
+        main: 'index.html',
+        about: 'about.html',
+        menopause: 'menopause.html',
+        metabolic: 'metabolic.html',
+        longevity: 'longevity.html',
+        fees: 'fees.html',
+      },
     },
   },
 })

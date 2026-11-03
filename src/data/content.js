@@ -29,11 +29,11 @@ export const accreditations = [
 ]
 
 export const nav = [
-  { label: 'Menopause', href: '/#menopause' },
-  { label: 'Metabolic health', href: '/#metabolic' },
-  { label: 'Longevity', href: '/#longevity' },
+  { label: 'Menopause', href: '/menopause.html' },
+  { label: 'Metabolic health', href: '/metabolic.html' },
+  { label: 'Longevity', href: '/longevity.html' },
   { label: 'Dr Sarika', href: '/about.html' },
-  { label: 'Fees', href: '/#fees' },
+  { label: 'Fees', href: '/fees.html' },
   { label: 'FAQs', href: '/#faqs' },
 ]
 
@@ -72,6 +72,23 @@ export const aboutHero = {
     'GP, Lifestyle Medicine and Longevity Doctor and Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
   cta: 'Book a discovery call',
   secondary: 'How I can help',
+}
+
+// The home page's introduction to Dr Sarika. Short on purpose: the full
+// biography is on her own page, and running it in both places put the same
+// photograph on a dark green band twice within one screen of the hero.
+export const aboutIntro = {
+  kicker: 'Your doctor',
+  title: 'Care led by a doctor who understands midlife health',
+  body: [
+    'I’m a GP, Lifestyle Medicine and Longevity Doctor and Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
+    'At 44, surgery for endometriosis left me in surgical menopause, living the same changes my patients had been describing to me for years. That is why this clinic exists.',
+  ],
+  cta: 'More about Dr Sarika',
+  // the kitchen photograph, free since the nutrition section was retired, and
+  // deliberately not the studio portrait the hero and her own page already use
+  image: '/images/dr-sarika-kitchen.webp',
+  imageAlt: 'Dr Sarika Gorantyal',
 }
 
 export const about = {
@@ -137,7 +154,7 @@ export const services = {
       // photographs of their own would stop this grid echoing that one.
       image: '/images/pillars/wellbeing.jpg',
       body: 'A symptom-led assessment and personalised plan for the changes affecting your sleep, mood, energy, focus and weight.',
-      href: '#menopause',
+      href: '/menopause.html',
     },
     {
       name: 'Metabolic health in midlife women',
@@ -146,7 +163,7 @@ export const services = {
       // paper ground falls outside the frame
       image: '/images/metabolic-bowl.jpg',
       body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
-      href: '#metabolic',
+      href: '/metabolic.html',
     },
     {
       name: 'Longevity care for both men and women',
@@ -154,7 +171,7 @@ export const services = {
       // STAND-IN: also used by the social-connection pillar below.
       image: '/images/pillars/connection.jpg',
       body: 'Advanced blood panel and DEXA scan, with optional VO2 max testing and a personalised plan to protect your heart, metabolic, muscle and bone health.',
-      href: '#longevity',
+      href: '/longevity.html',
     },
   ],
 }
@@ -409,16 +426,16 @@ export const footer = {
   tagline: site.byline,
   columns: [
     ['Care', [
-      ['Menopause & perimenopause', '/#menopause'],
-      ['Metabolic health', '/#metabolic'],
-      ['Longevity', '/#longevity'],
+      ['Menopause & perimenopause', '/menopause.html'],
+      ['Metabolic health', '/metabolic.html'],
+      ['Longevity', '/longevity.html'],
       ['Dr Sarika', '/about.html'],
     ]],
     ['Practical', [
-      ['Fees', '/#fees'],
+      ['Fees', '/fees.html'],
       ['How it works', '/#journey'],
       ['FAQs', '/#faqs'],
-      ['Cancellation policy', '/#cancellation'],
+      ['Cancellation policy', '/fees.html#cancellation'],
     ]],
   ],
 }
