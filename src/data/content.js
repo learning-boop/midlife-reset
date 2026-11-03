@@ -10,10 +10,13 @@ export const site = {
   // the wordmark sets the middle word apart; kept here so a rename cannot
   // silently lose the treatment, and so the split is never guessed in markup
   nameParts: ['Kaya', 'Reset', 'Clinic'],
-  domain: 'themidlifereset.uk', // TODO: confirm — may change with the rename
+  // Empty until the real ones exist. The footer shows each only when set, so
+  // filling these in is all it takes to bring the line and the link back.
+  // They held themidlifereset.uk, from the branding before the rename.
+  domain: '',
+  email: '', // address only, no mailto: — the footer adds that
   // Google appointment page, '15 min discovery call', supplied 3 Nov 2026
   bookingUrl: 'https://calendar.app.google/ZEQPQbtjCvNitf2Q8',
-  email: 'mailto:hello@themidlifereset.uk', // TODO: confirm
   whatsapp: '#', // TODO: confirm
   byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
   tagline: 'The science of living better, for longer.',

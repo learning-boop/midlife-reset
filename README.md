@@ -51,8 +51,10 @@ neither is in the repo. `npm run dev` and `npm run preview` already do it.
 ## Editing
 
 - All copy lives in `src/data/content.js`. Edit text there, not in components.
-- `site.domain`, `site.email` and `site.whatsapp` in `content.js` are still
-  placeholders, and the footer address is from the previous branding.
+- `site.domain` and `site.email` in `content.js` are empty: they held the
+  previous branding's themidlifereset.uk, which is gone from the site. The
+  footer shows the domain line and the Email us link only when they are set,
+  so filling them in brings both back. `site.whatsapp` is still a placeholder.
 - Photograph provenance and crop ratios are recorded in
   `public/images/README.md`. Service-card photographs are 1.786:1.
 - The mailing form in `src/components/Mailing.jsx` has a TODO for the list

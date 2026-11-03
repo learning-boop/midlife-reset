@@ -11,11 +11,15 @@ export default function Footer() {
           <div>
             <h3>Do you have a question?</h3>
             <p>{footer.tagline}</p>
+            {/* Both the address and the domain are shown only once they are
+                real. An address nobody reads is worse than none: the reader
+                writes, nothing bounces visibly, and they are left waiting. The
+                booking link is the way in until then. */}
             <div className="fcontact">
-              <a href={site.email}>Email us</a>
+              {site.email && <a href={`mailto:${site.email}`}>Email us</a>}
               <BookLink className="">Book a discovery call</BookLink>
             </div>
-            <p className="fdomain">{site.domain}</p>
+            {site.domain && <p className="fdomain">{site.domain}</p>}
           </div>
           {footer.columns.map(([heading, links]) => (
             <div key={heading}>
