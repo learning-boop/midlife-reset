@@ -6,11 +6,12 @@
 | service-metabolic.jpg | Metabolic health in midlife women | client-supplied 3 Nov 2026 |
 | service-longevity.jpg | Longevity care | Pexels 19070023, cropped from the bottom of the frame |
 
-The cards are rows now, not arches: the image box is 250x140 on a desktop,
-1.786:1. service-menopause.jpg is cropped to exactly that, so nothing of it is
-lost to object-fit. The other two were cropped to the arch's 363:230 and are
-trimmed a little at top and bottom here; worth recropping if either starts to
-look badly framed.
+All three are 1.786:1, which is the shape of the row thumbnail and of the lead
+image on the matching service page, so neither crops them. The last two were
+still at the old arch ratio and were losing 11% and 25% of their height in the
+row - enough to cut the top of a head - so they were recropped: the metabolic
+one from the top edge, where her head is, and the longevity one from the bottom,
+where the couple walks. Keep anything added here at 1.786:1.
 
 As with the pillars, nobody in these should read as a patient.
 

@@ -298,7 +298,9 @@ details p{padding:0 0 24px;max-width:72ch}
 .notice p:last-child{margin-bottom:0}
 
 /* mailing */
-.mail{background:#fff;border-top:1px solid var(--line);padding:72px 0}
+/* sand, so the sign-up reads as its own invitation between the white section
+   above it and the green footer below, rather than as more of the same page */
+.mail{background:var(--sand);border-top:1px solid var(--line);padding:72px 0}
 .mail .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .mail h3{font-size:28px;margin-bottom:10px}
 .mail form{display:grid;grid-template-columns:1fr 1fr auto;gap:12px}
@@ -341,7 +343,11 @@ footer a:hover{color:#fff}
   .mobile-menu{max-height:calc(100dvh - 74px);overflow-y:auto;overscroll-behavior:contain}
   .hero-grid{grid-template-columns:1fr}
   .hero-copy{padding:72px 24px 56px}
-  .hero-photo{min-height:420px;order:-1}
+  /* An explicit height, not a minimum: the container is auto-height here, so
+     the image's own height:100% never resolved and it took its intrinsic
+     portrait shape instead, filling the whole first screen and pushing the
+     headline and the booking button below the fold. */
+  .hero-photo{height:420px;order:-1}
   .hero-photo::after{background:linear-gradient(180deg,rgba(31,61,51,.25),rgba(31,61,51,0) 40%)}
   .six,.cgrid,.appts,.tiers,.why{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps5{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -372,7 +378,7 @@ footer a:hover{color:#fff}
   .hero-copy{padding:48px 24px 44px}
   .hero h1{font-size:clamp(27px,7.4vw,34px);margin-bottom:18px}
   .hero-intro{font-size:16px;margin-bottom:26px}
-  .hero-photo{min-height:330px}
+  .hero-photo{height:min(44vh,330px)}
   .hero-actions{margin-bottom:28px}
   .hero-actions .btn{width:100%}
   .trust{gap:12px 20px}
@@ -913,20 +919,28 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
    one system, two jobs. Three rows instead: photograph, service, way in. The
    rhythm is what separates them, since nothing else on the page is laid out
    this way, and each service gets room for a full sentence. */
-.svc article{display:flex;gap:34px;align-items:center;padding:26px 0;
-  border-top:1px solid var(--line)}
+.svc article{display:flex;gap:36px;align-items:center;padding:28px 0;
+  border-top:1px solid var(--line);position:relative}
 .svc article:last-child{border-bottom:1px solid var(--line)}
-.svc-img{width:250px;height:140px;flex:none;overflow:hidden;
+/* The hover tint bleeds past the text column so the row reads as one target,
+   while the hairlines stay ruled to the content edges. It is a pseudo-element
+   rather than padding on the row, which would shift every line sideways. */
+.svc article::before{content:"";position:absolute;inset:1px -24px 0;
+  border-radius:var(--r-img);background:var(--sand);
+  opacity:0;transition:opacity .4s ease}
+.svc-img,.svc-body,.svc-meta{position:relative}
+.svc-img{width:300px;height:168px;flex:none;overflow:hidden;
   border-radius:var(--r-img);background:var(--sand-deep)}
 .svc-img img{width:100%;height:100%;object-fit:cover;display:block;
   transition:transform .7s cubic-bezier(.22,.61,.36,1)}
 .svc-body{flex-grow:1;min-width:0}
-.svc h3{font-size:24px;line-height:1.2;margin-bottom:8px}
-.svc p{font-size:15.5px;color:var(--muted);max-width:62ch}
-.svc-meta{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.svc h3{font-size:25px;line-height:1.2;margin-bottom:9px}
+.svc-body>p{font-size:15.5px;color:var(--muted);max-width:60ch}
 .svc-who{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--terracotta-deep)}
-.svc-meta .link{white-space:nowrap}
+  color:var(--terracotta-deep);margin-bottom:9px}
+.svc-meta{flex:none}
+.svc-meta .link{white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.svc-meta .link span{transition:transform .4s cubic-bezier(.22,.61,.36,1)}
 
 /* menopause */
 .menopause{background:var(--sand)}
@@ -959,8 +973,10 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 
 /* fees */
 .fees{background:var(--sand)}
-.fee-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.fee{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:28px 26px}
+.fee-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;
+  align-items:start}
+.fee{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);
+  padding:28px 26px;transition:border-color .35s ease,box-shadow .35s ease}
 .fee.pop{background:var(--clay-soft);border-color:var(--clay-tint)}
 .fee-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
 .fee h3{font-size:21px;line-height:1.25}
@@ -984,6 +1000,10 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 
 @media (hover:hover){
   .svc article:hover .svc-img img{transform:scale(1.06)}
+  .svc article:hover::before{opacity:1}
+  .svc article:hover .svc-meta .link span{transform:translateX(5px)}
+  .fee:hover{border-color:var(--clay-tint);
+    box-shadow:0 10px 30px -22px rgba(31,61,51,.45)}
 }
 
 @media (max-width:1024px){
@@ -993,14 +1013,13 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
    columns leave the middle one too narrow for a sentence */
 @media (max-width:900px){
   .svc article{flex-wrap:wrap;gap:20px}
-  .svc-img{width:100%;height:200px}
+  .svc-img{width:100%;height:auto;aspect-ratio:1200/672}
   .svc-body{flex-basis:100%}
-  .svc-meta{flex-direction:row;align-items:center;justify-content:space-between;
-    width:100%;gap:18px}
+  .svc-meta{width:100%}
+  .svc article::before{inset:1px -16px 0}
 }
 @media (max-width:640px){
   .stages,.fee-list,.cols-2,.symptoms,.assess{grid-template-columns:minmax(0,1fr)}
-  .svc-img{height:180px}
   .svc h3{font-size:21px}
   .cols-2{gap:22px}
   .narrow-head{margin-bottom:32px}
@@ -1019,7 +1038,9 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
    Light, and with a different photograph from the hero. The full biography
    block used to run here as well as on her own page: dark green under a dark
    green hero, her portrait twice within a screen of each other. */
-.aboutintro{background:var(--sand);--curtain:var(--sand)}
+/* White, not sand: the pillars below are sand too, and the two together made
+   a 2,000px run of one colour straight after the hero. */
+.aboutintro{background:var(--white);--curtain:var(--white)}
 .aboutintro .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .aboutintro h2{margin-bottom:20px}
 .aboutintro p{color:var(--muted);margin-bottom:14px;max-width:54ch}
@@ -1044,11 +1065,9 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
    head with it, so the box takes the picture's own proportions instead and the
    width is capped to keep it from becoming a slab. */
 .page-lead .shot{max-width:780px}
-.page-lead .shot img{width:100%;aspect-ratio:var(--lead-ar,16/9);
+.page-lead .shot img{width:100%;aspect-ratio:var(--lead-ar,1200/672);
   object-fit:cover;border-radius:var(--r-card);display:block;
   background:var(--sand-deep)}
-.menopause{--lead-ar:1200/672}
-.metabolic{--lead-ar:1200/760}
 .page-split{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:start}
 /* lists sit in a narrower column here, so they stop being two across */
 .page-split .cols-2{grid-template-columns:minmax(0,1fr);gap:22px}
@@ -1056,7 +1075,7 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   border-radius:var(--r-card);display:block;background:var(--sand-deep)}
 /* the longevity page is dark green, so its curtain must be too or it flashes
    sand across the photograph as it opens */
-.longevity{--lead-ar:1400/1050;--curtain:var(--green)}
+.longevity{--curtain:var(--green)}
 
 @media (max-width:900px){
   .page-split{grid-template-columns:minmax(0,1fr);gap:34px}

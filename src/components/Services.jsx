@@ -26,14 +26,16 @@ export default function Services() {
                 <Img src={s.image} alt="" />
               </div>
               <div className="svc-body">
+                {/* who it is for reads as a label on the service, so it sits
+                    over the name rather than stranded at the far right */}
+                <p className="svc-who">{s.who}</p>
                 <h3>{s.name}</h3>
                 <p>{s.body}</p>
               </div>
-              {/* who it is for, and the way in, held together at the end of the
-                  row where the eye finishes rather than buried in the copy */}
               <div className="svc-meta">
-                <p className="svc-who">{s.who}</p>
-                <a className="link" href={s.href}>Learn more ›</a>
+                <a className="link" href={s.href}>
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
               </div>
             </article>
           ))}
