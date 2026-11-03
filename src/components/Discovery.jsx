@@ -1,5 +1,6 @@
 import Shot from './Shot'
-import { discovery, site } from '../data/content'
+import BookLink from './BookLink'
+import { discovery } from '../data/content'
 import FillText from './FillText'
 
 export default function Discovery() {
@@ -12,7 +13,7 @@ export default function Discovery() {
           <p className="lede">{discovery.intro}</p>
           <ul>{discovery.bullets.map((b) => <li key={b}><span className="check">✓</span>{b}</li>)}</ul>
           <div className="row">
-            <a className="btn btn-plum" href={site.bookingUrl}>{discovery.cta}</a>
+            <BookLink>{discovery.cta}</BookLink>
             <a className="btn btn-ghost" href="#faq">Read the FAQs</a>
           </div>
         </div>

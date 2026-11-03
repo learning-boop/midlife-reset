@@ -1,5 +1,6 @@
 import Logo from './Logo'
 import { footer, site } from '../data/content'
+import BookLink from './BookLink'
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
             <p>{footer.tagline}</p>
             <div className="fcontact">
               <a href={site.email}>Email us</a>
-              <a href={site.bookingUrl}>Book a discovery call</a>
+              <BookLink className="">Book a discovery call</BookLink>
             </div>
             <p className="fdomain">{site.domain}</p>
           </div>

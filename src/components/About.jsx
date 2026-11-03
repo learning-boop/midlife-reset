@@ -1,5 +1,6 @@
 import Shot from './Shot'
-import { about, site } from '../data/content'
+import BookLink from './BookLink'
+import { about } from '../data/content'
 import FillText from './FillText'
 
 export default function About() {
@@ -10,7 +11,7 @@ export default function About() {
           <FillText>{about.title}</FillText>
           <blockquote>“{about.quote}”</blockquote>
           {about.body.map((p) => <p key={p}>{p}</p>)}
-          <a className="btn btn-white" href={site.bookingUrl}>{about.cta}</a>
+          <BookLink className="btn btn-white">{about.cta}</BookLink>
         </div>
         <Shot src={about.image} alt={about.imageAlt} />
       </div>

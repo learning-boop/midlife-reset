@@ -1,4 +1,5 @@
-import { fees, site } from '../data/content'
+import { fees } from '../data/content'
+import BookLink from './BookLink'
 import FillText from './FillText'
 
 // One flat list rather than the old tabbed ladders: these are eight distinct
@@ -30,7 +31,7 @@ export default function Fees() {
             </article>
           ))}
         </div>
-        <a className="btn btn-plum fee-cta" href={site.bookingUrl}>Book your complimentary discovery call</a>
+        <BookLink className="btn btn-plum fee-cta">Book your complimentary discovery call</BookLink>
       </div>
     </section>
   )

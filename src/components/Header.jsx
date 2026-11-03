@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
-import { nav, site } from '../data/content'
+import BookLink from './BookLink'
+import { nav } from '../data/content'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -38,14 +39,14 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="btn btn-plum" href={site.bookingUrl}>Book a discovery call</a>
+        <BookLink>Book a discovery call</BookLink>
         <button className="burger" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           <span /><span /><span />
         </button>
       </div>
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         {nav.map((n) => <a key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>)}
-        <a className="btn btn-plum" style={{ marginTop: 16, width: '100%' }} href={site.bookingUrl}>Book a discovery call</a>
+        <BookLink style={{ marginTop: 16, width: '100%' }} onClick={() => setOpen(false)}>Book a discovery call</BookLink>
       </div>
     </header>
   )

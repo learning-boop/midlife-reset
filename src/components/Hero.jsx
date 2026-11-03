@@ -1,7 +1,8 @@
 import { forwardRef } from 'react'
 import Img from './Img'
+import BookLink from './BookLink'
 import useTypewriter from './useTypewriter'
-import { hero, site } from '../data/content'
+import { hero } from '../data/content'
 
 // The longest phrase sizes the rotating line, so the heading reserves exactly the
 // height it needs at any viewport and the buttons below never shift as it cycles.
@@ -28,7 +29,7 @@ const Hero = forwardRef(function Hero(_, ref) {
           </h1>
           <p className="hero-intro">{hero.intro}</p>
           <div className="hero-actions">
-            <a className="btn btn-white" href={site.bookingUrl}>{hero.primary}</a>
+            <BookLink className="btn btn-white">{hero.primary}</BookLink>
             <a className="btn btn-hero-ghost" href="#services">{hero.secondary} →</a>
           </div>
           <div className="trust">

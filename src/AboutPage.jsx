@@ -1,9 +1,10 @@
 import Header from './components/Header'
+import BookLink from './components/BookLink'
 import About from './components/About'
 import Footer from './components/Footer'
 import ProgressBar from './components/ProgressBar'
 import useReveal from './components/useReveal'
-import { about, aboutHero, site } from './data/content'
+import { about, aboutHero } from './data/content'
 
 // Dr Sarika's own page. The story itself is the same <About> block the home
 // page used to carry, so the two pages share one source of that copy.
@@ -46,7 +47,7 @@ export default function AboutPage() {
           <h1>{aboutHero.title}</h1>
           <p className="lede">{aboutHero.intro}</p>
           <div className="abouthero-actions">
-            <a className="btn btn-plum" href={site.bookingUrl}>{aboutHero.cta}</a>
+            <BookLink>{aboutHero.cta}</BookLink>
             <a className="btn btn-ghost" href="/#support">{aboutHero.secondary} →</a>
           </div>
         </div>
@@ -61,7 +62,7 @@ export default function AboutPage() {
           <ol className="qual-list">
             {about.creds.map((c) => <Qualification key={c} entry={c} />)}
           </ol>
-          <a className="btn btn-plum" href={site.bookingUrl}>{about.cta}</a>
+          <BookLink>{about.cta}</BookLink>
         </div>
       </section>
 

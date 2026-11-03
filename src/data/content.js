@@ -8,7 +8,8 @@ export const site = {
   name: 'Kaya Reset Clinic',
   nameShort: 'Kaya Reset Clinic',
   domain: 'themidlifereset.uk', // TODO: confirm — may change with the rename
-  bookingUrl: '/#discovery',
+  // Google appointment page, '15 min discovery call', supplied 3 Nov 2026
+  bookingUrl: 'https://calendar.app.google/ZEQPQbtjCvNitf2Q8',
   email: 'mailto:hello@themidlifereset.uk', // TODO: confirm
   whatsapp: '#', // TODO: confirm
   byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
