@@ -141,9 +141,8 @@ export const pillars = {
 }
 
 export const services = {
-  // the eyebrow moves off "How I can help" because the heading now says it
-  kicker: 'Services',
-  title: 'What I help with',
+  kicker: 'How I can help',
+  title: 'Care built around you, not a one-size-fits-all plan',
   intro:
     'Every person’s story, symptoms and goals are different. I start with a thorough assessment, look at the whole picture, from hormones and metabolism to sleep, stress, nutrition and activity, and build a plan that is genuinely yours.',
   items: [
