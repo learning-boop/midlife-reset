@@ -49,7 +49,14 @@ section{padding:var(--sp-section) 0}
 /* nav */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{height:74px;display:flex;align-items:center;gap:28px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:500;font-size:16px;color:var(--green);margin-right:auto}
+.logo{display:flex;align-items:center;gap:11px;color:var(--green);margin-right:auto}
+/* the serif the brand's lockup is drawn in, rather than the interface sans */
+.logo-text{font-family:var(--serif);font-weight:400;font-size:20px;
+  letter-spacing:.005em;white-space:nowrap}
+.logo-accent{font-style:italic;color:var(--terracotta-deep)}
+/* On the footer's dark green the terracotta goes muddy, so the accent there is
+   the gold from the mark's own leaves — which also ties the two together. */
+.fbottom .logo-accent{color:var(--gold)}
 .logo-mark{width:38px;height:38px;flex:none;position:relative}
 /* The monogram is taller than it is wide, so it fits its box rather than
    filling it. The box comes from inset, not from width/height percentages:
@@ -357,7 +364,7 @@ footer a:hover{color:#fff}
   :root{--sp-section:44px}
   html{scroll-padding-top:76px}
   .nav{height:64px}
-  .logo{font-size:15px}
+  .logo-text{font-size:17px}
   .logo-mark{width:34px;height:34px}
   .burger{margin-right:-8px}
   .mobile-menu{max-height:calc(100dvh - 64px)}

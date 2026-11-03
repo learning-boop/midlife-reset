@@ -7,6 +7,9 @@
 export const site = {
   name: 'Kaya Reset Clinic',
   nameShort: 'Kaya Reset Clinic',
+  // the wordmark sets the middle word apart; kept here so a rename cannot
+  // silently lose the treatment, and so the split is never guessed in markup
+  nameParts: ['Kaya', 'Reset', 'Clinic'],
   domain: 'themidlifereset.uk', // TODO: confirm — may change with the rename
   // Google appointment page, '15 min discovery call', supplied 3 Nov 2026
   bookingUrl: 'https://calendar.app.google/ZEQPQbtjCvNitf2Q8',
