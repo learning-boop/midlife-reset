@@ -169,8 +169,7 @@ export const services = {
     {
       name: 'Longevity care for both men and women',
       who: 'For men and women',
-      // STAND-IN: also used by the social-connection pillar below.
-      image: '/images/pillars/connection.jpg',
+      image: '/images/service-longevity.jpg',
       body: 'Advanced blood panel and DEXA scan, with optional VO2 max testing and a personalised plan to protect your heart, metabolic, muscle and bone health.',
       href: '/longevity.html',
     },

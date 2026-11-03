@@ -1,22 +1,22 @@
-# Photos
+# Service card images
 
-| File | Where it appears | Source |
-|------|------------------|--------|
-| `dr-sarika-garden.webp` | Hero, right-hand column | client, Oct 2026 |
-| `dr-sarika-studio.jpg`  | About / founder section | client, Sep 2026 |
-| `dr-sarika-kitchen.webp`| Nutrition approach      | client, Oct 2026 |
-| `dr-sarika-seated.jpg`  | Ready to begin / discovery | client, Sep 2026 |
+| File | Card | Source |
+|------|------|--------|
+| service-longevity.jpg | Longevity care | Pexels 19070023, cropped 4:3 from the bottom so the couple reads at card size |
+| metabolic-bowl.jpg    | Metabolic health | client-supplied 3 Nov 2026, cropped to the bowl |
+| pillars/wellbeing.jpg | Menopause care | **stand-in** — shared with the stress-management pillar |
 
-Not used (see handover notes): the two purple "Move More / Live Better" and
-"Why Movement is Essential" graphics, the cut-out objects sheet, and the
-yellow salad bowl. The purple graphics are off-palette and one carries
-third-party "Wardiere Inc." branding.
+Pexels and Unsplash are both free for commercial use with no attribution
+required. As with the pillars, anyone shown is seen from behind or in part:
+nobody in these cards should read as a patient.
 
-## Stock
+## Still wanted
 
-| File | Where | Source |
-|------|-------|--------|
-| `stock-nutrition.jpg` | Band between Pricing and Nutrition | Unsplash `photo-1591189863430-ab87e120f312` |
+One photograph for the menopause card, so it stops sharing with the pillar
+grid, and one for the "Reducing harmful substances" pillar, which is currently
+showing a dumbbell.
 
-Unsplash licence: free for commercial use, no attribution required. Both are
-decorative (empty `alt`) and must not be presented as patients or as staff.
+Stock searches for midlife women returned either close portraits of someone
+looking unwell or sad — which is exactly what these cards must not do — or
+jokey studio set-ups. Client photographs would be better than anything the
+libraries offered.
