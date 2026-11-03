@@ -2,14 +2,15 @@
 
 | File | Card | Source |
 |------|------|--------|
-| service-menopause.jpg | Menopause & perimenopause care | client-supplied 3 Nov 2026 |
+| service-menopause.jpg | Menopause & perimenopause care | client-supplied 3 Nov 2026 (replaced an earlier one the same day) |
 | service-metabolic.jpg | Metabolic health in midlife women | client-supplied 3 Nov 2026 |
 | service-longevity.jpg | Longevity care | Pexels 19070023, cropped from the bottom of the frame |
 
-All three are cropped to 363:230, the card's own box, and sized to 1200px wide.
-The cards are arched, and the arch takes a deep bite out of both top corners —
-at the very top only about 43px of the card's 363px width survives — so each
-crop keeps its subject low and central enough to clear that curve.
+The cards are rows now, not arches: the image box is 250x140 on a desktop,
+1.786:1. service-menopause.jpg is cropped to exactly that, so nothing of it is
+lost to object-fit. The other two were cropped to the arch's 363:230 and are
+trimmed a little at top and bottom here; worth recropping if either starts to
+look badly framed.
 
 As with the pillars, nobody in these should read as a patient.
 
