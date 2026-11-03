@@ -896,7 +896,11 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .svc-head{max-width:760px;margin-bottom:40px}
 .svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .svc article{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);
-  padding:30px 28px;display:flex;flex-direction:column}
+  overflow:hidden;display:flex;flex-direction:column}
+.svc-img{aspect-ratio:4/3;overflow:hidden;background:var(--sand-deep)}
+.svc-img img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.svc-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
 .svc-who{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
   color:var(--terracotta-deep);margin-bottom:12px}
 .svc h3{font-size:22px;margin-bottom:10px;line-height:1.25}
@@ -957,6 +961,10 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .cancel-list dt{font-family:var(--serif);font-size:18px;color:var(--ink)}
 .cancel-list dd{font-size:16px;color:var(--muted)}
 
+@media (hover:hover){
+  .svc article:hover .svc-img img{transform:scale(1.06)}
+}
+
 @media (max-width:1024px){
   .svc,.stages,.fee-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -966,7 +974,8 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .narrow-head{margin-bottom:32px}
   .sub{margin:38px 0 14px}
   .lm-panel{padding:24px 20px;margin-bottom:32px}
-  .svc article,.stage,.fee{padding:22px 18px}
+  .stage,.fee{padding:22px 18px}
+  .svc-body{padding:20px 18px 22px}
   .sa-panel{padding:26px 20px;margin-top:40px}
   .fee-top{flex-direction:column;gap:6px}
   .fee .price{font-size:23px}

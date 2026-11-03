@@ -132,18 +132,24 @@ export const services = {
     {
       name: 'Menopause & perimenopause care',
       who: 'For women',
+      // STAND-IN: also used by the stress-management pillar below. Three
+      // photographs of their own would stop this grid echoing that one.
+      image: '/images/pillars/wellbeing.jpg',
       body: 'A symptom-led assessment and personalised plan for the changes affecting your sleep, mood, energy, focus and weight.',
       href: '#menopause',
     },
     {
       name: 'Metabolic health in midlife women',
       who: 'For women',
+      image: '/images/stock-nutrition.jpg',
       body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
       href: '#metabolic',
     },
     {
       name: 'Longevity care for both men and women',
       who: 'For men and women',
+      // STAND-IN: also used by the social-connection pillar below.
+      image: '/images/pillars/connection.jpg',
       body: 'Advanced blood panel and DEXA scan, with optional VO2 max testing and a personalised plan to protect your heart, metabolic, muscle and bone health.',
       href: '#longevity',
     },
