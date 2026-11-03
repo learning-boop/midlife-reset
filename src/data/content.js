@@ -181,6 +181,10 @@ export const menopause = {
   title: 'If your body doesn’t feel like your own any more, you’re not imagining it.',
   intro:
     'Perimenopause can begin years before your periods stop. Symptoms often creep in gradually and overlap with everyday stress, so they are easily missed. These changes are real, they can be explained, and they can be managed well with the right support.',
+  // the same photograph the home page's menopause card carries, so arriving
+  // here from that card lands somewhere recognisable
+  leadImage: '/images/service-menopause.jpg',
+  careImage: '/images/menopause-care.jpg',
   stagesTitle: 'Understanding where you are',
   stages: [
     ['Perimenopause', 'The transition before menopause, often from your late 30s or 40s. Hormone levels fluctuate, periods may become irregular and symptoms often begin. It can last several years.'],

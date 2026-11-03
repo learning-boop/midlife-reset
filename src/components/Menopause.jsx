@@ -1,6 +1,10 @@
+import Shot from './Shot'
 import { menopause as m } from '../data/content'
 import FillText from './FillText'
 
+// Both photographs are decorative and carry an empty alt: the headings beside
+// them already say what the page is about, and neither woman should read as a
+// patient of the clinic.
 export default function Menopause() {
   return (
     <section className="menopause" id="menopause">
@@ -9,6 +13,10 @@ export default function Menopause() {
           <p className="kicker">{m.kicker}</p>
           <FillText>{m.title}</FillText>
           <p className="lede">{m.intro}</p>
+        </div>
+
+        <div className="page-lead">
+          <Shot src={m.leadImage} alt="" />
         </div>
 
         <h3 className="sub">{m.stagesTitle}</h3>
@@ -28,14 +36,20 @@ export default function Menopause() {
         </ul>
 
         <div className="care">
-          <h3 className="sub">{m.careTitle}</h3>
-          <p className="lede">{m.careIntro}</p>
-          <h4 className="sub-sm">{m.optionsTitle}</h4>
-          <div className="cols-2">
-            {m.options.map(([t, b]) => (
-              <div key={t} data-reveal><h5>{t}</h5><p>{b}</p></div>
-            ))}
+          <div className="care-grid">
+            <div>
+              <h3 className="sub">{m.careTitle}</h3>
+              <p className="lede">{m.careIntro}</p>
+              <h4 className="sub-sm">{m.optionsTitle}</h4>
+              <div className="cols-2 care-options">
+                {m.options.map(([t, b]) => (
+                  <div key={t} data-reveal><h5>{t}</h5><p>{b}</p></div>
+                ))}
+              </div>
+            </div>
+            <Shot src={m.careImage} alt="" wrapClass="care-shot" />
           </div>
+
           <h4 className="sub-sm">{m.expectTitle}</h4>
           <ol className="expect">
             {m.expect.map(([t, b]) => (
@@ -47,3 +61,4 @@ export default function Menopause() {
     </section>
   )
 }
+
