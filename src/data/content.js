@@ -33,6 +33,9 @@ export const accreditations = [
 ]
 
 export const nav = [
+  // '/#top' rather than '/': from a service page it goes home, and from the
+  // home page it scrolls to the top instead of reloading the page you are on
+  { label: 'Home', href: '/#top' },
   { label: 'Menopause', href: '/menopause.html' },
   { label: 'Metabolic health', href: '/metabolic.html' },
   { label: 'Longevity', href: '/longevity.html' },
