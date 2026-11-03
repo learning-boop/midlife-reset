@@ -136,8 +136,7 @@ export const pillars = {
     ['Restorative sleep', 'Consistent, good-quality sleep for recovery, mood and appetite control.', '/images/pillars/sleep.jpg'],
     ['Stress management', 'Practical tools to build resilience and support emotional wellbeing.', '/images/pillars/wellbeing.jpg'],
     ['Social connection', 'Relationships, belonging and purpose, which are linked to longer, healthier lives.', '/images/pillars/connection.jpg'],
-    // TODO: needs its own photograph — the strength image here is a stand-in
-    ['Reducing harmful substances', 'Cutting down on alcohol, smoking and other substances that harm long-term health.', '/images/pillars/strength.jpg'],
+    ['Reducing harmful substances', 'Cutting down on alcohol, smoking and other substances that harm long-term health.', '/images/pillars/substances.jpg'],
   ],
 }
 
