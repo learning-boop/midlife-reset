@@ -142,7 +142,9 @@ export const services = {
     {
       name: 'Metabolic health in midlife women',
       who: 'For women',
-      image: '/images/stock-nutrition.jpg',
+      // client-supplied, 3 Nov; cropped to the bowl so most of its yellow
+      // paper ground falls outside the frame
+      image: '/images/metabolic-bowl.jpg',
       body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
       href: '#metabolic',
     },
