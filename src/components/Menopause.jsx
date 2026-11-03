@@ -36,18 +36,18 @@ export default function Menopause() {
         </ul>
 
         <div className="care">
-          <div className="care-grid">
+          <div className="page-split">
             <div>
               <h3 className="sub">{m.careTitle}</h3>
               <p className="lede">{m.careIntro}</p>
               <h4 className="sub-sm">{m.optionsTitle}</h4>
-              <div className="cols-2 care-options">
+              <div className="cols-2">
                 {m.options.map(([t, b]) => (
                   <div key={t} data-reveal><h5>{t}</h5><p>{b}</p></div>
                 ))}
               </div>
             </div>
-            <Shot src={m.careImage} alt="" wrapClass="care-shot" />
+            <Shot src={m.careImage} alt="" wrapClass="split-shot" />
           </div>
 
           <h4 className="sub-sm">{m.expectTitle}</h4>

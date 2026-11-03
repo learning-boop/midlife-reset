@@ -1,6 +1,9 @@
+import Shot from './Shot'
 import { longevity as l } from '../data/content'
 import FillText from './FillText'
 
+// Both photographs are decorative with an empty alt. This section sits on the
+// dark green, so its reveal curtain is set to match in the stylesheet.
 export default function Longevity() {
   return (
     <section className="longevity" id="longevity">
@@ -11,6 +14,10 @@ export default function Longevity() {
           <p className="lede">{l.intro}</p>
         </div>
 
+        <div className="page-lead">
+          <Shot src={l.leadImage} alt="" />
+        </div>
+
         <h3 className="sub">{l.shapesTitle}</h3>
         <div className="cols-2">
           {l.shapes.map(([t, b]) => (
@@ -18,8 +25,13 @@ export default function Longevity() {
           ))}
         </div>
 
-        <h3 className="sub">{l.midlifeTitle}</h3>
-        <p className="lede">{l.midlifeBody}</p>
+        <div className="page-split">
+          <div>
+            <h3 className="sub">{l.midlifeTitle}</h3>
+            <p className="lede">{l.midlifeBody}</p>
+          </div>
+          <Shot src={l.midlifeImage} alt="" wrapClass="split-shot" />
+        </div>
 
         <h3 className="sub">{l.includesTitle}</h3>
         <ol className="assess">
@@ -32,3 +44,4 @@ export default function Longevity() {
     </section>
   )
 }
+

@@ -1,6 +1,9 @@
+import Shot from './Shot'
 import { metabolic as m } from '../data/content'
 import FillText from './FillText'
 
+// Both photographs are decorative with an empty alt: the headings beside them
+// already say what the page is about.
 export default function Metabolic() {
   return (
     <section className="metabolic" id="metabolic">
@@ -9,6 +12,10 @@ export default function Metabolic() {
           <p className="kicker">{m.kicker}</p>
           <FillText>{m.title}</FillText>
           <p className="lede">{m.intro}</p>
+        </div>
+
+        <div className="page-lead">
+          <Shot src={m.leadImage} alt="" />
         </div>
 
         <h3 className="sub">{m.changesTitle}</h3>
@@ -29,13 +36,18 @@ export default function Metabolic() {
         <h3 className="sub">{m.approachTitle}</h3>
         <p className="lede">{m.approachBody}</p>
 
-        <h3 className="sub">{m.includesTitle}</h3>
-        <ol className="expect">
-          {m.includes.map(([t, b]) => (
-            <li key={t}><strong>{t}</strong> — {b}</li>
-          ))}
-        </ol>
-        <p className="note-line">{m.outro}</p>
+        <div className="page-split">
+          <div>
+            <h3 className="sub">{m.includesTitle}</h3>
+            <ol className="expect">
+              {m.includes.map(([t, b]) => (
+                <li key={t}><strong>{t}</strong> — {b}</li>
+              ))}
+            </ol>
+            <p className="note-line">{m.outro}</p>
+          </div>
+          <Shot src={m.planImage} alt="" wrapClass="split-shot" />
+        </div>
 
         <div className="sa-panel" data-reveal>
           <p className="kicker">{m.southAsian.kicker}</p>
@@ -46,3 +58,4 @@ export default function Metabolic() {
     </section>
   )
 }
+

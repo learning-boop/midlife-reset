@@ -228,6 +228,10 @@ export const metabolic = {
   title: 'Metabolic health in midlife women',
   intro:
     'Many women find weight harder to manage in midlife, especially around the middle, even though nothing about their effort has changed. Eating less and moving more stops working. It isn’t that you’ve stopped trying. Your body has changed, and your plan needs to change with it.',
+  leadImage: '/images/service-metabolic.jpg',
+  // the bowl the client sent on 3 Nov, cropped 4:5 so its yellow paper ground
+  // is reduced to slivers at the edges
+  planImage: '/images/metabolic-plan.jpg',
   changesTitle: 'What changes, and why',
   changes: [
     ['Falling oestrogen', 'Shifts fat storage towards the abdomen, where it is more metabolically active.'],
@@ -274,6 +278,8 @@ export const longevity = {
   title: 'Longevity care for both men and women',
   intro:
     'Lifespan is how many years you live. Healthspan is how many of those years you spend strong, mobile, sharp and free from chronic disease. Longevity medicine focuses on extending your healthspan, for women and men alike.',
+  leadImage: '/images/service-longevity.jpg',
+  midlifeImage: '/images/longevity-strength.jpg',
   shapesTitle: 'What shapes how well you age',
   shapes: [
     ['Cardiorespiratory fitness', 'VO2 max is one of the strongest predictors of long-term health.'],

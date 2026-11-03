@@ -1041,18 +1041,21 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .page-lead{margin-bottom:54px}
 .page-lead .shot img{width:100%;height:clamp(240px,32vw,400px);object-fit:cover;
   border-radius:var(--r-card);display:block;background:var(--sand-deep)}
-.care-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:start}
-/* the options sit in a narrower column here, so they stop being two across */
-.care-grid .care-options{grid-template-columns:minmax(0,1fr);gap:22px}
-.care-shot img{width:100%;aspect-ratio:4/5;object-fit:cover;
+.page-split{display:grid;grid-template-columns:1.3fr .7fr;gap:54px;align-items:start}
+/* lists sit in a narrower column here, so they stop being two across */
+.page-split .cols-2{grid-template-columns:minmax(0,1fr);gap:22px}
+.split-shot img{width:100%;aspect-ratio:4/5;object-fit:cover;
   border-radius:var(--r-card);display:block;background:var(--sand-deep)}
+/* the longevity page is dark green, so its curtain must be too or it flashes
+   sand across the photograph as it opens */
+.longevity{--curtain:var(--green)}
 
 @media (max-width:900px){
-  .care-grid{grid-template-columns:minmax(0,1fr);gap:34px}
-  .care-shot{max-width:420px}
+  .page-split{grid-template-columns:minmax(0,1fr);gap:34px}
+  .split-shot{max-width:420px}
   .page-lead{margin-bottom:38px}
 }
 @media (max-width:640px){
   .page-lead .shot img{height:200px}
-  .care-shot img{aspect-ratio:1}
+  .split-shot img{aspect-ratio:1}
 }
