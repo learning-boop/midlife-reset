@@ -151,18 +151,14 @@ export const services = {
     {
       name: 'Menopause & perimenopause care',
       who: 'For women',
-      // STAND-IN: also used by the stress-management pillar below. Three
-      // photographs of their own would stop this grid echoing that one.
-      image: '/images/pillars/wellbeing.jpg',
+      image: '/images/service-menopause.jpg',
       body: 'A symptom-led assessment and personalised plan for the changes affecting your sleep, mood, energy, focus and weight.',
       href: '/menopause.html',
     },
     {
       name: 'Metabolic health in midlife women',
       who: 'For women',
-      // client-supplied, 3 Nov; cropped to the bowl so most of its yellow
-      // paper ground falls outside the frame
-      image: '/images/metabolic-bowl.jpg',
+      image: '/images/service-metabolic.jpg',
       body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
       href: '/metabolic.html',
     },
