@@ -1,6 +1,7 @@
 import Img from './Img'
 import { services } from '../data/content'
 import FillText from './FillText'
+import SiteLink from './SiteLink'
 
 // The three ways in, as three rows rather than a three-across grid: a
 // photograph, the service, and the way through to its page. The rhythm is the
@@ -33,9 +34,9 @@ export default function Services() {
                 <p>{s.body}</p>
               </div>
               <div className="svc-meta">
-                <a className="link" href={s.href}>
+                <SiteLink className="link" href={s.href}>
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </SiteLink>
               </div>
             </article>
           ))}

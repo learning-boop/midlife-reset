@@ -36,12 +36,12 @@ export const nav = [
   // '/#top' rather than '/': from a service page it goes home, and from the
   // home page it scrolls to the top instead of reloading the page you are on
   { label: 'Home', href: '/#top' },
-  { label: 'Menopause', href: '/menopause.html' },
-  { label: 'Metabolic health', href: '/metabolic.html' },
-  { label: 'Longevity', href: '/longevity.html' },
-  { label: 'Dr Sarika', href: '/about.html' },
-  { label: 'Fees', href: '/fees.html' },
-  { label: 'FAQs', href: '/#faqs' },
+  { label: 'Menopause', href: '/menopause' },
+  { label: 'Metabolic health', href: '/metabolic' },
+  { label: 'Longevity', href: '/longevity' },
+  { label: 'Dr Sarika', href: '/about' },
+  { label: 'Fees', href: '/fees' },
+  { label: 'FAQs', href: '/#faq' },
 ]
 
 export const hero = {
@@ -157,21 +157,21 @@ export const services = {
       who: 'For women',
       image: '/images/service-menopause.jpg',
       body: 'A symptom-led assessment and personalised plan for the changes affecting your sleep, mood, energy, focus and weight.',
-      href: '/menopause.html',
+      href: '/menopause',
     },
     {
       name: 'Metabolic health in midlife women',
       who: 'For women',
       image: '/images/service-metabolic.jpg',
       body: 'A medical, whole-picture approach to midlife weight change, looking beyond calories to the hormonal and metabolic factors behind it.',
-      href: '/metabolic.html',
+      href: '/metabolic',
     },
     {
       name: 'Longevity care for both men and women',
       who: 'For men and women',
       image: '/images/service-longevity.jpg',
       body: 'Advanced blood panel and DEXA scan, with optional VO2 max testing and a personalised plan to protect your heart, metabolic, muscle and bone health.',
-      href: '/longevity.html',
+      href: '/longevity',
     },
   ],
 }
@@ -436,16 +436,16 @@ export const footer = {
   tagline: site.byline,
   columns: [
     ['Care', [
-      ['Menopause & perimenopause', '/menopause.html'],
-      ['Metabolic health', '/metabolic.html'],
-      ['Longevity', '/longevity.html'],
-      ['Dr Sarika', '/about.html'],
+      ['Menopause & perimenopause', '/menopause'],
+      ['Metabolic health', '/metabolic'],
+      ['Longevity', '/longevity'],
+      ['Dr Sarika', '/about'],
     ]],
     ['Practical', [
-      ['Fees', '/fees.html'],
+      ['Fees', '/fees'],
       ['How it works', '/#journey'],
-      ['FAQs', '/#faqs'],
-      ['Cancellation policy', '/fees.html#cancellation'],
+      ['FAQs', '/#faq'],
+      ['Cancellation policy', '/fees#cancellation'],
     ]],
   ],
 }

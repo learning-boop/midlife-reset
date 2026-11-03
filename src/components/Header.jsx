@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import BookLink from './BookLink'
 import { nav } from '../data/content'
+import SiteLink from './SiteLink'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -34,9 +35,9 @@ export default function Header() {
         <Logo />
         <nav className="nav-links">
           {nav.map((n) => (
-            <a key={n.label} href={n.href}>
+            <SiteLink key={n.label} href={n.href}>
               {n.label}
-            </a>
+            </SiteLink>
           ))}
         </nav>
         <BookLink>Book a discovery call</BookLink>
@@ -45,7 +46,9 @@ export default function Header() {
         </button>
       </div>
       <div className={`mobile-menu${open ? ' open' : ''}`}>
-        {nav.map((n) => <a key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>)}
+        {nav.map((n) => (
+          <SiteLink key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</SiteLink>
+        ))}
         <BookLink style={{ marginTop: 16, width: '100%' }} onClick={() => setOpen(false)}>Book a discovery call</BookLink>
       </div>
     </header>

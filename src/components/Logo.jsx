@@ -1,4 +1,5 @@
 import LogoMark from './LogoMark'
+import SiteLink from './SiteLink'
 import { site } from '../data/content'
 
 // The wordmark sets "Reset" apart from the words around it — the serif the
@@ -8,12 +9,12 @@ import { site } from '../data/content'
 export default function Logo({ href = '/#top' }) {
   const [first, mark, last] = site.nameParts
   return (
-    <a className="logo" href={href}>
+    <SiteLink className="logo" href={href}>
       <span className="logo-mark"><LogoMark /></span>
       <span className="logo-text">
         {first} <span className="logo-accent">{mark}</span> {last}
       </span>
-    </a>
+    </SiteLink>
   )
 }
 

@@ -1,6 +1,7 @@
 import Logo from './Logo'
 import { footer, site } from '../data/content'
 import BookLink from './BookLink'
+import SiteLink from './SiteLink'
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           {footer.columns.map(([heading, links]) => (
             <div key={heading}>
               <h4>{heading}</h4>
-              <ul>{links.map(([label, href]) => <li key={label}><a href={href}>{label}</a></li>)}</ul>
+              <ul>{links.map(([label, href]) => <li key={label}><SiteLink href={href}>{label}</SiteLink></li>)}</ul>
             </div>
           ))}
         </div>
