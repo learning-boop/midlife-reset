@@ -2,9 +2,10 @@ import Img from './Img'
 import { services } from '../data/content'
 import FillText from './FillText'
 
-// The three ways in, each led by a photograph, as on the reference site. Each
-// card links down to the section that explains it, so this reads as a map of
-// the page rather than a list of claims.
+// The three ways in, as three rows rather than a three-across grid: a
+// photograph, the service, and the way through to its page. The rhythm is the
+// point — nothing else on the page is laid out this way, so these stop reading
+// as more of the six pillar cards directly above them.
 //
 // The photographs are decorative and carry an empty alt: the heading directly
 // beneath each one already names the service, so describing the picture would
@@ -25,9 +26,13 @@ export default function Services() {
                 <Img src={s.image} alt="" />
               </div>
               <div className="svc-body">
-                <div className="svc-who">{s.who}</div>
                 <h3>{s.name}</h3>
                 <p>{s.body}</p>
+              </div>
+              {/* who it is for, and the way in, held together at the end of the
+                  row where the eye finishes rather than buried in the copy */}
+              <div className="svc-meta">
+                <p className="svc-who">{s.who}</p>
                 <a className="link" href={s.href}>Learn more ›</a>
               </div>
             </article>

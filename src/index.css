@@ -894,23 +894,26 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 
 /* three ways in */
 .svc-head{max-width:760px;margin-bottom:40px}
-.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.svc{display:flex;flex-direction:column}
 /* These are the way into the three service pages, and they sat directly under
    the six pillar cards in the same white bordered box with a picture on top —
-   one system, two jobs. The box goes entirely: an arched photograph over
-   centred text, on the section's own ground. Nothing else on the site uses
-   that shape, so these three stop reading as six more pillars. */
-.svc article{display:flex;flex-direction:column;align-items:center;text-align:center}
-.svc-img{width:100%;height:230px;overflow:hidden;background:var(--sand-deep);
-  border-radius:160px 160px var(--r-img) var(--r-img)}
+   one system, two jobs. Three rows instead: photograph, service, way in. The
+   rhythm is what separates them, since nothing else on the page is laid out
+   this way, and each service gets room for a full sentence. */
+.svc article{display:flex;gap:34px;align-items:center;padding:26px 0;
+  border-top:1px solid var(--line)}
+.svc article:last-child{border-bottom:1px solid var(--line)}
+.svc-img{width:250px;height:140px;flex:none;overflow:hidden;
+  border-radius:var(--r-img);background:var(--sand-deep)}
 .svc-img img{width:100%;height:100%;object-fit:cover;display:block;
   transition:transform .7s cubic-bezier(.22,.61,.36,1)}
-.svc-body{width:100%;padding:20px 10px 0;display:flex;flex-direction:column;
-  align-items:center}
+.svc-body{flex-grow:1;min-width:0}
+.svc h3{font-size:24px;line-height:1.2;margin-bottom:8px}
+.svc p{font-size:15.5px;color:var(--muted);max-width:62ch}
+.svc-meta{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
 .svc-who{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--terracotta-deep);margin-bottom:8px}
-.svc h3{font-size:21px;margin-bottom:10px;line-height:1.22}
-.svc p{font-size:15px;color:var(--muted);margin-bottom:14px;max-width:34ch}
+  color:var(--terracotta-deep)}
+.svc-meta .link{white-space:nowrap}
 
 /* menopause */
 .menopause{background:var(--sand)}
@@ -971,17 +974,27 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 }
 
 @media (max-width:1024px){
-  .svc,.stages,.fee-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stages,.fee-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* the row needs to break earlier than the card grids did: at 900px the three
+   columns leave the middle one too narrow for a sentence */
+@media (max-width:900px){
+  .svc article{flex-wrap:wrap;gap:20px}
+  .svc-img{width:100%;height:200px}
+  .svc-body{flex-basis:100%}
+  .svc-meta{flex-direction:row;align-items:center;justify-content:space-between;
+    width:100%;gap:18px}
 }
 @media (max-width:640px){
-  .svc,.stages,.fee-list,.cols-2,.symptoms,.assess{grid-template-columns:minmax(0,1fr)}
-  .svc-img{height:210px}
+  .stages,.fee-list,.cols-2,.symptoms,.assess{grid-template-columns:minmax(0,1fr)}
+  .svc-img{height:180px}
+  .svc h3{font-size:21px}
   .cols-2{gap:22px}
   .narrow-head{margin-bottom:32px}
   .sub{margin:38px 0 14px}
   .lm-panel{padding:24px 20px;margin-bottom:32px}
   .stage,.fee{padding:22px 18px}
-  .svc-body{padding:18px 6px 0}
+  .svc article{padding:22px 0}
   .sa-panel{padding:26px 20px;margin-top:40px}
   .fee-top{flex-direction:column;gap:6px}
   .fee .price{font-size:23px}
