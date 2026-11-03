@@ -895,17 +895,34 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 /* three ways in */
 .svc-head{max-width:760px;margin-bottom:40px}
 .svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.svc article{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);
-  overflow:hidden;display:flex;flex-direction:column}
-.svc-img{aspect-ratio:4/3;overflow:hidden;background:var(--sand-deep)}
+/* These are the way into the three service pages, and they sat directly under
+   the six pillar cards in the same white bordered box with a picture on top —
+   one system, two jobs. They become image tiles instead: the photograph fills
+   the card and the words sit over it, which reads as a door rather than as
+   another piece of information. */
+.svc article{position:relative;border-radius:var(--r-card);overflow:hidden;
+  min-height:440px;display:flex;align-items:flex-end;background:var(--green-mid)}
+.svc-img{position:absolute;inset:0}
 .svc-img img{width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
-.svc-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
-.svc-who{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--terracotta-deep);margin-bottom:12px}
-.svc h3{font-size:22px;margin-bottom:10px;line-height:1.25}
-.svc p{font-size:16px;color:var(--muted);margin-bottom:18px}
-.svc .link{margin-top:auto;align-self:flex-start}
+  transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+/* a light overall darkening, so a bright photograph does not glare against the
+   section's white ground */
+.svc article::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(21,42,35,0) 40%,rgba(21,42,35,.28) 100%)}
+/* The gradient that carries the text belongs to the text, not to the card. Tied
+   to the card's height it failed on a phone: the same words in a 360px card
+   instead of a 440px one start higher up, where the gradient was still thin,
+   and the tag over the bright bowl disappeared. Anchored here it fades in just
+   above the first line at any height. */
+.svc-body{position:relative;z-index:1;width:100%;padding:52px 26px 26px;color:#fff;
+  background:linear-gradient(180deg,rgba(21,42,35,0) 0%,rgba(21,42,35,.75) 8%,
+    rgba(21,42,35,.95) 18%,rgba(21,42,35,.97) 100%)}
+.svc-who{font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px}
+.svc h3{font-size:23px;margin-bottom:10px;line-height:1.22;color:#fff}
+.svc p{font-size:15.5px;color:#D5E0DB;margin-bottom:16px}
+.svc .link{color:#fff}
+.svc .link::after{background:#fff}
 
 /* menopause */
 .menopause{background:var(--sand)}
@@ -962,7 +979,7 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .cancel-list dd{font-size:16px;color:var(--muted)}
 
 @media (hover:hover){
-  .svc article:hover .svc-img img{transform:scale(1.06)}
+  .svc article:hover .svc-img img{transform:scale(1.05)}
 }
 
 @media (max-width:1024px){
@@ -970,12 +987,16 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 }
 @media (max-width:640px){
   .svc,.stages,.fee-list,.cols-2,.symptoms,.assess{grid-template-columns:minmax(0,1fr)}
+  .svc article{min-height:360px}
   .cols-2{gap:22px}
   .narrow-head{margin-bottom:32px}
   .sub{margin:38px 0 14px}
   .lm-panel{padding:24px 20px;margin-bottom:32px}
   .stage,.fee{padding:22px 18px}
-  .svc-body{padding:20px 18px 22px}
+  /* keeps the padding the gradient needs to reach full strength before the
+     first line; at 22px the tag sat at 7% of the body, under a scrim of 0.44,
+     and vanished against the bright bowl */
+  .svc-body{padding:46px 20px 20px}
   .sa-panel{padding:26px 20px;margin-top:40px}
   .fee-top{flex-direction:column;gap:6px}
   .fee .price{font-size:23px}
