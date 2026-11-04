@@ -22,6 +22,16 @@ export const site = {
   tagline: 'The science of living better, for longer.',
 }
 
+// Dr Sarika's own profiles, supplied 4 November 2026. The LinkedIn address
+// arrived with utm parameters from the iOS share sheet; those record how the
+// link reached us, not where it goes, so they are dropped. A profile with no
+// address yet is left out rather than linked to '#': a dead social icon in a
+// footer looks like a broken site, and there is no Facebook address.
+export const social = [
+  ['Instagram', 'ig', 'https://www.instagram.com/dr.sarika.gorantyal/'],
+  ['LinkedIn', 'in', 'https://www.linkedin.com/in/dr-sarika-gorantyal-037348397'],
+]
+
 // The bodies Dr Sarika is registered with, accredited by, or trained through.
 // Logos supplied by the client on 30 October 2026 and used at their request;
 // each is the property of the body named beside it.
