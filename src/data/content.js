@@ -138,7 +138,6 @@ export const about = {
     'Certified Health Coach, Health Coaches Academy',
     'Advanced Longevity Certification, Apex Longevity Academy',
     'Nutrition Certification, Precision Nutrition',
-    'Currently completing: British Menopause Society Certificate in the Principles and Practice of Menopause Care',
   ],
   cta: 'Book a discovery call with Dr Sarika',
   image: '/images/dr-sarika-studio.jpg',
