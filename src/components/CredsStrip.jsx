@@ -1,32 +1,27 @@
 import { accreditations } from '../data/content'
 
 // The bodies behind Dr Sarika's registration and training, as their own marks.
-// This slot used to carry the same credentials as scrolling text; the full
-// names and what each one is now live in the qualifications section of her
-// page, so here the logos do the recognising and the names ride along as alt
-// text for anyone who cannot see them.
 //
-// The row is rendered twice inside the track and the animation travels exactly
-// -50%, so the second copy lands where the first began and the loop is seamless.
-// aria-hidden on the duplicate keeps a screen reader from reading it twice.
+// These used to travel past on a loop under the hero, which meant a reader had
+// to wait for a mark to come round and could not take the set in at a glance.
+// They sit still now, in one wrapping row above the footer, where they read as
+// a closing statement of who stands behind the clinic — and because the footer
+// is on every page, so are they.
+//
+// The names ride along as alt text for anyone who cannot see the marks; the
+// full names and what each one is live in the qualifications section of Dr
+// Sarika's page.
 export default function CredsStrip() {
-  const row = (duplicate) => (
-    <span aria-hidden={duplicate || undefined}>
-      {accreditations.map(([name, logo]) => (
-        <b key={name}>
-          <img src={logo} alt={duplicate ? '' : name} loading="lazy" />
-        </b>
-      ))}
-    </span>
-  )
-
   return (
-    <div className="creds-strip" role="group" aria-label="Registrations and accreditations">
-      <div className="creds-track">
-        {row(false)}
-        {row(true)}
+    <div className="creds-strip">
+      <div className="wrap">
+        <p className="creds-label">Registrations and accreditations</p>
+        <div className="creds-row">
+          {accreditations.map(([name, logo]) => (
+            <img key={name} src={logo} alt={name} loading="lazy" />
+          ))}
+        </div>
       </div>
     </div>
   )
 }
-

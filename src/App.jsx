@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import CredsStrip from './components/CredsStrip'
 import AboutIntro from './components/AboutIntro'
 import Pillars from './components/Pillars'
 import Services from './components/Services'
@@ -25,7 +24,6 @@ export default function App() {
       <ProgressBar />
       <Header />
       <Hero ref={heroRef} />
-      <CredsStrip />
       <AboutIntro />
       <Pillars />
       <Services />
