@@ -292,10 +292,6 @@ summary::-webkit-details-marker{display:none}
 summary .ic{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:transform .2s;background:#fff}
 details[open] summary .ic{transform:rotate(45deg)}
 details p{padding:0 0 24px;max-width:72ch}
-.notice{background:var(--plum-soft);border-radius:var(--r-card);padding:32px 36px;max-width:880px;margin-top:48px}
-.notice h3{font-size:21px;margin-bottom:12px}
-.notice p{color:var(--ink);font-size:16px;margin-bottom:10px}
-.notice p:last-child{margin-bottom:0}
 
 /* mailing */
 /* sand, so the sign-up reads as its own invitation between the white section
@@ -402,7 +398,6 @@ footer a:hover{color:#fff}
   .band{padding:52px 0}
   .stat{padding:26px 24px}
   .def,.cardio-col,.appt,.tier,.ccard{padding:26px 22px}
-  .notice{padding:26px 22px}
   .quotes blockquote{padding:18px 20px}
   .mech-list li{grid-template-columns:1fr}
   .mech-list li::before{grid-row:auto;display:block;margin-bottom:4px}
@@ -434,7 +429,7 @@ footer a:hover{color:#fff}
   .wrap{padding:0 18px}
   .hero-copy{padding-left:18px;padding-right:18px}
   .btn{padding:14px 20px;font-size:14px}
-  .def,.cardio-col,.appt,.tier,.ccard,.notice,.stat{padding:22px 18px}
+  .def,.cardio-col,.appt,.tier,.ccard,.stat{padding:22px 18px}
 }
 
 /* phones in landscape */

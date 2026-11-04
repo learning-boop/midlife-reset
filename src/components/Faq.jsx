@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { faqs, notice } from '../data/content'
+import { faqs } from '../data/content'
 import FillText from './FillText'
 
 const DURATION = 420
@@ -79,10 +79,6 @@ export default function Faq() {
           {faqs.map(([q, a], i) => (
             <Item key={q} q={q} a={a} defaultOpen={i === 0} />
           ))}
-        </div>
-        <div className="notice">
-          <h3>{notice.title}</h3>
-          {notice.lines.map((l) => <p key={l}>{l}</p>)}
         </div>
       </div>
     </section>
