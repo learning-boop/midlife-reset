@@ -72,8 +72,7 @@ export const hero = {
   primary: 'Book your complimentary discovery call',
   secondary: 'How I can help',
   trust: [
-    ['Virtual & face-to-face', 'appointments'],
-    ['Doctor-led', 'across the UK'],
+    ['Doctor-led', 'virtual and face-to-face consultations'],
   ],
   image: '/images/dr-sarika-seated.jpg',
   imageAlt: 'Dr Sarika Gorantyal, Lifestyle Medicine and Longevity Doctor',

@@ -15,7 +15,7 @@ export const routes = [
     element: <App />,
     title: 'Kaya Reset Clinic | Metabolic Health, Menopause Support & Longevity | Dr Sarika Gorantyal',
     description:
-      'Doctor-led care for metabolic health, weight, perimenopause and menopause support, and longevity with Dr Sarika Gorantyal, Lifestyle Medicine & Longevity Doctor. Virtual and face-to-face appointments across the UK.',
+      'Doctor-led care for metabolic health, weight, perimenopause and menopause support, and longevity with Dr Sarika Gorantyal, Lifestyle Medicine & Longevity Doctor. Virtual and face-to-face consultations.',
   },
   {
     path: '/about',
