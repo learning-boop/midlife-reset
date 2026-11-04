@@ -341,12 +341,20 @@ footer a:hover{color:#fff}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
 
-/* ─── tablet ─────────────────────────────────────────────── */
-@media (max-width:1024px){
-  :root{--sp-section:84px}
+/* The header needs about 1,100px to hold the wordmark, seven links and the
+   booking button on one line. Below that the links were wrapping mid-label —
+   "Menopause / support", "Dr / Sarika" — so the burger takes over there
+   rather than at the tablet breakpoint the rest of the layout uses. */
+.nav-links a{white-space:nowrap}
+@media (max-width:1100px){
   .nav-links,.nav .btn{display:none}
   .burger{display:block}
   .mobile-menu{max-height:calc(100dvh - 74px);overflow-y:auto;overscroll-behavior:contain}
+}
+
+/* ─── tablet ─────────────────────────────────────────────── */
+@media (max-width:1024px){
+  :root{--sp-section:84px}
   .hero-grid{grid-template-columns:1fr}
   .hero-copy{padding:72px 24px 56px}
   /* An explicit height, not a minimum: the container is auto-height here, so

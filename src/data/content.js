@@ -49,7 +49,7 @@ export const nav = [
   // '/#top' rather than '/': from a service page it goes home, and from the
   // home page it scrolls to the top instead of reloading the page you are on
   { label: 'Home', href: '/#top' },
-  { label: 'Menopause', href: '/menopause' },
+  { label: 'Menopause support', href: '/menopause' },
   { label: 'Metabolic health', href: '/metabolic' },
   { label: 'Longevity', href: '/longevity' },
   { label: 'Dr Sarika', href: '/about' },
