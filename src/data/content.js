@@ -443,6 +443,81 @@ export const cancellation = {
   outro: 'Exceptions may be made in genuine emergencies or illness.',
 }
 
+// PRIVACY NOTICE — NOT READY TO PUBLISH.
+//
+// This is a working draft of a UK GDPR privacy notice for a private clinical
+// service. Everything in square brackets is a fact only the clinic holds, and
+// the brackets are rendered on the page so the draft cannot be shipped by
+// accident. It needs reading by whoever advises Dr Sarika on data protection
+// before it goes live, in particular the lawful bases and the retention
+// period, which carry legal weight and are not a copywriting decision.
+//
+// What is said here about the website itself is true of the code as it
+// stands: no analytics, no tracking, no cookies set by this site, and the
+// mailing form does not yet send anywhere.
+export const privacy = {
+  kicker: 'Privacy',
+  title: 'Privacy notice',
+  intro:
+    'How your personal information is collected, used and protected when you contact the clinic, book an appointment or receive care.',
+  updated: 'Last updated: [DATE THIS NOTICE IS PUBLISHED]',
+  sections: [
+    ['Who this notice is from', [
+      'Kaya Reset Clinic is run by Dr Sarika Gorantyal. The clinic is the data controller for the information described here, which means it decides how and why your information is used.',
+      'Registered name and address: [LEGAL ENTITY NAME AND REGISTERED ADDRESS]. Registered with the Information Commissioner’s Office under number [ICO REGISTRATION NUMBER].',
+      'For anything in this notice, or to exercise any of the rights below, contact [DATA PROTECTION CONTACT EMAIL].',
+    ]],
+    ['What is collected', [
+      'Contact details: your name, email address and telephone number.',
+      'Health information: your symptoms, medical and family history, medications, lifestyle, measurements, test and scan results, and the notes and plans made during your care. This is special category data and is treated with the additional care the law requires.',
+      'Appointment and payment records: what was booked, when it took place, what was charged and whether it was paid. Card details are handled by the payment provider and are not held by the clinic.',
+      'Correspondence: emails and messages you send, and the replies to them.',
+    ]],
+    ['Where it comes from', [
+      'Most of it comes from you — through the booking pages, the pre-appointment questionnaire, and what you tell Dr Sarika during an appointment.',
+      'Some comes from elsewhere with your knowledge: results from the laboratories and imaging providers used for your tests, and, where you ask for it, correspondence with your GP or another clinician.',
+    ]],
+    ['Why it is used, and the lawful basis', [
+      'To provide your care. Under UK GDPR this is Article 6(1)(b), a contract with you, together with Article 9(2)(h), the provision of health care by a professional bound by a duty of confidentiality.',
+      'To keep clinical records, and to meet professional and regulatory obligations such as those of the General Medical Council. Article 6(1)(c), a legal obligation, with Article 9(2)(h).',
+      'To arrange and take payment, and to keep the accounts required by law. Article 6(1)(b) and 6(1)(c).',
+      'To send you the mailing list, if you ask for it. Article 6(1)(a), your consent, which you can withdraw at any time.',
+    ]],
+    ['Who it is shared with', [
+      'helfy, operated by The Wellbeing Doctors, is the clinical platform virtual consultations are booked and held on. Your details and consultation records are processed there.',
+      'Google, when you book a discovery call, because the booking page is a Google appointment page. Google receives the name, email and any note you give when booking.',
+      'Laboratories and imaging providers, where tests or scans are arranged for you.',
+      'Your GP or another clinician, where you ask for that or where there is a clinical duty to do so.',
+      'The mailing list provider, if you join the list: [MAILING LIST PROVIDER, ONCE CHOSEN].',
+      'Your information is never sold, and it is not used for advertising.',
+    ]],
+    ['How long it is kept', [
+      'Clinical records are kept for [RETENTION PERIOD FOR CLINICAL RECORDS — CONFIRM AGAINST CURRENT GUIDANCE], in line with professional guidance on private medical records.',
+      'Financial records are kept for the period required by HMRC.',
+      'Mailing list details are kept until you unsubscribe.',
+    ]],
+    ['Where it is held', [
+      '[WHERE RECORDS ARE STORED, AND WHETHER ANY PROCESSOR HOLDS THEM OUTSIDE THE UK OR EEA. If any do, name the safeguard relied on.]',
+    ]],
+    ['Your rights', [
+      'You can ask for a copy of the information held about you, ask for it to be corrected, ask for it to be deleted, object to or restrict how it is used, and ask for it in a portable form. Where use rests on your consent, you can withdraw that consent at any time.',
+      'Some of these rights are qualified where the information forms part of a clinical record that must be retained. You will be told if that applies and why.',
+      'To make a request, contact [DATA PROTECTION CONTACT EMAIL]. There is normally no charge, and you will have a response within one month.',
+    ]],
+    ['Cookies and this website', [
+      'This website sets no cookies, uses no analytics and does not track you. Nothing you do here is recorded by the site itself.',
+      'Booking takes you to another company’s website — helfy or Google — and those sites have their own cookies and their own privacy notices, which govern what happens once you arrive.',
+    ]],
+    ['Complaints', [
+      'If you are unhappy with how your information has been handled, please raise it with the clinic first at [DATA PROTECTION CONTACT EMAIL].',
+      'You also have the right to complain to the Information Commissioner’s Office at ico.org.uk, or on 0303 123 1113.',
+    ]],
+    ['Changes to this notice', [
+      'This notice will be updated when the way information is handled changes. The date at the top shows when it last changed.',
+    ]],
+  ],
+}
+
 export const footer = {
   tagline: site.byline,
   columns: [
@@ -457,6 +532,7 @@ export const footer = {
       ['How it works', '/#journey'],
       ['FAQs', '/#faq'],
       ['Cancellation policy', '/fees#cancellation'],
+      ['Privacy notice', '/privacy'],
     ]],
   ],
 }

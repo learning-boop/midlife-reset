@@ -4,6 +4,7 @@ import MenopausePage from './MenopausePage'
 import MetabolicPage from './MetabolicPage'
 import LongevityPage from './LongevityPage'
 import FeesPage from './FeesPage'
+import PrivacyPage from './PrivacyPage'
 
 // Every page of the site in one place: its address, what renders there, and
 // the title and description it sets for itself once it has mounted. The copy
@@ -44,6 +45,13 @@ export const routes = [
     title: 'Longevity care for men and women | Kaya Reset Clinic',
     description:
       'Advanced blood panel, DEXA scan and optional VO2 max testing, with a personalised plan to protect your heart, metabolic, muscle and bone health.',
+  },
+  {
+    path: '/privacy',
+    element: <PrivacyPage />,
+    title: 'Privacy notice | Kaya Reset Clinic',
+    description:
+      'How Kaya Reset Clinic collects, uses and protects your personal and health information, the lawful basis for it, who it is shared with and your rights under UK data protection law.',
   },
   {
     path: '/fees',
