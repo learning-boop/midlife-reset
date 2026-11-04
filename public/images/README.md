@@ -33,6 +33,19 @@ with it. Anything added here wants its ratio declared the same way.
 
 The menopause page's two photographs are recorded with the pillars.
 
+## Not a photograph
+
+helfy.png is the booking platform's own lockup, supplied by the client on
+4 November 2026 as a screenshot: a near-white panel inside a one-pixel frame.
+The frame is trimmed and the panel matted away per pixel against its own
+colour, so both inks survive — the teal wordmark and the orange dot — and the
+mark sits on sand as readily as on white. Cut tight to the ink at 764x296.
+
+It is two lines, the wordmark over "by The Wellbeing Doctors", so it needs
+about 54px of height before that second line is readable. Do not set it
+smaller. It is the platform's property, used to name where appointments are
+booked.
+
 ## No longer used
 
 metabolic-bowl.jpg, the salad bowl on yellow paper, replaced on the metabolic

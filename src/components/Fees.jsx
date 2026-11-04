@@ -1,4 +1,4 @@
-import { fees } from '../data/content'
+import { fees, site } from '../data/content'
 import BookLink from './BookLink'
 import FillText from './FillText'
 
@@ -31,7 +31,19 @@ export default function Fees() {
             </article>
           ))}
         </div>
-        <BookLink className="btn btn-plum fee-cta">Book your complimentary discovery call</BookLink>
+        {/* Two bookings, two destinations. The discovery call leads, because
+            the standfirst above tells anyone unsure to start there; helfy is
+            for people who already know what they are booking. */}
+        <div className="fee-actions">
+          <BookLink className="btn btn-plum">{fees.ctaPrimary}</BookLink>
+          <BookLink href={site.appointmentUrl} className="btn btn-ghost">
+            {fees.ctaAppointment}
+          </BookLink>
+        </div>
+        <p className="booked-via">
+          {fees.bookedVia}
+          <img src="/images/helfy.png" alt="helfy by The Wellbeing Doctors" />
+        </p>
       </div>
     </section>
   )

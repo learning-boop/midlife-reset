@@ -15,8 +15,13 @@ export const site = {
   // They held themidlifereset.uk, from the branding before the rename.
   domain: '',
   email: '', // address only, no mailto: — the footer adds that
-  // Google appointment page, '15 min discovery call', supplied 3 Nov 2026
-  bookingUrl: 'https://calendar.app.google/ZEQPQbtjCvNitf2Q8',
+  // Two different bookings, two different places. The discovery call is a free
+  // 15 minutes on Dr Sarika's Google appointment page; a paid appointment is
+  // booked on helfy, the clinical platform she consults through. Both links
+  // supplied 4 November 2026; the discovery one replaces the address given on
+  // 3 November.
+  bookingUrl: 'https://calendar.app.google/cga581qW8TzRLvvG7',
+  appointmentUrl: 'https://app.helfylabs.com/clinic?teamToken=0624C2',
   whatsapp: '#', // TODO: confirm
   byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
   tagline: 'The science of living better, for longer.',
@@ -320,6 +325,9 @@ export const fees = {
   title: 'Our fees',
   intro:
     'Appointments are available virtually or face to face. Not sure which is right for you? Start with a free discovery call.',
+  ctaPrimary: 'Book your complimentary discovery call',
+  ctaAppointment: 'Book a virtual appointment',
+  bookedVia: 'Virtual appointments are booked through',
   items: [
     {
       name: 'Initial consultation',
@@ -398,7 +406,7 @@ export const journey = {
 export const faqs = [
   ['Is this the same as seeing my NHS GP?', 'No. This is a private, doctor-led service combining lifestyle medicine with clinical assessment. It runs alongside your NHS GP care, not instead of it.'],
   ['Do I need a blood test?', 'Not always. Where clinically appropriate, investigations will be organised as part of your assessment. If you already have recent results, these can be reviewed.'],
-  ['Are appointments online or in person?', 'Both. Virtual consultations are available anywhere in the UK, and face-to-face appointments can be booked after your discovery call.'],
+  ['Are appointments online or in person?', 'Both. Virtual consultations are booked and held on helfy, the clinical platform I consult through, and face-to-face appointments can be booked after your discovery call.'],
   ['Do I need to choose a service before booking?', 'No. Most people start with a free discovery call, where we agree together on the right starting point.'],
   ['What if I have an urgent health concern?', 'This service does not provide emergency care. For urgent concerns, please contact your GP, NHS 111, or 999.'],
 ]
