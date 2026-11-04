@@ -445,9 +445,9 @@ export const cancellation = {
   outro: 'Exceptions may be made in genuine emergencies or illness.',
 }
 
-// PRIVACY NOTICE — NOT READY TO PUBLISH.
+// PRIVACY POLICY — NOT READY TO PUBLISH.
 //
-// This is a working draft of a UK GDPR privacy notice for a private clinical
+// This is a working draft of a UK GDPR privacy policy for a private clinical
 // service. Everything in square brackets is a fact only the clinic holds, and
 // the brackets are rendered on the page so the draft cannot be shipped by
 // accident. It needs reading by whoever advises Dr Sarika on data protection
@@ -459,15 +459,15 @@ export const cancellation = {
 // mailing form does not yet send anywhere.
 export const privacy = {
   kicker: 'Privacy',
-  title: 'Privacy notice',
+  title: 'Privacy policy',
   intro:
     'How your personal information is collected, used and protected when you contact the clinic, book an appointment or receive care.',
-  updated: 'Last updated: [DATE THIS NOTICE IS PUBLISHED]',
+  updated: 'Last updated: [DATE THIS POLICY IS PUBLISHED]',
   sections: [
-    ['Who this notice is from', [
+    ['Who this policy is from', [
       'Kaya Reset Clinic is run by Dr Sarika Gorantyal. The clinic is the data controller for the information described here, which means it decides how and why your information is used.',
       'Registered name and address: [LEGAL ENTITY NAME AND REGISTERED ADDRESS]. Registered with the Information Commissioner’s Office under number [ICO REGISTRATION NUMBER].',
-      'For anything in this notice, or to exercise any of the rights below, contact [DATA PROTECTION CONTACT EMAIL].',
+      'For anything in this policy, or to exercise any of the rights below, contact [DATA PROTECTION CONTACT EMAIL].',
     ]],
     ['What is collected', [
       'Contact details: your name, email address and telephone number.',
@@ -508,14 +508,14 @@ export const privacy = {
     ]],
     ['Cookies and this website', [
       'This website sets no cookies, uses no analytics and does not track you. Nothing you do here is recorded by the site itself.',
-      'Booking takes you to another company’s website — helfy or Google — and those sites have their own cookies and their own privacy notices, which govern what happens once you arrive.',
+      'Booking takes you to another company’s website — helfy or Google — and those sites have their own cookies and their own privacy policies, which govern what happens once you arrive.',
     ]],
     ['Complaints', [
       'If you are unhappy with how your information has been handled, please raise it with the clinic first at [DATA PROTECTION CONTACT EMAIL].',
       'You also have the right to complain to the Information Commissioner’s Office at ico.org.uk, or on 0303 123 1113.',
     ]],
-    ['Changes to this notice', [
-      'This notice will be updated when the way information is handled changes. The date at the top shows when it last changed.',
+    ['Changes to this policy', [
+      'This policy will be updated when the way information is handled changes. The date at the top shows when it last changed.',
     ]],
   ],
 }
@@ -534,7 +534,7 @@ export const footer = {
       ['How it works', '/#journey'],
       ['FAQs', '/#faq'],
       ['Cancellation policy', '/fees#cancellation'],
-      ['Privacy notice', '/privacy'],
+      ['Privacy policy', '/privacy'],
     ]],
   ],
 }

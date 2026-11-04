@@ -49,7 +49,7 @@ export const routes = [
   {
     path: '/privacy',
     element: <PrivacyPage />,
-    title: 'Privacy notice | Kaya Reset Clinic',
+    title: 'Privacy policy | Kaya Reset Clinic',
     description:
       'How Kaya Reset Clinic collects, uses and protects your personal and health information, the lawful basis for it, who it is shared with and your rights under UK data protection law.',
   },
