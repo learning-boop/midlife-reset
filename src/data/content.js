@@ -400,6 +400,10 @@ export const notice = {
   title: 'Please note',
   lines: [
     'This service combines lifestyle medicine coaching with doctor-led clinical assessment. Where clinically appropriate, investigations will be organised and treatment, including prescribing, may be offered as part of your care — always following a full assessment and in line with recognised clinical guidelines.',
+    // Supplied by the client on 4 November 2026, in their wording. The note
+    // above applies to this line too: it is a claim about regulated status,
+    // so the governance lead should confirm it before the site goes live.
+    'Care provided through CQC registered providers.',
     'This service does not provide emergency care. If you have an urgent health concern, please contact your GP, NHS 111, 999 or emergency services.',
   ],
 }
