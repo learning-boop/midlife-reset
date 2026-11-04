@@ -326,7 +326,7 @@ export const fees = {
   intro:
     'Appointments are available virtually or face to face. Not sure which is right for you? Start with a free discovery call.',
   ctaPrimary: 'Book your complimentary discovery call',
-  ctaAppointment: 'Book a virtual appointment',
+  ctaAppointment: 'Book a virtual consultation',
   bookedVia: 'Virtual appointments are booked through',
   items: [
     {

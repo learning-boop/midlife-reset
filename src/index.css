@@ -429,7 +429,10 @@ footer a:hover{color:#fff}
      type and padding keep both on one line, and stretch keeps them equal
      height if a label ever does wrap. */
   .sticky .r{width:100%;gap:10px;align-items:stretch}
-  .sticky .r .btn{flex:1;padding:13px 10px;font-size:13.5px}
+  /* "Virtual consultation" needs 125px of the 121px this left it, so the
+     padding and type come down rather than the label going back to two
+     lines; stretch still keeps the pair level on a narrower phone. */
+  .sticky .r .btn{flex:1;padding:13px 8px;font-size:12.5px}
   .wa{width:48px;height:48px}
   footer{padding-bottom:100px}
   .fgrid{grid-template-columns:1fr;gap:34px}
