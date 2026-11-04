@@ -1,7 +1,8 @@
 import Logo from './Logo'
-import { footer, site, social } from '../data/content'
+import { footer, site } from '../data/content'
 import BookLink from './BookLink'
 import SiteLink from './SiteLink'
+import SocialLinks from './SocialLinks'
 
 export default function Footer() {
   return (
@@ -30,14 +31,7 @@ export default function Footer() {
         </div>
         <div className="fbottom">
           <Logo />
-          {/* Each opens in its own tab, with noopener so the page being left
-              cannot be reached by the one arriving. The two-letter label is
-              the visible mark; the accessible name is the full one. */}
-          <div className="social">
-            {social.map(([name, mark, href]) => (
-              <a key={name} href={href} aria-label={name} target="_blank" rel="noopener noreferrer">{mark}</a>
-            ))}
-          </div>
+          <SocialLinks />
           <span>© {new Date().getFullYear()} {site.name} · Dr Sarika Gorantyal</span>
         </div>
       </div>

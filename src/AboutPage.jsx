@@ -3,6 +3,8 @@ import BookLink from './components/BookLink'
 import About from './components/About'
 import Footer from './components/Footer'
 import ProgressBar from './components/ProgressBar'
+import SocialLinks from './components/SocialLinks'
+import SiteLink from './components/SiteLink'
 import useReveal from './components/useReveal'
 import { about, aboutHero } from './data/content'
 
@@ -48,7 +50,13 @@ export default function AboutPage() {
           <p className="lede">{aboutHero.intro}</p>
           <div className="abouthero-actions">
             <BookLink>{aboutHero.cta}</BookLink>
-            <a className="btn btn-ghost" href="/#support">{aboutHero.secondary} →</a>
+            <SiteLink className="btn btn-ghost" href="/#services">{aboutHero.secondary} →</SiteLink>
+          </div>
+          {/* Her own profiles, on the page that is about her rather than only
+              at the foot of every page. The light ground needs the dark set. */}
+          <div className="abouthero-social">
+            <span>Follow Dr Sarika</span>
+            <SocialLinks className="social-ink" />
           </div>
         </div>
       </section>
