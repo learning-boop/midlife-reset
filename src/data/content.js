@@ -126,13 +126,12 @@ export const about = {
   // the rest from the Kaya page of 3 Nov, which also restores the health coach
   // qualification that list had left out.
   creds: [
-    // Each entry is "qualification, awarding body" — the first comma splits
-    // the two, and the page sets the body as a line under the name.
-    'MRCGP, Royal College of General Practitioners',
+    'MRCGP',
     'Diploma in Lifestyle Medicine, British Society of Lifestyle Medicine',
     'Certified Health Coach, Health Coaches Academy',
     'Advanced Longevity Certification, Apex Longevity Academy',
     'Nutrition Certification, Precision Nutrition',
+    'Currently completing: British Menopause Society Certificate in the Principles and Practice of Menopause Care',
   ],
   cta: 'Book a discovery call with Dr Sarika',
   image: '/images/dr-sarika-studio.jpg',
