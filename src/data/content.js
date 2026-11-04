@@ -133,7 +133,9 @@ export const about = {
   // the rest from the Kaya page of 3 Nov, which also restores the health coach
   // qualification that list had left out.
   creds: [
-    'MRCGP',
+    // "qualification, awarding body" — the page splits each entry at the first
+    // comma and sets the body as a line under the name
+    'MRCGP, Royal College of General Practitioners',
     'Diploma in Lifestyle Medicine, British Society of Lifestyle Medicine',
     'Certified Health Coach, Health Coaches Academy',
     'Advanced Longevity Certification, Apex Longevity Academy',
