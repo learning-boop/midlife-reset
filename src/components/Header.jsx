@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import BookLink from './BookLink'
-import { nav } from '../data/content'
+import { nav, site } from '../data/content'
 import SiteLink from './SiteLink'
 
 export default function Header() {
@@ -40,7 +40,12 @@ export default function Header() {
             </SiteLink>
           ))}
         </nav>
-        <BookLink>Book a discovery call</BookLink>
+        {/* Two bookings: the free call for anyone still deciding, and the
+            appointment itself on helfy for anyone who already knows. */}
+        <div className="nav-cta">
+          <BookLink href={site.appointmentUrl} className="btn btn-ghost">Book appointment</BookLink>
+          <BookLink>Discovery call</BookLink>
+        </div>
         <button className="burger" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           <span /><span /><span />
         </button>
@@ -50,6 +55,7 @@ export default function Header() {
           <SiteLink key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</SiteLink>
         ))}
         <BookLink style={{ marginTop: 16, width: '100%' }} onClick={() => setOpen(false)}>Book a discovery call</BookLink>
+        <BookLink href={site.appointmentUrl} className="btn btn-ghost" style={{ marginTop: 10, width: '100%' }} onClick={() => setOpen(false)}>Book a virtual appointment</BookLink>
       </div>
     </header>
   )
