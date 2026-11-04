@@ -34,10 +34,10 @@ export default function Fees() {
         {/* Two bookings, two destinations. The discovery call leads, because
             the standfirst above tells anyone unsure to start there; helfy is
             for people who already know what they are booking. */}
-        <div className="fee-actions">
+        <div className="cta-pair">
           <BookLink className="btn btn-plum">{fees.ctaPrimary}</BookLink>
           <BookLink href={site.appointmentUrl} className="btn btn-ghost">
-            {fees.ctaAppointment}
+            {site.ctaAppointment}
           </BookLink>
         </div>
         <p className="booked-via">

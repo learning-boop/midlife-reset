@@ -1022,7 +1022,8 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .fee-inc li{display:flex;gap:10px;font-size:15px;color:var(--muted)}
 .fee-inc li::before{content:"–";color:var(--terracotta);flex:none}
 .fee-note{margin-top:14px;font-size:14.5px;font-style:italic}
-.fee-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+/* a pair of booking buttons: the discovery call and helfy, side by side */
+.cta-pair{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 /* The lockup is two lines — the wordmark over "by The Wellbeing Doctors" —
    so it needs real height to stay legible, which makes it too tall to sit on
    the same line as the text. The text goes above it. */
@@ -1100,7 +1101,7 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   .fee-top{flex-direction:column;gap:6px}
   .fee .price{font-size:23px}
   .cancel-list>div{grid-template-columns:minmax(0,1fr);gap:6px}
-  .fee-actions .btn{width:100%}
+  .cta-pair .btn{width:100%}
 }
 
 /* ═══ Dr Sarika's introduction on the home page ════════════

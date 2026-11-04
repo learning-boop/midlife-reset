@@ -22,6 +22,8 @@ export const site = {
   // 3 November.
   bookingUrl: 'https://calendar.app.google/cga581qW8TzRLvvG7',
   appointmentUrl: 'https://app.helfylabs.com/clinic?teamToken=0624C2',
+  // the helfy button's words, shown on the fees page and on Dr Sarika's
+  ctaAppointment: 'Book a virtual consultation',
   whatsapp: '#', // TODO: confirm
   byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
   tagline: 'The science of living better, for longer.',
@@ -327,7 +329,6 @@ export const fees = {
   intro:
     'Appointments are available virtually or face to face. Not sure which is right for you? Start with a free discovery call.',
   ctaPrimary: 'Book your complimentary discovery call',
-  ctaAppointment: 'Book a virtual consultation',
   bookedVia: 'Virtual appointments are booked through',
   items: [
     {

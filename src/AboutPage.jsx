@@ -6,7 +6,7 @@ import ProgressBar from './components/ProgressBar'
 import SocialLinks from './components/SocialLinks'
 import SiteLink from './components/SiteLink'
 import useReveal from './components/useReveal'
-import { about, aboutHero } from './data/content'
+import { about, aboutHero, site } from './data/content'
 
 // Dr Sarika's own page. The story itself is the same <About> block the home
 // page used to carry, so the two pages share one source of that copy.
@@ -70,7 +70,15 @@ export default function AboutPage() {
           <ol className="qual-list">
             {about.creds.map((c) => <Qualification key={c} entry={c} />)}
           </ol>
-          <BookLink>{about.cta}</BookLink>
+          {/* both ways in, at the point the page has finished making its
+              case: the free call for anyone still deciding, and helfy for
+              anyone who has decided */}
+          <div className="cta-pair">
+            <BookLink>{about.cta}</BookLink>
+            <BookLink href={site.appointmentUrl} className="btn btn-ghost">
+              {site.ctaAppointment}
+            </BookLink>
+          </div>
         </div>
       </section>
 
