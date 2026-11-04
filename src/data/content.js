@@ -469,6 +469,19 @@ export const privacy = {
     'How your personal information is collected, used and protected when you contact the clinic, book an appointment or receive care.',
   updated: 'Last updated: [DATE THIS POLICY IS PUBLISHED]',
   sections: [
+    // The plain-English promises the client asked for, in the shape of the
+    // policy they sent over. Written here rather than copied from it: that
+    // was another clinic's page, and the principles behind it are the common
+    // ones, not their wording.
+    ['Our commitments', [
+      'Information is collected only by lawful and fair means, and, wherever it is appropriate, with your knowledge and agreement.',
+      'The reason for collecting something is made clear before it is collected, or at the point it is.',
+      'What is collected is used for those reasons and no others, unless you agree to something further or the law requires it.',
+      'What is held is kept relevant to those reasons, and kept accurate and up to date for as long as it is relied on.',
+      'Health information is protected with safeguards appropriate to how sensitive it is, against loss, theft, and access, disclosure or alteration by anyone without authority.',
+      'Nothing is kept longer than those reasons need, or than the professional guidance on medical records requires.',
+      'How information is handled is set out openly. This policy says it, and any question about it will be answered.',
+    ]],
     ['Who this policy is from', [
       'Kaya Reset Clinic is run by Dr Sarika Gorantyal. The clinic is the data controller for the information described here, which means it decides how and why your information is used.',
       'Registered name and address: [LEGAL ENTITY NAME AND REGISTERED ADDRESS]. Registered with the Information Commissioner’s Office under number [ICO REGISTRATION NUMBER].',
