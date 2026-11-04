@@ -533,7 +533,6 @@ export const footer = {
       ['Fees', '/fees'],
       ['How it works', '/#journey'],
       ['FAQs', '/#faq'],
-      ['Cancellation policy', '/fees#cancellation'],
       ['Privacy policy', '/privacy'],
     ]],
   ],
