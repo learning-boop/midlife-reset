@@ -71,8 +71,11 @@ export const hero = {
     'Evidence-based lifestyle medicine for women in midlife, with longevity care for both men and women. Investigations and treatment where clinically appropriate.',
   primary: 'Book your complimentary discovery call',
   secondary: 'How I can help',
+  // [before, emphasis, after] — the strong part is the claim itself, which is
+  // not always the first words of the mark.
   trust: [
-    ['Doctor-led', 'virtual and face-to-face consultations'],
+    ['', 'Doctor-led', 'virtual and face-to-face consultations'],
+    ['Care provided through', 'CQC registered providers', ''],
   ],
   image: '/images/dr-sarika-seated.jpg',
   imageAlt: 'Dr Sarika Gorantyal, Lifestyle Medicine and Longevity Doctor',
