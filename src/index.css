@@ -1039,12 +1039,11 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 .legal-body h2{font-size:23px;line-height:1.25;margin-bottom:14px}
 .legal-body p{color:var(--muted);font-size:16.5px;margin-bottom:12px}
 .legal-body p:last-child{margin-bottom:0}
-/* a fact the clinic still has to supply: loud on purpose, so an unfinished
-   notice cannot be mistaken for a finished one */
-.todo{background:var(--clay-soft);color:var(--terracotta-deep);
-  border:1px dashed var(--terracotta);border-radius:4px;padding:1px 6px;
-  font-size:.92em;font-style:normal}
-
+.legal-list{list-style:none;display:grid;gap:12px;margin:20px 0 22px}
+.legal-list li{display:flex;gap:12px;color:var(--muted);font-size:16.5px;
+  line-height:1.65}
+.legal-list li::before{content:"";flex:none;width:6px;height:6px;margin-top:11px;
+  border-radius:50%;background:var(--terracotta)}
 /* cancellation */
 /* The policy folds away behind its own summary. The row is styled like a FAQ
    question so the two disclosures on the site behave and read alike, but it
