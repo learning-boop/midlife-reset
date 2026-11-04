@@ -1045,6 +1045,19 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
   font-size:.92em;font-style:normal}
 
 /* cancellation */
+/* The policy folds away behind its own summary. The row is styled like a FAQ
+   question so the two disclosures on the site behave and read alike, but it
+   opens a whole block rather than one answer. */
+.cancel-fold{max-width:860px;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+.cancel-fold>summary{display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:22px 0;cursor:pointer;list-style:none;
+  font-family:var(--serif);font-size:19px;color:var(--ink)}
+.cancel-fold>summary::-webkit-details-marker{display:none}
+.cancel-fold .cancel-list>div:first-child{border-top:0}
+.cancel-fold .note-line{margin-bottom:22px}
+@media (hover:hover){.cancel-fold>summary:hover{color:var(--plum)}}
+
 .cancel-list{display:grid;gap:0;max-width:860px}
 .cancel-list>div{display:grid;grid-template-columns:minmax(0,290px) minmax(0,1fr);
   gap:10px 32px;padding:18px 0;border-top:1px solid var(--line)}

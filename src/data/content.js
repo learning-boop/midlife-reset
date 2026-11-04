@@ -432,6 +432,7 @@ export const cancellation = {
   title: 'Cancellation policy',
   intro:
     'Appointments are set aside just for you, so I ask for as much notice as possible if you need to change one.',
+  summary: 'Read the notice periods and charges',
   items: [
     ['48 hours’ notice or more', 'You can rearrange free of charge, or cancel for a full refund.'],
     ['Less than 48 hours’ notice', '50% of the appointment fee will be charged.'],
