@@ -24,7 +24,11 @@ export const site = {
   appointmentUrl: 'https://app.helfylabs.com/clinic?teamToken=0624C2',
   // the helfy button's words, shown on the fees page and on Dr Sarika's
   ctaAppointment: 'Book a virtual consultation',
-  whatsapp: '#', // TODO: confirm
+  // +44 7885 427419, supplied 4 November 2026. wa.me wants the number in
+  // international form with no plus, spaces or leading zero; whatsappLabel is
+  // the same number as a person would read it.
+  whatsapp: 'https://wa.me/447885427419',
+  whatsappLabel: '+44 7885 427419',
   byline: 'Dr Sarika Gorantyal · Lifestyle Medicine & Longevity Doctor',
   tagline: 'The science of living better, for longer.',
 }
