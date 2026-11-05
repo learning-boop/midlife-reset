@@ -54,6 +54,11 @@ export const accreditations = [
   ['Apex Longevity Academy', '/creds/apex.png'],
   ['Precision Nutrition', '/creds/precision-nutrition.png'],
   ["Information Commissioner's Office", '/creds/ico.png'],
+  // helfy is the platform consultations are booked and held on, not a body
+  // that registers or accredits the clinic. It sits in this row at the
+  // client's request; the heading above it says "Registrations and
+  // accreditations", which does not describe it.
+  ['helfy by The Wellbeing Doctors', '/creds/helfy.png'],
 ]
 
 export const nav = [

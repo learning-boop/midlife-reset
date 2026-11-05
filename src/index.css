@@ -662,8 +662,10 @@ header.is-tucked{transform:translateY(-100%)}
   padding:40px 0 44px}
 .creds-label{text-align:center;font-size:12px;letter-spacing:.09em;
   text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+/* 40px between, not 52: eight marks at the wider gap needed 1,150px of the
+   1,132 the page gives them, which left helfy alone on a second row */
 .creds-row{display:flex;flex-wrap:wrap;align-items:center;
-  justify-content:center;gap:30px 52px}
+  justify-content:center;gap:30px 40px}
 /* Each mark fits a box rather than matching one height. Matching heights
    punished the three-line lockups — GMC and the lifestyle medicine society set
    nine pixels a line while a single-line wordmark got the full 36 — so the
