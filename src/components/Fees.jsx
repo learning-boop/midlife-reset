@@ -41,7 +41,7 @@ export default function Fees() {
           </BookLink>
         </div>
         <p className="booked-via">
-          {fees.bookedVia}
+          {site.bookedVia}
           <img src="/images/helfy.png" alt="helfy by The Wellbeing Doctors" />
         </p>
       </div>
