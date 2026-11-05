@@ -24,7 +24,6 @@ export const site = {
   appointmentUrl: 'https://app.helfylabs.com/clinic?teamToken=0624C2',
   // the helfy button's words, shown on the fees page and on Dr Sarika's
   ctaAppointment: 'Book a virtual consultation',
-  bookedVia: 'Virtual consultations are booked and held on',
   // +44 7885 427419, supplied 4 November 2026. wa.me wants the number in
   // international form with no plus, spaces or leading zero; whatsappLabel is
   // the same number as a person would read it.
@@ -334,6 +333,7 @@ export const fees = {
   intro:
     'Appointments are available virtually or face to face. Not sure which is right for you? Start with a free discovery call.',
   ctaPrimary: 'Book your complimentary discovery call',
+  bookedVia: 'Virtual appointments are booked through',
   items: [
     {
       name: 'Initial consultation',

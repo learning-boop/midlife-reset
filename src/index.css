@@ -278,9 +278,7 @@ footer .logo-mark{background:var(--sand);border-radius:50%;
 .disc ul{list-style:none;margin:26px 0 32px;display:grid;gap:14px}
 .disc li{display:flex;gap:13px;align-items:flex-start;color:var(--ink)}
 .disc .row{display:flex;flex-wrap:wrap;gap:12px}
-/* the portrait only: this section also carries the helfy mark, which is 2.58
-   to one and would be squared off and cropped by an unscoped img rule */
-.disc .shot img{border-radius:var(--r-card);aspect-ratio:1;object-fit:cover;object-position:50% 20%;background:var(--sand-deep)}
+.disc img{border-radius:var(--r-card);aspect-ratio:1;object-fit:cover;object-position:50% 20%;background:var(--sand-deep)}
 .check{width:24px;height:24px;border-radius:50%;background:var(--sage-soft);color:var(--sage-deep);display:grid;place-items:center;flex:none;font-size:13px}
 
 /* faq */
