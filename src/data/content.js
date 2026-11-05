@@ -119,7 +119,7 @@ export const aboutIntro = {
   kicker: 'Your doctor',
   title: 'Care led by a doctor who understands midlife health',
   body: [
-    'I’m a GP, Lifestyle Medicine and Longevity Doctor and Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
+    'I’m a GP, Lifestyle Medicine and Longevity Doctor and a Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
     'At 44, surgery for endometriosis left me in surgical menopause, living the same changes my patients had been describing to me for years. That is why this clinic exists.',
   ],
   cta: 'More about Dr Sarika',
