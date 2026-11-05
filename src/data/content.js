@@ -107,7 +107,7 @@ export const aboutHero = {
   kicker: 'About',
   title: 'Dr Sarika Gorantyal',
   intro:
-    'A GP, Lifestyle Medicine and Longevity Doctor and a Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
+    'I am a GP,lifestyle medicine and longevity doctor and a certified health coach.',
   cta: 'Book a discovery call',
   secondary: 'How I can help',
 }
@@ -119,7 +119,7 @@ export const aboutIntro = {
   kicker: 'Your doctor',
   title: 'Care led by a doctor who understands midlife health',
   body: [
-    'I’m a GP, Lifestyle Medicine and Longevity Doctor and a Certified Health Coach, with a special interest in metabolic health, longevity and women’s midlife health.',
+    'I am a GP,lifestyle medicine and longevity doctor and a certified health coach.',
     'At 44, surgery for endometriosis left me in surgical menopause, living the same changes my patients had been describing to me for years. That is why this clinic exists.',
   ],
   cta: 'More about Dr Sarika',
