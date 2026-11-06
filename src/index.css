@@ -1112,15 +1112,38 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 /* White, not sand: the pillars below are sand too, and the two together made
    a 2,000px run of one colour straight after the hero. */
 .aboutintro{background:var(--white);--curtain:var(--white)}
-.aboutintro .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+/* The text column carries the whole biography now, so it is taller than the
+   photograph: start-aligned with the picture sticky beside it, the way the
+   founder section on her own page does it, rather than floating centred
+   against a long read. */
+.aboutintro .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
 .aboutintro h2{margin-bottom:20px}
 .aboutintro p{color:var(--muted);margin-bottom:14px;max-width:54ch}
-.aboutintro .btn{margin-top:14px}
+/* the one line that introduces her, set a step up from the biography */
+.ai-lead{font-size:18px;color:var(--ink)!important}
+.aboutintro blockquote{font-family:var(--serif);font-weight:300;
+  font-size:clamp(19px,1.7vw,23px);line-height:1.45;color:var(--green);
+  max-width:46ch;margin:22px 0 24px;padding-left:20px;
+  border-left:2px solid var(--terracotta)}
+.ai-creds-title{font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;margin:26px 0 12px}
+.ai-creds{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px 24px;margin-bottom:8px}
+.ai-creds li{font-size:15px;color:var(--ink);padding-left:16px;position:relative}
+.ai-creds li::before{content:"";position:absolute;left:0;top:9px;width:6px;
+  height:6px;border-radius:50%;background:var(--sage)}
+.aboutintro .shot{position:sticky;top:100px}
+.aboutintro .btn{margin-top:22px}
 .aboutintro .shot img{border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;
   background:var(--sand-deep);width:100%;display:block}
 
 @media (max-width:900px){
   .aboutintro .wrap{grid-template-columns:minmax(0,1fr);gap:32px}
+  /* nothing to stick to once the photograph is below the text */
+  .aboutintro .shot{position:static}
+  /* one column: in two, the longer qualifications each wrap to a second line
+     and the list stops reading as a list */
+  .ai-creds{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:640px){
   .aboutintro .shot{width:100%}

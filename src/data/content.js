@@ -115,13 +115,15 @@ export const aboutHero = {
 // The home page's introduction to Dr Sarika. Short on purpose: the full
 // biography is on her own page, and running it in both places put the same
 // photograph on a dark green band twice within one screen of the hero.
+// The home page's band about Dr Sarika. The biography itself, the pull quote
+// and the qualifications are not repeated here — the component reads them
+// from `about`, so her page and this band say the same thing and editing one
+// edits both. Only what is particular to the band lives here.
 export const aboutIntro = {
   kicker: 'Your doctor',
   title: 'Care led by a doctor who understands midlife health',
-  body: [
-    'I am a GP, lifestyle medicine and longevity doctor and a certified health coach.',
-    'At 44, surgery for endometriosis left me in surgical menopause, living the same changes my patients had been describing to me for years. That is why this clinic exists.',
-  ],
+  lead: 'I am a GP, lifestyle medicine and longevity doctor and a certified health coach.',
+  credsTitle: 'Qualifications',
   cta: 'More about Dr Sarika',
   // the kitchen photograph, free since the nutrition section was retired, and
   // deliberately not the studio portrait the hero and her own page already use
