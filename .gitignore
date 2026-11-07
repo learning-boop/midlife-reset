@@ -5,6 +5,8 @@ node_modules/
 dist/
 dist-ssr/
 *.local
+# the packaged dist, made for uploading to a host
+*.zip
 
 # Environment
 .env

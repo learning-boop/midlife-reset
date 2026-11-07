@@ -40,13 +40,34 @@ Every address other than `/` has to be served `index.html`, or a refresh on
 `/fees` returns 404 before the app can run. Two forms of that ship with the
 build:
 
+- `public/.htaccess` — Apache, which is what cPanel and most shared hosting
+  run. It also sets the cache headers: a year on the hashed assets, never on
+  `index.html`.
 - `public/_redirects` — Netlify, Cloudflare Pages.
 - `dist/404.html`, a copy of `index.html` written by a small plugin in
   `vite.config.js` — GitHub Pages and others that use a 404 page as the
   fallback.
 
-Apache wants a `.htaccess` rewrite and nginx a `try_files $uri /index.html`;
-neither is in the repo. `npm run dev` and `npm run preview` already do it.
+All three are copied into `dist/` by the build. nginx is the one that is not
+covered: it wants `try_files $uri /index.html` in the server block.
+`npm run dev` and `npm run preview` already do the fallback themselves.
+
+### Uploading to cPanel
+
+1. `npm run build`.
+2. Upload the **contents** of `dist/` into `public_html` — the files
+   themselves, not the `dist` folder. `index.html` has to sit at the top of
+   `public_html`.
+3. Make sure `.htaccess` arrives with them. File managers and FTP clients
+   hide dotfiles by default; in cPanel's File Manager it is Settings → Show
+   Hidden Files. Without it every address except the home page returns 404.
+4. Delete the old files first, or at least the old `assets/` folder, so stale
+   bundles do not pile up. The filenames carry a content hash, so nothing is
+   overwritten and old ones linger forever otherwise.
+
+Serving the site from a subfolder rather than the domain root needs two more
+changes: `base: '/folder/'` in `vite.config.js`, and `RewriteBase /folder/`
+with `RewriteRule . /folder/index.html [L]` in `.htaccess`.
 
 ## Editing
 
