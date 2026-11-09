@@ -834,7 +834,11 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 }
 
 @media (max-width:640px){
-  .founder .shot{position:static;width:100%;max-width:460px}
+  /* relative, not static: the shot is the containing block for its own
+     curtain, which is absolute with inset:0. Static leaves the curtain
+     nothing to size against but the page, and it covers the screen until the
+     reveal fires — here in the founder section's green. */
+  .founder .shot{position:relative;width:100%;max-width:460px}
 }
 
 /* ═══ Phone length ════════════════════════════════════════
@@ -1139,8 +1143,12 @@ summary:hover .ic{border-color:var(--plum);color:var(--plum)}
 
 @media (max-width:900px){
   .aboutintro .wrap{grid-template-columns:minmax(0,1fr);gap:32px}
-  /* nothing to stick to once the photograph is below the text */
-  .aboutintro .shot{position:static}
+  /* Nothing to stick to once the photograph is below the text — but back to
+     relative, never static. The curtain inside a .shot is absolute with
+     inset:0, so a static .shot leaves it no positioned ancestor and it sizes
+     itself to the page instead: a full-screen white sheet over everything,
+     with only the sticky header above it. */
+  .aboutintro .shot{position:relative}
   /* one column: in two, the longer qualifications each wrap to a second line
      and the list stops reading as a list */
   .ai-creds{grid-template-columns:minmax(0,1fr)}
