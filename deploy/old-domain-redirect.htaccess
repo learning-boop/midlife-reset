@@ -1,0 +1,25 @@
+# REDIRECT FROM THE OLD DOMAIN TO THE NEW ONE
+#
+# Upload this as ".htaccess" in the OLD domain's document root — the folder
+# kayareset.com serves from — replacing the .htaccess already there. Delete
+# the site's other files from that folder; this one is all it needs.
+#
+# Do it LAST, after kayaresetclinic.co.uk is confirmed working. Until then the
+# .com is the only live site the clinic has.
+#
+# Why redirect rather than just empty the folder: every link already shared —
+# in an email, a message, a search result — keeps working, and the permanent
+# (301) status tells Google to move the ranking to the new address instead of
+# treating it as a site that vanished. /fees goes to /fees, not to the home
+# page, so a deep link survives too.
+#
+# This stays useful only while the clinic still owns kayareset.com. If the
+# domain is allowed to lapse, the redirect goes with it.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # with or without www, and whatever the path
+  RewriteCond %{HTTP_HOST} ^(www\.)?kayareset\.com$ [NC]
+  RewriteRule ^(.*)$ https://kayaresetclinic.co.uk/$1 [R=301,L]
+</IfModule>

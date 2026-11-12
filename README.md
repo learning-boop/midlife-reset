@@ -69,6 +69,22 @@ Serving the site from a subfolder rather than the domain root needs two more
 changes: `base: '/folder/'` in `vite.config.js`, and `RewriteBase /folder/`
 with `RewriteRule . /folder/index.html [L]` in `.htaccess`.
 
+### Moving to another domain
+
+Nothing in the build names a domain — no canonical tags, no sitemap, no
+absolute URLs — so the same `dist/` works on any address with no rebuild.
+Moving is a hosting job, not a code one:
+
+1. Point the new domain's DNS at the hosting (nameservers, or an A record).
+2. Add it in cPanel and upload `dist/` to its document root.
+3. Let AutoSSL issue its certificate.
+4. Confirm it works, including a refresh on a route like `/fees`.
+5. Only then put `deploy/old-domain-redirect.htaccess` in the old domain's
+   folder, as `.htaccess`, and delete the old copy of the site.
+
+Step 5 goes last on purpose: until the new address is serving, the old one is
+the only site the clinic has.
+
 ## Editing
 
 - All copy lives in `src/data/content.js`. Edit text there, not in components.
