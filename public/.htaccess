@@ -9,6 +9,18 @@
   RewriteEngine On
   RewriteBase /
 
+  # Anyone who types the bare domain arrives over plain http. Send them to
+  # https permanently, before anything else is decided, so no page and no
+  # asset is ever served unencrypted.
+  #
+  # Two conditions, not one: on shared hosting the TLS is often terminated by
+  # a proxy in front of Apache, which leaves %{HTTPS} off on a request that
+  # already arrived securely. X-Forwarded-Proto is what that proxy sets, and
+  # checking it as well is what stops the rule redirecting to itself forever.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
   # A real file or folder is served as itself: the JavaScript, the CSS, the
   # photographs, robots.txt. Only addresses with nothing behind them fall
   # through to the app.
